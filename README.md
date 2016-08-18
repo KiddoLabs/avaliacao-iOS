@@ -4,6 +4,10 @@
 Este projeto visa testar o conhecimento dos programadores que estão na fase de seleção da [Kiddo Labs](www.kiddolabs.com).
 
 
+<p align="center">
+	<img src="img/ios_logo.png" width="187px">
+</p>
+
 ### Linguagens de programação
 
 - Objective-C ou Swift.
@@ -34,7 +38,7 @@ Use o [Teste_iOS.sketch](Teste_iOS.sketch)
 
 |               Home               |            Detalhe do filme           |       Compra do filme
 |----------------------------------|---------------------------------------|---------------------------------------|
-|<img src="Home.png" width="180">  |  <img src="Interna.png" width="180">  |   <img src="Compra_Selecionado.png" width="180">  |           |
+|<img src="img/Home.png" width="180">  |  <img src="img/Interna.png" width="180">  |   <img src="img/Compra_Selecionado.png" width="180">  |           |
                                   
 
 
