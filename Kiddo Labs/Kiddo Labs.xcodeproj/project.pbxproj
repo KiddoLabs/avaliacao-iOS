@@ -1,0 +1,405 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A092B5EC1D678F370023BF0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A092B5EB1D678F370023BF0D /* AppDelegate.swift */; };
+		A092B5EE1D678F370023BF0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A092B5ED1D678F370023BF0D /* ViewController.swift */; };
+		A092B5F11D678F370023BF0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A092B5EF1D678F370023BF0D /* Main.storyboard */; };
+		A092B5F31D678F370023BF0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A092B5F21D678F370023BF0D /* Assets.xcassets */; };
+		A092B5F61D678F370023BF0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A092B5F41D678F370023BF0D /* LaunchScreen.storyboard */; };
+		A092B6011D678F370023BF0D /* Kiddo_LabsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A092B6001D678F370023BF0D /* Kiddo_LabsTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A092B5FD1D678F370023BF0D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A092B5E01D678F370023BF0D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A092B5E71D678F370023BF0D;
+			remoteInfo = "Kiddo Labs";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A092B5E81D678F370023BF0D /* Kiddo Labs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kiddo Labs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A092B5EB1D678F370023BF0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A092B5ED1D678F370023BF0D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A092B5F01D678F370023BF0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A092B5F21D678F370023BF0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A092B5F51D678F370023BF0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A092B5F71D678F370023BF0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A092B5FC1D678F370023BF0D /* Kiddo LabsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kiddo LabsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A092B6001D678F370023BF0D /* Kiddo_LabsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kiddo_LabsTests.swift; sourceTree = "<group>"; };
+		A092B6021D678F370023BF0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A092B5E51D678F370023BF0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A092B5F91D678F370023BF0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A092B5DF1D678F370023BF0D = {
+			isa = PBXGroup;
+			children = (
+				A092B5EA1D678F370023BF0D /* Kiddo Labs */,
+				A092B5FF1D678F370023BF0D /* Kiddo LabsTests */,
+				A092B5E91D678F370023BF0D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A092B5E91D678F370023BF0D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A092B5E81D678F370023BF0D /* Kiddo Labs.app */,
+				A092B5FC1D678F370023BF0D /* Kiddo LabsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A092B5EA1D678F370023BF0D /* Kiddo Labs */ = {
+			isa = PBXGroup;
+			children = (
+				A092B5EB1D678F370023BF0D /* AppDelegate.swift */,
+				A092B5ED1D678F370023BF0D /* ViewController.swift */,
+				A092B5EF1D678F370023BF0D /* Main.storyboard */,
+				A092B5F21D678F370023BF0D /* Assets.xcassets */,
+				A092B5F41D678F370023BF0D /* LaunchScreen.storyboard */,
+				A092B5F71D678F370023BF0D /* Info.plist */,
+			);
+			path = "Kiddo Labs";
+			sourceTree = "<group>";
+		};
+		A092B5FF1D678F370023BF0D /* Kiddo LabsTests */ = {
+			isa = PBXGroup;
+			children = (
+				A092B6001D678F370023BF0D /* Kiddo_LabsTests.swift */,
+				A092B6021D678F370023BF0D /* Info.plist */,
+			);
+			path = "Kiddo LabsTests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A092B5E71D678F370023BF0D /* Kiddo Labs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A092B6051D678F370023BF0D /* Build configuration list for PBXNativeTarget "Kiddo Labs" */;
+			buildPhases = (
+				A092B5E41D678F370023BF0D /* Sources */,
+				A092B5E51D678F370023BF0D /* Frameworks */,
+				A092B5E61D678F370023BF0D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Kiddo Labs";
+			productName = "Kiddo Labs";
+			productReference = A092B5E81D678F370023BF0D /* Kiddo Labs.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A092B5FB1D678F370023BF0D /* Kiddo LabsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A092B6081D678F370023BF0D /* Build configuration list for PBXNativeTarget "Kiddo LabsTests" */;
+			buildPhases = (
+				A092B5F81D678F370023BF0D /* Sources */,
+				A092B5F91D678F370023BF0D /* Frameworks */,
+				A092B5FA1D678F370023BF0D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A092B5FE1D678F370023BF0D /* PBXTargetDependency */,
+			);
+			name = "Kiddo LabsTests";
+			productName = "Kiddo LabsTests";
+			productReference = A092B5FC1D678F370023BF0D /* Kiddo LabsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A092B5E01D678F370023BF0D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Domene;
+				TargetAttributes = {
+					A092B5E71D678F370023BF0D = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					A092B5FB1D678F370023BF0D = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = A092B5E71D678F370023BF0D;
+					};
+				};
+			};
+			buildConfigurationList = A092B5E31D678F370023BF0D /* Build configuration list for PBXProject "Kiddo Labs" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A092B5DF1D678F370023BF0D;
+			productRefGroup = A092B5E91D678F370023BF0D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A092B5E71D678F370023BF0D /* Kiddo Labs */,
+				A092B5FB1D678F370023BF0D /* Kiddo LabsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A092B5E61D678F370023BF0D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A092B5F61D678F370023BF0D /* LaunchScreen.storyboard in Resources */,
+				A092B5F31D678F370023BF0D /* Assets.xcassets in Resources */,
+				A092B5F11D678F370023BF0D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A092B5FA1D678F370023BF0D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A092B5E41D678F370023BF0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A092B5EE1D678F370023BF0D /* ViewController.swift in Sources */,
+				A092B5EC1D678F370023BF0D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A092B5F81D678F370023BF0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A092B6011D678F370023BF0D /* Kiddo_LabsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A092B5FE1D678F370023BF0D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A092B5E71D678F370023BF0D /* Kiddo Labs */;
+			targetProxy = A092B5FD1D678F370023BF0D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A092B5EF1D678F370023BF0D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A092B5F01D678F370023BF0D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A092B5F41D678F370023BF0D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A092B5F51D678F370023BF0D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A092B6031D678F370023BF0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A092B6041D678F370023BF0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A092B6061D678F370023BF0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Kiddo Labs/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.domene.Kiddo-Labs";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A092B6071D678F370023BF0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Kiddo Labs/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.domene.Kiddo-Labs";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A092B6091D678F370023BF0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Kiddo LabsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.domene.Kiddo-LabsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kiddo Labs.app/Kiddo Labs";
+			};
+			name = Debug;
+		};
+		A092B60A1D678F370023BF0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Kiddo LabsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.domene.Kiddo-LabsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kiddo Labs.app/Kiddo Labs";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A092B5E31D678F370023BF0D /* Build configuration list for PBXProject "Kiddo Labs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A092B6031D678F370023BF0D /* Debug */,
+				A092B6041D678F370023BF0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A092B6051D678F370023BF0D /* Build configuration list for PBXNativeTarget "Kiddo Labs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A092B6061D678F370023BF0D /* Debug */,
+				A092B6071D678F370023BF0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A092B6081D678F370023BF0D /* Build configuration list for PBXNativeTarget "Kiddo LabsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A092B6091D678F370023BF0D /* Debug */,
+				A092B60A1D678F370023BF0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A092B5E01D678F370023BF0D /* Project object */;
+}
