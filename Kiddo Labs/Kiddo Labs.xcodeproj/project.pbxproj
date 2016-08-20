@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		893B206FED638A249A6E92C7 /* Pods_Kiddo_Labs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04429BDEEBB30F822A278AF /* Pods_Kiddo_Labs.framework */; };
+		A01134D11D68DB5D0008668D /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01134D01D68DB5D0008668D /* Movie.swift */; };
 		A092B5EC1D678F370023BF0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A092B5EB1D678F370023BF0D /* AppDelegate.swift */; };
 		A092B5EE1D678F370023BF0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A092B5ED1D678F370023BF0D /* ViewController.swift */; };
 		A092B5F11D678F370023BF0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A092B5EF1D678F370023BF0D /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		09638D6A1A43A0AAECAACB77 /* Pods-Kiddo Labs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kiddo Labs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kiddo Labs/Pods-Kiddo Labs.debug.xcconfig"; sourceTree = "<group>"; };
 		5A4C66402D8815D4577E0552 /* Pods-Kiddo Labs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kiddo Labs.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kiddo Labs/Pods-Kiddo Labs.release.xcconfig"; sourceTree = "<group>"; };
+		A01134D01D68DB5D0008668D /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		A092B5E81D678F370023BF0D /* Kiddo Labs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kiddo Labs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A092B5EB1D678F370023BF0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A092B5ED1D678F370023BF0D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +80,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A01134CF1D68DB500008668D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A01134D01D68DB5D0008668D /* Movie.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		A092B5DF1D678F370023BF0D = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +111,7 @@
 		A092B5EA1D678F370023BF0D /* Kiddo Labs */ = {
 			isa = PBXGroup;
 			children = (
+				A01134CF1D68DB500008668D /* Models */,
 				A092B5EB1D678F370023BF0D /* AppDelegate.swift */,
 				A092B5ED1D678F370023BF0D /* ViewController.swift */,
 				A092B5EF1D678F370023BF0D /* Main.storyboard */,
@@ -274,6 +285,7 @@
 			files = (
 				A092B5EE1D678F370023BF0D /* ViewController.swift in Sources */,
 				A092B5EC1D678F370023BF0D /* AppDelegate.swift in Sources */,
+				A01134D11D68DB5D0008668D /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
