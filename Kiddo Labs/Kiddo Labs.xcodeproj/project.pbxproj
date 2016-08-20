@@ -11,6 +11,9 @@
 		A01134D11D68DB5D0008668D /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01134D01D68DB5D0008668D /* Movie.swift */; };
 		A01134D41D68DD7C0008668D /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01134D31D68DD7C0008668D /* BaseRequest.swift */; };
 		A01134D71D68DEA80008668D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01134D61D68DEA80008668D /* Constants.swift */; };
+		A01134D91D68E2790008668D /* MoviesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01134D81D68E2790008668D /* MoviesRequest.swift */; };
+		A01134DC1D68E8490008668D /* Movie+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01134DB1D68E8490008668D /* Movie+Ext.swift */; };
+		A01134DE1D68EA040008668D /* ErrorList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01134DD1D68EA040008668D /* ErrorList.swift */; };
 		A092B5EC1D678F370023BF0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A092B5EB1D678F370023BF0D /* AppDelegate.swift */; };
 		A092B5EE1D678F370023BF0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A092B5ED1D678F370023BF0D /* ViewController.swift */; };
 		A092B5F11D678F370023BF0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A092B5EF1D678F370023BF0D /* Main.storyboard */; };
@@ -35,6 +38,9 @@
 		A01134D01D68DB5D0008668D /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		A01134D31D68DD7C0008668D /* BaseRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
 		A01134D61D68DEA80008668D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A01134D81D68E2790008668D /* MoviesRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesRequest.swift; sourceTree = "<group>"; };
+		A01134DB1D68E8490008668D /* Movie+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Movie+Ext.swift"; sourceTree = "<group>"; };
+		A01134DD1D68EA040008668D /* ErrorList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorList.swift; sourceTree = "<group>"; };
 		A092B5E81D678F370023BF0D /* Kiddo Labs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kiddo Labs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A092B5EB1D678F370023BF0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A092B5ED1D678F370023BF0D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				A01134D31D68DD7C0008668D /* BaseRequest.swift */,
+				A01134D81D68E2790008668D /* MoviesRequest.swift */,
 			);
 			name = Requests;
 			sourceTree = "<group>";
@@ -104,8 +111,17 @@
 			isa = PBXGroup;
 			children = (
 				A01134D61D68DEA80008668D /* Constants.swift */,
+				A01134DD1D68EA040008668D /* ErrorList.swift */,
 			);
 			name = Constants;
+			sourceTree = "<group>";
+		};
+		A01134DA1D68E83A0008668D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A01134DB1D68E8490008668D /* Movie+Ext.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		A092B5DF1D678F370023BF0D = {
@@ -131,6 +147,7 @@
 		A092B5EA1D678F370023BF0D /* Kiddo Labs */ = {
 			isa = PBXGroup;
 			children = (
+				A01134DA1D68E83A0008668D /* Extensions */,
 				A01134D51D68DE980008668D /* Constants */,
 				A01134D21D68DD700008668D /* Requests */,
 				A01134CF1D68DB500008668D /* Models */,
@@ -305,8 +322,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A01134DE1D68EA040008668D /* ErrorList.swift in Sources */,
 				A01134D71D68DEA80008668D /* Constants.swift in Sources */,
+				A01134DC1D68E8490008668D /* Movie+Ext.swift in Sources */,
 				A01134D41D68DD7C0008668D /* BaseRequest.swift in Sources */,
+				A01134D91D68E2790008668D /* MoviesRequest.swift in Sources */,
 				A092B5EE1D678F370023BF0D /* ViewController.swift in Sources */,
 				A092B5EC1D678F370023BF0D /* AppDelegate.swift in Sources */,
 				A01134D11D68DB5D0008668D /* Movie.swift in Sources */,

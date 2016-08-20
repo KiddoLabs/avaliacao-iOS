@@ -15,7 +15,7 @@ class BaseRequest {
     private let basePath = "https://api-public.guidebox.com/v1.43/US/\(GUIDEBOX_KEY)/"
     
     // MARK: - Instance Methods
-    func makeRequest(httpMethod: Alamofire.Method, path: String, parameters: JSONDictionary, completion: (Response<AnyObject, NSError>) -> ()) {
+    func makeRequest(httpMethod: Alamofire.Method, path: String, parameters: JSONDictionary?, completion: (Response<AnyObject, NSError>) -> ()) {
         let request = Alamofire.request(httpMethod, basePath + path, parameters: parameters, encoding: .URL, headers: nil)
         request.responseJSON { response in
             completion(response)
