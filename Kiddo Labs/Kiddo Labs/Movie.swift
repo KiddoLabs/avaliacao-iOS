@@ -10,7 +10,7 @@ import Foundation
 
 class Movie {
     
-    // MARK: Attributes
+    // MARK: - Attributes
     
     var id: Int
     var title: String
