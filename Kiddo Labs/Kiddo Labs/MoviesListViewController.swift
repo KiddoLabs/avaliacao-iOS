@@ -21,7 +21,6 @@ class MoviesListViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.fetchMovies()
-        print("WIDTH: \(self.view.bounds.size.width)")
     }
     
     // MARK: - Data Fetcher
@@ -90,7 +89,6 @@ class MoviesListViewController: UICollectionViewController {
         }
         
         cell?.fill(movie!)
-        cell?.backgroundColor = UIColor.blueColor()
         return cell!
     }
     

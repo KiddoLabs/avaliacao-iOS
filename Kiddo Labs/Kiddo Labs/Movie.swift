@@ -15,12 +15,14 @@ class Movie {
     var id: Int
     var title: String
     var year: Int
+    var posterURL: NSURL
     
     // MARK: - Initializer
     
-    init(id: Int, title: String, year: Int) {
+    init(id: Int, title: String, year: Int, posterURL: NSURL) {
         self.id = id
         self.title = title
         self.year = year
+        self.posterURL = posterURL
     }
 }

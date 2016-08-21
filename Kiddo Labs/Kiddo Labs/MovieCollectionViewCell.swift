@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Haneke
 
 class MovieCollectionViewCell: UICollectionViewCell {
     
@@ -14,6 +15,7 @@ class MovieCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var yearLabel: UILabel!
+    @IBOutlet weak var posterImageView: UIImageView!
     
     // MARK: - Life's Cycle
     
@@ -28,14 +30,29 @@ class MovieCollectionViewCell: UICollectionViewCell {
     // MARK: - Content Managment
     
     func fill(movie: Movie) {
-        self.clean()
-        self.titleLabel.text = movie.title
-        self.yearLabel.text = String(movie.year)
+        clean()
+        configure()
+        titleLabel.text = movie.title
+        yearLabel.text = String(movie.year)
+        posterImageView.hnk_setImageFromURL(movie.posterURL)
     }
     
     func clean() {
-        self.titleLabel.text = "Untitled"
-        self.yearLabel.text = "Unknown"
+        titleLabel.text = "Untitled"
+        yearLabel.text = "Unknown"
+        posterImageView.image = nil
+    }
+    
+    func configure() {
+        // Configuring cell
+        layer.cornerRadius = 2.0
+        layer.borderWidth = 1.0
+        layer.borderColor = UIColor.blackColor().CGColor
+        layer.masksToBounds = true
+        
+        // Configuring image view
+        posterImageView.layer.borderColor = UIColor.blackColor().CGColor
+        posterImageView.layer.borderWidth = 1.0
     }
     
 }

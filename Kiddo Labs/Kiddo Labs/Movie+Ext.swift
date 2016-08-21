@@ -10,11 +10,14 @@ import Foundation
 
 extension Movie {
     convenience init(json: JSONDictionary) throws {
-        guard let id = json["id"] as? Int, title = json["title"] as? String, year = json["release_year"] as? Int else {
+        guard let id = json["id"] as? Int,
+                  title = json["title"] as? String,
+                  year = json["release_year"] as? Int,
+                  posterURL = NSURL(string: json["poster_120x171"] as? String ?? "") else {
             throw JSONMappingError.KeyNotFound
         }
         
-        self.init(id: id, title: title, year: year)
+        self.init(id: id, title: title, year: year, posterURL: posterURL)
     }
     
     class func massCreation(jsonArray: [JSONDictionary]) -> ([Movie]?, ErrorType?) {
