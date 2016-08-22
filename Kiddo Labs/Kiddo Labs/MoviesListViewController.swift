@@ -21,6 +21,8 @@ class MoviesListViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let nib = UINib(nibName: "MovieCell", bundle: nil)
+        self.collectionView?.registerNib(nib, forCellWithReuseIdentifier: "MovieCell")
         addViewTitle()
         fetchMovies()
     }
@@ -121,6 +123,7 @@ class MoviesListViewController: UICollectionViewController {
                 let movie = sender as? Movie {
                 movieDetailsViewController.hidesBottomBarWhenPushed = true
                 movieDetailsViewController.movie = movie
+                self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Voltar", style: .Plain, target: nil, action: nil)
             }
         }
     }

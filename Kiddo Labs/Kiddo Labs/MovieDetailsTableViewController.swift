@@ -26,7 +26,6 @@ class MovieDetailsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         movieFormatsSegmentedControl.removeAllSegments()
-        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -42,10 +41,14 @@ class MovieDetailsTableViewController: UITableViewController {
     // MARK: - Instance Methods
     func fill(movie: Movie) {
         configureView()
-        posterImageView.hnk_setImageFromURL(movie.posterURL)
+        
+        if let url = NSURL(string: movie.posterURL) {
+            posterImageView.hnk_setImageFromURL(url)
+        }
+        
         titleLabel.text = movie.title
         yearLabel.text = String(movie.year)
-        movieDescription.text = movie.description
+        movieDescription.text = movie.movieDescription
         configureSegmentedControl()
     }
     
@@ -70,14 +73,10 @@ class MovieDetailsTableViewController: UITableViewController {
     
     func availableQualityFormats() -> [String] {
         var allFormats = [String]()
-        if let availableFormats = movie?.availableFormats {
-            for formatsDictionary in availableFormats {
-                if let formats = formatsDictionary["formats"] as? [[String: AnyObject]] {
-                    for format in formats {
-                        if !allFormats.contains(format["format"] as! String) {
-                            allFormats.append(format["format"] as! String)
-                        }
-                    }
+        for sources in (movie?.sources)! {
+            for format in sources.formats {
+                if !allFormats.contains(format.format) {
+                    allFormats.append(format.format)
                 }
             }
         }

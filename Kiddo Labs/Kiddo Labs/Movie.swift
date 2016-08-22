@@ -7,21 +7,23 @@
 //
 
 import Foundation
+import RealmSwift
 
-class Movie {
+class Movie: Object {
     
     // MARK: - Attributes
     
-    var id: Int
-    var title: String
-    var year: Int
-    var posterURL: NSURL
-    var description: String?
-    var availableFormats: [[String: AnyObject]]?
+    dynamic var id = 0
+    dynamic var title = ""
+    dynamic var year = 0
+    dynamic var posterURL = ""
+    dynamic var movieDescription = ""
+    var sources = List<Source>()
     
     // MARK: - Initializer
     
-    init(id: Int, title: String, year: Int, posterURL: NSURL) {
+    convenience required init(id: Int, title: String, year: Int, posterURL: String) {
+        self.init()
         self.id = id
         self.title = title
         self.year = year

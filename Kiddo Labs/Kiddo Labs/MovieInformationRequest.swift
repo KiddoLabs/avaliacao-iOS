@@ -22,9 +22,7 @@ class MovieInformationRequest: BaseRequest {
             }
             
             let data = movie.movieInformation(json)
-            movie.description = data.0?.description
-            movie.availableFormats = data.0?.availableFormats
-            return completion(movie, data.1)
+            return completion(data.0, data.1)
         }
     }
 }

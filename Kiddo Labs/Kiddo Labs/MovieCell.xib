@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieCell" id="B3D-1K-yDi" customClass="MovieCollectionViewCell" customModule="Kiddo_Labs" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="230"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="100" height="230"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jfw-BS-EAp">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="144"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="B2I-cm-Inl"/>
+                            <constraint firstAttribute="height" constant="144" id="Yqy-k4-26s"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Untitled" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMn-7c-Bzx">
+                        <rect key="frame" x="8" y="144" width="84" height="38"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="38" id="VwE-8i-7cY"/>
+                            <constraint firstAttribute="width" constant="84" id="fFw-f0-TBx"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="12"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unknown" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x9i-WB-HjA">
+                        <rect key="frame" x="8" y="182" width="84" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="84" id="2h8-tV-yzU"/>
+                            <constraint firstAttribute="height" constant="21" id="G5y-09-YPd"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="Jfw-BS-EAp" firstAttribute="leading" secondItem="B3D-1K-yDi" secondAttribute="leading" id="4AE-Zz-Ycg"/>
+                <constraint firstAttribute="trailing" secondItem="sMn-7c-Bzx" secondAttribute="trailing" constant="8" id="Bgd-Cf-e2b"/>
+                <constraint firstItem="sMn-7c-Bzx" firstAttribute="top" secondItem="Jfw-BS-EAp" secondAttribute="bottom" id="Jef-HA-B6k"/>
+                <constraint firstItem="Jfw-BS-EAp" firstAttribute="top" secondItem="B3D-1K-yDi" secondAttribute="top" id="SJL-yA-obv"/>
+                <constraint firstAttribute="trailing" secondItem="x9i-WB-HjA" secondAttribute="trailing" constant="8" id="eBo-eS-Fb1"/>
+                <constraint firstAttribute="trailing" secondItem="Jfw-BS-EAp" secondAttribute="trailing" id="gis-0r-zms"/>
+                <constraint firstItem="x9i-WB-HjA" firstAttribute="leading" secondItem="B3D-1K-yDi" secondAttribute="leading" constant="8" id="oyd-a1-DGg"/>
+                <constraint firstItem="x9i-WB-HjA" firstAttribute="top" secondItem="sMn-7c-Bzx" secondAttribute="bottom" id="pLP-b9-jtF"/>
+                <constraint firstItem="sMn-7c-Bzx" firstAttribute="leading" secondItem="B3D-1K-yDi" secondAttribute="leading" constant="8" id="rNz-sq-kLg"/>
+            </constraints>
+            <size key="customSize" width="128" height="147"/>
+            <connections>
+                <outlet property="posterImageView" destination="Jfw-BS-EAp" id="Coz-cs-1Zl"/>
+                <outlet property="titleLabel" destination="sMn-7c-Bzx" id="pP9-0S-18X"/>
+                <outlet property="yearLabel" destination="x9i-WB-HjA" id="AV3-a9-303"/>
+            </connections>
+            <point key="canvasLocation" x="354" y="434.5"/>
+        </collectionViewCell>
+    </objects>
+</document>
