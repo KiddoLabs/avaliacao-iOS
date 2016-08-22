@@ -18,7 +18,7 @@ class MoviesRequest: BaseRequest {
     var plataform: String
     
     // MARK: - Initializer
-    init(movieIndex: Int = 0, numberOfMovies: Int = 20, source: String = "all", plataform: String = "all") {
+    init(movieIndex: Int = 0, numberOfMovies: Int = 20, source: String = "all", plataform: String = "ios") {
         self.movieIndex = movieIndex
         self.numberOfMovies = numberOfMovies
         self.source = source

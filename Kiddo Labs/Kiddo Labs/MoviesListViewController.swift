@@ -34,8 +34,7 @@ class MoviesListViewController: UICollectionViewController {
     // MARK: - Data Fetcher
     
     func fetchMovies(completion: (() -> ())? = nil) {
-        let moviesRequest = MoviesRequest()
-        moviesRequest.makeRequest(movieIndex) { movies, error in
+        MoviesRequest().makeRequest(movieIndex) { movies, error in
             if error != nil {
                 completion?()
                 // TREAT ERROR

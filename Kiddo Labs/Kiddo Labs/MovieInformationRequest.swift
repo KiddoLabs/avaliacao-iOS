@@ -12,25 +12,19 @@ class MovieInformationRequest: BaseRequest {
     
     // MARK: - Attributes
     private var path = "movie/"
-    var movie: Movie
-    
-    // MARK: - Initializer
-    init(movie: Movie) {
-        self.movie = movie
-    }
     
     // MARK: - Instance Methods
-    func makeRequest(movieID: Int, completion: (Movie?, ErrorType?) -> ()) {
-        super.makeRequest(.GET, path: path + String(movieID), parameters: nil) { response in
+    func makeRequest(movie: Movie, completion: (Movie?, ErrorType?) -> ()) {
+        super.makeRequest(.GET, path: path + String(movie.id), parameters: nil) { response in
             guard let json = response.result.value as? JSONDictionary else {
                 completion(nil, JSONMappingError.KeyNotFound)
                 return
             }
             
-            let data = self.movie.movieInformation(json)
-            self.movie.description = data.0?.description
-            self.movie.availableFormats = data.0?.availableFormats
-            return completion(self.movie, data.1)
+            let data = movie.movieInformation(json)
+            movie.description = data.0?.description
+            movie.availableFormats = data.0?.availableFormats
+            return completion(movie, data.1)
         }
     }
 }
