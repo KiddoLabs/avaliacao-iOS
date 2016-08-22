@@ -16,7 +16,7 @@ class MoviesListViewController: UICollectionViewController {
     var isLastPage = false
     var movieIndex = 0
     
-    // MARK: - Class Life Cycle
+    // MARK: - Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -103,6 +103,26 @@ class MoviesListViewController: UICollectionViewController {
     override func collectionView(collectionView: UICollectionView, willDisplayCell cell: UICollectionViewCell, forItemAtIndexPath indexPath: NSIndexPath) {
         if indexPath.row == moviesList.count - 3 {
             loadNextPage()
+        }
+    }
+    
+    // MARK: UICollectionViewDelegate
+    
+    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        if let movie = movie(indexPath) {
+            self.performSegueWithIdentifier("movieDetails", sender: movie)
+        }
+    }
+    
+    // MARK: - Navigation
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "movieDetails" {
+            if  let movieDetailsViewController = segue.destinationViewController as? MovieDetailsTableViewController,
+                let movie = sender as? Movie {
+                movieDetailsViewController.hidesBottomBarWhenPushed = true
+                movieDetailsViewController.movie = movie
+            }
         }
     }
 

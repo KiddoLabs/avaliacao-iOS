@@ -36,4 +36,14 @@ extension Movie {
         
         return (movies, nil)
     }
+    
+    func movieInformation(jsonArray: JSONDictionary) -> (Movie?, ErrorType?) {
+        guard let description = jsonArray["overview"] as? String,
+                  sources = jsonArray["purchase_ios_sources"] as? [[String: AnyObject]] else {
+            return (nil, JSONMappingError.KeyNotFound)
+        }
+        self.availableFormats = sources
+        self.description = description
+        return (self, nil)
+    }
 }
