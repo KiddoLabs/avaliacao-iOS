@@ -47,11 +47,15 @@ class MovieCollectionViewCell: UICollectionViewCell {
         // Configuring cell
         layer.cornerRadius = 2.0
         layer.borderWidth = 1.0
-        layer.borderColor = UIColor.blackColor().CGColor
+        layer.borderColor = UIColor.lightGrayColor().CGColor
         layer.masksToBounds = true
+        layer.shadowColor = UIColor.lightGrayColor().CGColor
+        layer.shadowOffset = CGSizeMake(0, 2.0)
+        layer.shadowRadius = 2.0
+        layer.shadowOpacity = 1.0
         
         // Configuring image view
-        posterImageView.layer.borderColor = UIColor.blackColor().CGColor
+        posterImageView.layer.borderColor = UIColor.lightGrayColor().CGColor
         posterImageView.layer.borderWidth = 1.0
     }
     

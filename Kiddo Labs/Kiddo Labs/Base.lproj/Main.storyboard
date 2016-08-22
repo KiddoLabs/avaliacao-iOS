@@ -1,41 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8Sd-Nv-Ksn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dAa-wL-yUW">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="Nxt-a6-Ocn">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8Sd-Nv-Ksn" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Bla-v2-Hk0">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="dAa-wL-yUW" kind="relationship" relationship="rootViewController" id="kCp-VY-pT3"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xN6-li-StX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="376" y="-293"/>
-        </scene>
-        <!--Filmes-->
+        <!--Tab Bar Controller-->
         <scene sceneID="bNJ-ya-IfG">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="dAa-wL-yUW" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Filmes" id="qkg-c0-iau"/>
+                    <navigationItem key="navigationItem" id="qkg-c0-iau"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="bav-2e-Wcf">
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.78845952181208057" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
-                        <segue destination="jRm-68-ns4" kind="relationship" relationship="viewControllers" id="mdH-xd-CU1"/>
+                        <segue destination="mOi-HN-gFa" kind="relationship" relationship="viewControllers" id="mdH-xd-CU1"/>
                         <segue destination="LSk-h6-1fB" kind="relationship" relationship="viewControllers" id="flp-bn-jW0"/>
                     </connections>
                 </tabBarController>
@@ -43,7 +30,7 @@
             </objects>
             <point key="canvasLocation" x="1065" y="-293"/>
         </scene>
-        <!--Home-->
+        <!--Movies List View Controller-->
         <scene sceneID="lht-XJ-E1G">
             <objects>
                 <collectionViewController id="jRm-68-ns4" customClass="MoviesListViewController" customModule="Kiddo_Labs" customModuleProvider="target" sceneMemberID="viewController">
@@ -55,11 +42,11 @@
                             <size key="itemSize" width="100" height="225"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="5" minY="63" maxX="5" maxY="0.0"/>
+                            <inset key="sectionInset" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieCell" id="Iud-op-zbE" customClass="MovieCollectionViewCell" customModule="Kiddo_Labs" customModuleProvider="target">
-                                <rect key="frame" x="5" y="127" width="100" height="225"/>
+                                <rect key="frame" x="5" y="64" width="100" height="225"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="100" height="225"/>
@@ -119,11 +106,11 @@
                             <outlet property="delegate" destination="jRm-68-ns4" id="VcU-9c-hDr"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" title="Home" id="EzE-cp-zRa"/>
+                    <navigationItem key="navigationItem" id="hPy-Sn-NIe"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IQk-zt-LvG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1820" y="-637"/>
+            <point key="canvasLocation" x="2632" y="-637"/>
         </scene>
         <!--Favoritos-->
         <scene sceneID="hmD-sp-W22">
@@ -140,7 +127,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ucQ-v4-KJc">
-                                <rect key="frame" x="0.0" y="64" width="50" height="50"/>
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -154,11 +141,34 @@
                             <outlet property="delegate" destination="LSk-h6-1fB" id="Lto-nK-DUG"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" title="Favoritos" id="SAS-sn-CIU"/>
+                    <tabBarItem key="tabBarItem" title="Favoritos" image="favorite" id="SAS-sn-CIU"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S53-0t-8zB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1826" y="82"/>
         </scene>
+        <!--Home-->
+        <scene sceneID="PlZ-ZZ-gr2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mOi-HN-gFa" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="home" id="EzE-cp-zRa"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LH9-KX-tjz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="jRm-68-ns4" kind="relationship" relationship="rootViewController" id="AIX-4a-8uG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qye-qZ-FUA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1820" y="-637"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="favorite" width="32" height="32"/>
+        <image name="home" width="32" height="32"/>
+    </resources>
 </document>

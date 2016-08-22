@@ -20,7 +20,15 @@ class MoviesListViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.fetchMovies()
+        
+        addViewTitle()
+        fetchMovies()
+    }
+    
+    func addViewTitle() {
+        let logoImageView = UIImageView(image: UIImage(named: "moviesLabel"))
+        let imageItem = UIBarButtonItem(customView: logoImageView)
+        navigationItem.leftBarButtonItem = imageItem
     }
     
     // MARK: - Data Fetcher
