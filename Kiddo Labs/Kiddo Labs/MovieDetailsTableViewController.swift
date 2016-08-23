@@ -123,6 +123,9 @@ class MovieDetailsTableViewController: UITableViewController {
         try! appDelegate.realm.write {
             let favorite = Favorite()
             favorite.id = movie!.id
+            favorite.title = movie!.title
+            favorite.posterURL = (movie?.posterURL.absoluteString)!
+            favorite.year = movie!.year
             appDelegate.realm.add(favorite)
         }
     }

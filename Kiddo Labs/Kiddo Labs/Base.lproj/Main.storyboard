@@ -50,7 +50,9 @@
                             <outlet property="delegate" destination="jRm-68-ns4" id="VcU-9c-hDr"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="hPy-Sn-NIe"/>
+                    <navigationItem key="navigationItem" id="hPy-Sn-NIe">
+                        <barButtonItem key="backBarButtonItem" title="Voltar" id="xqb-K0-3Vb"/>
+                    </navigationItem>
                     <connections>
                         <segue destination="2Eo-fV-evP" kind="show" identifier="movieDetails" id="dKO-Da-vBE"/>
                     </connections>
@@ -79,7 +81,12 @@
                             <outlet property="delegate" destination="LSk-h6-1fB" id="Lto-nK-DUG"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="yk9-BS-QY1"/>
+                    <navigationItem key="navigationItem" id="yk9-BS-QY1">
+                        <barButtonItem key="backBarButtonItem" title="Voltar" id="ffz-bu-v8N"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="2Eo-fV-evP" kind="show" identifier="movieDetails" id="FEk-iL-Xce"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S53-0t-8zB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -294,6 +301,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="uv6-os-tyb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.78845952180000001" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -311,4 +319,7 @@
         <image name="star" width="26" height="26"/>
         <image name="star_highlighted" width="25" height="25"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="dKO-Da-vBE"/>
+    </inferredMetricsTieBreakers>
 </document>

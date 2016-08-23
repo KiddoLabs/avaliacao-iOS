@@ -11,4 +11,7 @@ import RealmSwift
 
 class Favorite: Object {
     dynamic var id = 0
+    dynamic var title = ""
+    dynamic var posterURL = ""
+    dynamic var year = 0
 }

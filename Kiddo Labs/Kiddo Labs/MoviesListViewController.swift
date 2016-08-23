@@ -88,12 +88,10 @@ class MoviesListViewController: UICollectionViewController {
         let movie = self.movie(indexPath)
         
         guard cell != nil else {
-            print("\nMovieCollectionViewCell couldn't be created. Setting an empty cell instead the non created cell.\n")
             return MovieCollectionViewCell()
         }
         
         guard movie != nil else {
-            print("\nMovie couldn't be load. Setting an empty cell.\n")
             return cell!
         }
         
@@ -116,14 +114,12 @@ class MoviesListViewController: UICollectionViewController {
     }
     
     // MARK: - Navigation
-    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "movieDetails" {
             if  let movieDetailsViewController = segue.destinationViewController as? MovieDetailsTableViewController,
                 let movie = sender as? Movie {
                 movieDetailsViewController.hidesBottomBarWhenPushed = true
                 movieDetailsViewController.movie = movie
-                self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Voltar", style: .Plain, target: nil, action: nil)
             }
         }
     }

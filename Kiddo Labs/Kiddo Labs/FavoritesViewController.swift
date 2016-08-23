@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import RealmSwift
 
 class FavoritesViewController: UICollectionViewController {
 
-    var favoritesList = [Movie]()
+    // MARK: - Attributes
+    var favoritesList = [Favorite]()
+    let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +22,10 @@ class FavoritesViewController: UICollectionViewController {
         collectionView?.registerNib(nib, forCellWithReuseIdentifier: "MovieCell")
         
         addViewTitle()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        fetchFavorites()
     }
     
     // MARK: Instance Methods
@@ -31,7 +38,9 @@ class FavoritesViewController: UICollectionViewController {
     
     // MARK: - Data Fetcher
     func fetchFavorites() {
-        
+        let result = appDelegate.realm.objects(Favorite.self)
+        favoritesList = Array(result)
+        collectionView?.reloadData()
     }
     
     // MARK: - Collection Control
@@ -39,7 +48,8 @@ class FavoritesViewController: UICollectionViewController {
     private func movie(indexPath: NSIndexPath) -> Movie? {
         let index = indexPath.row
         if favoritesList.count > index && index >= 0 {
-            return favoritesList[index]
+            let favorite = favoritesList[index]
+            return Movie(id: favorite.id, title: favorite.title, year: favorite.year, posterURL: NSURL(string: favorite.posterURL ?? "")!)
         }
         return nil
     }
@@ -59,17 +69,34 @@ class FavoritesViewController: UICollectionViewController {
         let movie = self.movie(indexPath)
         
         guard cell != nil else {
-            print("\nMovieCollectionViewCell couldn't be created. Setting an empty cell instead the non created cell.\n")
             return MovieCollectionViewCell()
         }
         
         guard movie != nil else {
-            print("\nMovie couldn't be load. Setting an empty cell.\n")
             return cell!
         }
         
         cell?.fill(movie!)
         return cell!
+    }
+    
+    // MARK: UICollectionViewDelegate
+    
+    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        if let movie = movie(indexPath) {
+            self.performSegueWithIdentifier("movieDetails", sender: movie)
+        }
+    }
+    
+    // MARK: - Navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "movieDetails" {
+            if  let movieDetailsViewController = segue.destinationViewController as? MovieDetailsTableViewController,
+                let movie = sender as? Movie {
+                movieDetailsViewController.hidesBottomBarWhenPushed = true
+                movieDetailsViewController.movie = movie
+            }
+        }
     }
 
 }
