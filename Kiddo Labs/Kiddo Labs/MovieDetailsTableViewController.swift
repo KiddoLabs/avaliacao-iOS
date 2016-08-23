@@ -64,6 +64,11 @@ class MovieDetailsTableViewController: UITableViewController {
         for (index, format) in formats.enumerate() {
             movieFormatsSegmentedControl.insertSegmentWithTitle(format, atIndex: index, animated: false)
         }
+    gs
+        
+        if movieFormatsSegmentedControl.numberOfSegments == 0 {
+            movieFormatsSegmentedControl.insertSegmentWithTitle("Indisponível", atIndex: 0, animated: false)
+        }
     }
     
     func configureShareButton() {
