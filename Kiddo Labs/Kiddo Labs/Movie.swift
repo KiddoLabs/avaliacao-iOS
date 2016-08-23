@@ -16,7 +16,7 @@ class Movie {
     var year: Int
     var posterURL: NSURL
     var description: String?
-    var availableFormats: [[String: AnyObject]]?
+    var availableSources: [Source]?
     
     // MARK: - Initializer
     

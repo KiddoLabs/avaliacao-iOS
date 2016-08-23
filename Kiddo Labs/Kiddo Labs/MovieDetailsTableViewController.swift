@@ -90,13 +90,11 @@ class MovieDetailsTableViewController: UITableViewController {
     
     func availableQualityFormats() -> [String] {
         var allFormats = [String]()
-        if let availableFormats = movie?.availableFormats {
-            for formatsDictionary in availableFormats {
-                if let formats = formatsDictionary["formats"] as? [[String: AnyObject]] {
-                    for format in formats {
-                        if !allFormats.contains(format["format"] as! String) {
-                            allFormats.append(format["format"] as! String)
-                        }
+        if let availableSources = movie?.availableSources {
+            for source in availableSources {
+                for format in source.formats {
+                    if !allFormats.contains(format.formatName) {
+                        allFormats.append(format.formatName)
                     }
                 }
             }
@@ -132,6 +130,10 @@ class MovieDetailsTableViewController: UITableViewController {
         configureFavorites()
     }
     
+    @IBAction func purchaseButtonPressed(sender: AnyObject) {
+        self.performSegueWithIdentifier("purchaseOptions", sender: movie)
+    }
+    
     func addToFavorites() {
         try! appDelegate.realm.write {
             let favorite = Favorite()
@@ -149,4 +151,15 @@ class MovieDetailsTableViewController: UITableViewController {
             appDelegate.realm.delete(persistedMovie!)
         }
     }
+
+    // MARK: - Navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "purchaseOptions" {
+            if  let purchaseViewController = (segue.destinationViewController as? PurchaseViewController),
+                let movie = sender as? Movie {
+                purchaseViewController.movie = movie
+            }
+        }
+    }
+
 }

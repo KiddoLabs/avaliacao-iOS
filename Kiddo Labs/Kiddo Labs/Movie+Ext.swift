@@ -39,10 +39,22 @@ extension Movie {
     
     func movieInformation(jsonArray: JSONDictionary) -> (Movie?, ErrorType?) {
         guard let description = jsonArray["overview"] as? String,
-                  sources = jsonArray["purchase_ios_sources"] as? [[String: AnyObject]] else {
+                  sourcesJSON = jsonArray["purchase_ios_sources"] as? [JSONDictionary] else {
             return (nil, JSONMappingError.KeyNotFound)
         }
-        self.availableFormats = sources
+        
+        var sources = [Source]()
+        for source in sourcesJSON {
+            do {
+                try sources.append(Source(json: source))
+            } catch JSONMappingError.KeyNotFound {
+                return (nil, JSONMappingError.KeyNotFound)
+            } catch {
+                return (nil, ObjectCreationError.Unknown)
+            }
+        }
+        
+        self.availableSources = sources
         self.description = description
         return (self, nil)
     }
