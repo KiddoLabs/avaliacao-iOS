@@ -86,6 +86,9 @@ class MovieDetailsTableViewController: UITableViewController {
         yearLabel.backgroundColor = UIColor.whiteColor()
         formatsLabel.backgroundColor = UIColor.whiteColor()
         favoriteButton.backgroundColor = UIColor.whiteColor()
+        
+        let tapGestureRecognizer = UITapGestureRecognizer(target:self, action:#selector(MovieDetailsTableViewController.favoriteButtonPressed(_:)))
+        favoriteImageView.addGestureRecognizer(tapGestureRecognizer)
     }
     
     func configureSegmentedControl() {

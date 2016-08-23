@@ -75,6 +75,36 @@
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
+                        <view key="backgroundView" hidden="YES" contentMode="scaleToFill" id="8JI-sx-3AV">
+                            <rect key="frame" x="0.0" y="-64" width="600" height="600"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="P9b-Lj-Xb9">
+                                    <rect key="frame" x="263" y="263" width="74" height="74"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="74" id="JdE-hm-0DC"/>
+                                        <constraint firstAttribute="height" constant="74" id="vT5-Ql-Fxw"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você não possui favoritos!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="toe-po-DeD">
+                                    <rect key="frame" x="200" y="345" width="201" height="21"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="21" id="RJH-cO-bGN"/>
+                                        <constraint firstAttribute="width" constant="201" id="tbU-EJ-jd8"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="toe-po-DeD" firstAttribute="centerX" secondItem="8JI-sx-3AV" secondAttribute="centerX" id="SWI-0r-gmH"/>
+                                <constraint firstItem="P9b-Lj-Xb9" firstAttribute="centerX" secondItem="8JI-sx-3AV" secondAttribute="centerX" id="aJ4-3z-JQu"/>
+                                <constraint firstItem="P9b-Lj-Xb9" firstAttribute="centerY" secondItem="8JI-sx-3AV" secondAttribute="centerY" id="fiG-6m-Jt7"/>
+                                <constraint firstItem="toe-po-DeD" firstAttribute="top" secondItem="P9b-Lj-Xb9" secondAttribute="bottom" constant="8" id="qXp-Oa-ZLL"/>
+                            </constraints>
+                        </view>
                         <cells/>
                         <connections>
                             <outlet property="dataSource" destination="LSk-h6-1fB" id="cXo-Vy-2EW"/>
@@ -85,6 +115,7 @@
                         <barButtonItem key="backBarButtonItem" title="Voltar" id="ffz-bu-v8N"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="emptyView" destination="8JI-sx-3AV" id="K36-cM-ipB"/>
                         <segue destination="2Eo-fV-evP" kind="show" identifier="MovieDetails" id="FEk-iL-Xce"/>
                     </connections>
                 </collectionViewController>
@@ -447,6 +478,6 @@
         <image name="star_highlighted" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dKO-Da-vBE"/>
+        <segue reference="FEk-iL-Xce"/>
     </inferredMetricsTieBreakers>
 </document>

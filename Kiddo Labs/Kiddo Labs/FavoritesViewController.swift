@@ -11,14 +11,15 @@ import RealmSwift
 
 class FavoritesViewController: BaseCollectionViewController {
 
+    @IBOutlet weak var emptyView: UIView!
     // MARK: - Attributes
     let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
     // MARK: - Life Cycle
     
     override func viewDidLoad() {
-        super.viewDidLoad()
         isFavoriteView = true
+        super.viewDidLoad()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -31,6 +32,12 @@ class FavoritesViewController: BaseCollectionViewController {
     func fetchFavorites() {
         let result = appDelegate.realm.objects(Favorite.self)
         favoritesList = Array(result)
+        
+        if !(favoritesList.count > 0) {
+            emptyView.hidden = false
+        } else {
+            emptyView.hidden = true
+        }
         collectionView?.reloadData()
     }
 }

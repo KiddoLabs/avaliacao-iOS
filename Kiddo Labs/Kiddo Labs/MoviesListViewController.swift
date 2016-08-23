@@ -18,9 +18,8 @@ class MoviesListViewController: BaseCollectionViewController {
     // MARK: - Life Cycle
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        
         isFavoriteView = false
+        super.viewDidLoad()
         fetchMovies()
     }
     
