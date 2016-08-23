@@ -20,6 +20,7 @@ class MoviesListViewController: BaseCollectionViewController {
     override func viewDidLoad() {
         isFavoriteView = false
         super.viewDidLoad()
+        createPullToRefresh()
         fetchMovies()
     }
     
@@ -40,6 +41,23 @@ class MoviesListViewController: BaseCollectionViewController {
                 self.isLastPage = true
             }
             completion?()
+        }
+    }
+    
+    // MARK: - Pull to refresh
+    
+    private func createPullToRefresh() {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(MoviesListViewController.refreshMovies(_:)), forControlEvents: .ValueChanged)
+        self.collectionView?.addSubview(refreshControl)
+    }
+    
+    func refreshMovies(sender: UIRefreshControl) {
+        moviesList = [Movie]()
+        isLastPage = false
+        movieIndex = 0
+        fetchMovies {
+            sender.endRefreshing()
         }
     }
     
