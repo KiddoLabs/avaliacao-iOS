@@ -26,15 +26,10 @@ class MovieDetailsTableViewController: UITableViewController {
     let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     var isFavorite = false
     
-    // MARK: - Life Cycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        movieFormatsSegmentedControl.removeAllSegments()
-        navigationController?.toolbarHidden = false
-    }
-    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        movieFormatsSegmentedControl.removeAllSegments()
+        configureNavigationController()
         
         if let movie = self.movie {
             self.fetchMovieInformation(movie, completion: {
@@ -45,6 +40,12 @@ class MovieDetailsTableViewController: UITableViewController {
     }
     
     // MARK: - Instance Methods
+    func configureNavigationController() {
+        navigationController?.toolbarHidden = false
+        navigationController?.navigationBar.tintColor = UIColor(red: 201.0/255.0, green: 0, blue: 0, alpha: 1.0)
+        navigationController?.navigationBar.translucent = false
+    }
+    
     func fill(movie: Movie) {
         configureView()
         

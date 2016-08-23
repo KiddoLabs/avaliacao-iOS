@@ -28,6 +28,7 @@ class PurchaseCollectionViewCell: UICollectionViewCell {
     
     func fill(format: Format) {
         clean()
+        configure()
         formatLabel.text = format.formatName
         priceLabel.text = format.price
         purchaseType.text = format.purchaseType
@@ -37,5 +38,12 @@ class PurchaseCollectionViewCell: UICollectionViewCell {
         formatLabel.text = "Unknown"
         priceLabel.text = "No price"
         purchaseType.text = "Unknown"
+    }
+    
+    func configure() {
+        // Configuring cell
+        layer.cornerRadius = 5.0
+        layer.masksToBounds = true
+        self.backgroundColor = UIColor(red: 170.0/255.0, green: 170.0/255.0, blue: 170.0/255.0, alpha: 0.5)
     }
 }
