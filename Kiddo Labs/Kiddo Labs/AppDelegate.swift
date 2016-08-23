@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        self.setStatusBarBackgroundColor(UIColor(red: 201.0/255.0, green: 0, blue: 0, alpha: 1.0))
+        self.setStatusBarBackgroundColor(CUSTOM_RED_COLOR)
         return true
     }
     

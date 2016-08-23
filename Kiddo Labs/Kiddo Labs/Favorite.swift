@@ -13,5 +13,6 @@ class Favorite: Object {
     dynamic var id = 0
     dynamic var title = ""
     dynamic var thumbnail = ""
+    dynamic var largerPoster = ""
     dynamic var year = 0
 }

@@ -145,6 +145,7 @@ class MovieDetailsTableViewController: UITableViewController {
             favorite.id = movie!.id
             favorite.title = movie!.title
             favorite.thumbnail = (movie?.poster.thumbnail.absoluteString)!
+            favorite.largerPoster = (movie?.poster.largePoster.absoluteString)!
             favorite.year = movie!.year
             appDelegate.realm.add(favorite)
         }

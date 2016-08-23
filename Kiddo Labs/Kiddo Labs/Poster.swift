@@ -11,10 +11,10 @@ import Foundation
 class Poster {
     // MARK: - Attributes
     var thumbnail: NSURL
-    var largePoster: NSURL?
+    var largePoster: NSURL
 
     // MARK: - Initializer
-    init(thumbnail: NSURL, largePoster: NSURL?) {
+    init(thumbnail: NSURL, largePoster: NSURL) {
         self.thumbnail = thumbnail
         self.largePoster = largePoster
     }

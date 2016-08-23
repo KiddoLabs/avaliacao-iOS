@@ -32,7 +32,7 @@ class PurchaseViewController: UICollectionViewController {
     }
     
     func setBackgroundImage() {
-        Shared.imageCache.fetch(URL: movie!.poster.largePoster!).onSuccess { image in
+        Shared.imageCache.fetch(URL: movie!.poster.largePoster).onSuccess { image in
             let bgImage = UIImageView();
             bgImage.image = image
             bgImage.contentMode = .ScaleToFill

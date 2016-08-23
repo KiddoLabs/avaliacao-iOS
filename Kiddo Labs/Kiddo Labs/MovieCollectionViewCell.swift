@@ -12,13 +12,11 @@ import Haneke
 class MovieCollectionViewCell: UICollectionViewCell {
     
     // MARK: - IBOutlets
-    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var yearLabel: UILabel!
     @IBOutlet weak var posterImageView: UIImageView!
     
     // MARK: - Life Cycle
-    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
@@ -28,7 +26,6 @@ class MovieCollectionViewCell: UICollectionViewCell {
     }
     
     // MARK: - Content Managment
-    
     func fill(movie: Movie) {
         clean()
         configure()

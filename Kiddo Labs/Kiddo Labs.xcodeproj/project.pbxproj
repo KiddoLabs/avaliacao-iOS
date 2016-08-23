@@ -29,6 +29,7 @@
 		A01135041D6C9D780008668D /* PurchaseHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01135031D6C9D780008668D /* PurchaseHeader.swift */; };
 		A01135061D6CA7180008668D /* Poster.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01135051D6CA7180008668D /* Poster.swift */; };
 		A01135081D6CA7960008668D /* Poster+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01135071D6CA7960008668D /* Poster+Ext.swift */; };
+		A011350A1D6CC1F80008668D /* BaseCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01135091D6CC1F80008668D /* BaseCollectionViewController.swift */; };
 		A092B5EC1D678F370023BF0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A092B5EB1D678F370023BF0D /* AppDelegate.swift */; };
 		A092B5EE1D678F370023BF0D /* MoviesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A092B5ED1D678F370023BF0D /* MoviesListViewController.swift */; };
 		A092B5F11D678F370023BF0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A092B5EF1D678F370023BF0D /* Main.storyboard */; };
@@ -71,6 +72,7 @@
 		A01135031D6C9D780008668D /* PurchaseHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseHeader.swift; sourceTree = "<group>"; };
 		A01135051D6CA7180008668D /* Poster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Poster.swift; sourceTree = "<group>"; };
 		A01135071D6CA7960008668D /* Poster+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Poster+Ext.swift"; sourceTree = "<group>"; };
+		A01135091D6CC1F80008668D /* BaseCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewController.swift; sourceTree = "<group>"; };
 		A092B5E81D678F370023BF0D /* Kiddo Labs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kiddo Labs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A092B5EB1D678F370023BF0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A092B5ED1D678F370023BF0D /* MoviesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListViewController.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				A01134E51D6B45C60008668D /* MovieDetailsTableViewController.swift */,
 				A01134EF1D6B9FCA0008668D /* FavoritesViewController.swift */,
 				A01134F71D6C83CB0008668D /* PurchaseViewController.swift */,
+				A01135091D6CC1F80008668D /* BaseCollectionViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				A01134D91D68E2790008668D /* MoviesRequest.swift in Sources */,
 				A01135061D6CA7180008668D /* Poster.swift in Sources */,
 				A01135041D6C9D780008668D /* PurchaseHeader.swift in Sources */,
+				A011350A1D6CC1F80008668D /* BaseCollectionViewController.swift in Sources */,
 				A092B5EE1D678F370023BF0D /* MoviesListViewController.swift in Sources */,
 				A01134FA1D6C872E0008668D /* Source.swift in Sources */,
 				A01134E21D69DF240008668D /* MovieCollectionViewCell.swift in Sources */,
