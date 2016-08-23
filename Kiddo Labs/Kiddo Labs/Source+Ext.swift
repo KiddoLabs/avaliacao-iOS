@@ -9,6 +9,10 @@
 import Foundation
 
 extension Source {
+    /**
+        Create a new Source given a JSON.
+        - parameter json: a JSONDictionary with Source data.
+     */
     convenience init(json: JSONDictionary) throws {
         guard let displayName = json[JSON_KEY_SOURCE_DISPLAY_NAME] as? String,
             formatsJSON = json[JSON_KEY_FORMATS] as? [JSONDictionary] else {

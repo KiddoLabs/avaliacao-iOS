@@ -12,11 +12,13 @@ import Haneke
 class MovieCollectionViewCell: UICollectionViewCell {
     
     // MARK: - IBOutlets
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var yearLabel: UILabel!
     @IBOutlet weak var posterImageView: UIImageView!
     
     // MARK: - Life Cycle
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
@@ -26,6 +28,11 @@ class MovieCollectionViewCell: UICollectionViewCell {
     }
     
     // MARK: - Content Managment
+    
+    /**
+        Fill the movie cell outlets.
+        - parameter movie: a movie instance.
+     */
     func fill(movie: Movie) {
         clean()
         configure()
@@ -34,12 +41,18 @@ class MovieCollectionViewCell: UICollectionViewCell {
         posterImageView.hnk_setImageFromURL(movie.poster.thumbnail)
     }
     
+    /**
+        Configure the initial values of the cell outlets.
+     */
     func clean() {
         titleLabel.text = LABELS_UNTITLED
         yearLabel.text = LABELS_UNKNOWN
         posterImageView.image = nil
     }
     
+    /**
+        Configure the cell layout.
+     */
     func configure() {
         // Configuring cell
         layer.cornerRadius = 2.0

@@ -9,6 +9,10 @@
 import Foundation
 
 extension Movie {
+    /**
+        Create a new Movie given a JSON.
+        - parameter json: a JSONDictionary with movie data.
+     */
     convenience init(json: JSONDictionary) throws {
         guard let id = json[JSON_KEY_ID] as? Int,
                   title = json[JSON_KEY_TITLE] as? String,
@@ -28,6 +32,11 @@ extension Movie {
         self.init(id: id, title: title, year: year, poster: poster!)
     }
     
+    /**
+        Create a list a movies given a JSON.
+        - parameter jsonArray: a JSONDictionary with movies.
+        - returns: a tuple containing a movie list and a error, if there was any.
+     */
     class func massCreation(jsonArray: [JSONDictionary]) -> ([Movie]?, ErrorType?) {
         var movies = [Movie]()
         for jsonDict in jsonArray {
@@ -45,6 +54,11 @@ extension Movie {
         return (movies, nil)
     }
     
+    /**
+        Add information for a movie.
+        - parameter jsonArray: the JSONDictionary of a movie.
+        - returns: a tuple with a movie containing all information and a error, if there was any. 
+     */
     func movieInformation(jsonArray: JSONDictionary) -> (Movie?, ErrorType?) {
         guard let description = jsonArray[JSON_KEY_DESCRIPTION] as? String,
                   sourcesJSON = jsonArray[JSON_KEY_SOURCES] as? [JSONDictionary] else {

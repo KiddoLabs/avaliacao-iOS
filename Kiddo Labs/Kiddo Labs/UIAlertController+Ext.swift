@@ -10,12 +10,22 @@ import Foundation
 import UIKit
 
 extension UIAlertController {
+    /**
+        Create a new Alert given an ErrorType.
+        - parameter errorType: an ErrorType (optional).
+        - returns: A UIAlertController.
+     */
     class func errorAlert(errorType: ErrorType = ObjectCreationError.Unknown) -> UIAlertController {
         let alert = UIAlertController(title: "Ops", message: messageForErrorType(errorType), preferredStyle: .Alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
         return alert
     }
     
+    /**
+        Identify a correct message to use on a alert.
+        - parameter errorType: an ErrorType.
+        - returns: a error message
+     */
     class func messageForErrorType(errorType: ErrorType) -> String {
         switch errorType {
         case InternetError.NoConnection:

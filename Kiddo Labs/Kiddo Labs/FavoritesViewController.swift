@@ -29,6 +29,9 @@ class FavoritesViewController: BaseCollectionViewController {
     
     // MARK: - Data Fetcher
     
+    /**
+        Fetch all the favorite movies from the database.
+     */
     func fetchFavorites() {
         let result = appDelegate.realm.objects(Favorite.self)
         favoritesList = Array(result)

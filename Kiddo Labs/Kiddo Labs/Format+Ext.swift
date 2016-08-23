@@ -9,6 +9,10 @@
 import Foundation
 
 extension Format {
+    /**
+        Create a new Format given a JSON.
+        - parameter json: a JSONDictionary with format data.
+     */
     convenience init(json: JSONDictionary) throws {
         guard let formatName = json[JSON_KEY_FORMAT_NAME] as? String,
             price = json[JSON_KEY_FORMAT_PRICE] as? String,

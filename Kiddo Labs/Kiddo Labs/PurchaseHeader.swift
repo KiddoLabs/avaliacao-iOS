@@ -8,6 +8,7 @@
 
 import UIKit
 
+// Section Header for the PurchaseViewController
 class PurchaseHeader: UICollectionReusableView {
     @IBOutlet weak var headerTitle: UILabel!
 }

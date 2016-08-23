@@ -10,13 +10,17 @@ import Foundation
 
 class MovieInformationRequest: BaseRequest {
     
-    // MARK: - Attributes
-    private var path = MOVIE_DETAILS_PATH
-    
     // MARK: - Instance Methods
+    
+    /**
+     Make a request to retrive movie information
+     - parameter movie: the movie which will be used to retrive more information of.
+     - parameter completion: a closure which receives a tuple containing a movie and an error, if there was any.
+     */
     func makeRequest(movie: Movie, completion: (Movie?, ErrorType?) -> ()) {
-        super.makeRequest(.GET, path: path + String(movie.id), parameters: nil) { response in
+        super.makeRequest(.GET, path: MOVIE_DETAILS_PATH + String(movie.id), parameters: nil) { response in
             guard let json = response.result.value as? JSONDictionary else {
+                // -1009 stands for no internet connection error
                 if response.result.error?.code == -1009 {
                     completion(nil, InternetError.NoConnection)
                 } else {

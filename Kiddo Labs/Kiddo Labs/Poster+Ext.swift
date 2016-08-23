@@ -9,6 +9,10 @@
 import Foundation
 
 extension Poster {
+    /**
+        Create a new Poster given a JSON.
+        - parameter json: a JSONDictionary with movie data.
+     */
     convenience init(json: JSONDictionary) throws {
         guard let thumbnail = json[JSON_KEY_THUMBNAIL] as? String,
             largePoster = json[JSON_KEY_LARGE_IMAGE] as? String else {

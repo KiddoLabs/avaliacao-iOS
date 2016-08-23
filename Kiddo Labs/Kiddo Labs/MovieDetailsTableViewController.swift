@@ -34,6 +34,7 @@ class MovieDetailsTableViewController: UITableViewController {
         super.viewWillAppear(animated)
         movieFormatsSegmentedControl.removeAllSegments()
         
+        // Try to fetch the movie information and configure the view with the received data.
         if let movie = self.movie {
             self.fetchMovieInformation(movie, completion: {
                 self.fill(self.movie!)
@@ -46,6 +47,10 @@ class MovieDetailsTableViewController: UITableViewController {
     
     // MARK: - Instance Methods
     
+    /**
+        Get all available movie formats for the selected movie.
+        - returns: A string list of formats.
+     */
     func availableQualityFormats() -> [String] {
         var allFormats = [String]()
         if let availableSources = movie?.availableSources {
@@ -60,6 +65,10 @@ class MovieDetailsTableViewController: UITableViewController {
         return allFormats
     }
     
+    /**
+        Configure the view with movie data.
+        - parameter movie: The selected movie.
+     */
     func fill(movie: Movie) {
         configureView()
         
@@ -75,12 +84,18 @@ class MovieDetailsTableViewController: UITableViewController {
     
     // MARK: - Configuration Methods
     
+    /**
+        Set initial state of the navigation bar and toolbar.
+     */
     func configureNavigationController() {
         navigationController?.toolbarHidden = false
         navigationController?.navigationBar.tintColor = CUSTOM_RED_COLOR
         navigationController?.navigationBar.translucent = false
     }
     
+    /**
+        Set the initial state of the view elements.
+     */
     func configureView() {
         titleLabel.backgroundColor = UIColor.whiteColor()
         yearLabel.backgroundColor = UIColor.whiteColor()
@@ -91,6 +106,9 @@ class MovieDetailsTableViewController: UITableViewController {
         favoriteImageView.addGestureRecognizer(tapGestureRecognizer)
     }
     
+    /**
+        Configure the segmented control with the available formats.
+     */
     func configureSegmentedControl() {
         let formats = availableQualityFormats()
         for (index, format) in formats.enumerate() {
@@ -102,6 +120,9 @@ class MovieDetailsTableViewController: UITableViewController {
         }
     }
     
+    /**
+        Configure the share button.
+     */
     func configureShareButton() {
         let rightBarButtonItem = UIBarButtonItem(image: UIImage(named: SHARE_IMAGE), style: .Plain, target: self, action: #selector(MovieDetailsTableViewController.shareButtonPressed))
         self.navigationItem.rightBarButtonItem = rightBarButtonItem
@@ -109,6 +130,11 @@ class MovieDetailsTableViewController: UITableViewController {
     
     // MARK: - Data Fetcher
     
+    /**
+        Fetch movie information given a movie ID.
+        - parameter movie: The selected movie.
+        - parameter completion: The completion closeru to be used after fetching the movie information.
+     */
     func fetchMovieInformation(movie: Movie, completion: () -> ()) {
         MovieInformationRequest().makeRequest(movie) { movie, error in
             if error != nil {
@@ -126,6 +152,9 @@ class MovieDetailsTableViewController: UITableViewController {
     
     // MARK: - Favorites
     
+    /**
+        Configure the favorite label and the favorite image.
+     */
     func configureFavorites() {
         if isFavorite {
             favoriteButton.setTitle(LABELS_REMOVE_FROM_FAVORITES, forState: .Normal)
@@ -136,6 +165,9 @@ class MovieDetailsTableViewController: UITableViewController {
         }
     }
     
+    /**
+        Add a movie to favorites database.
+     */
     func addToFavorites() {
         try! appDelegate.realm.write {
             if let movie = self.movie {
@@ -152,6 +184,9 @@ class MovieDetailsTableViewController: UITableViewController {
         }
     }
     
+    /**
+        Delete a movie from favorites database.
+     */
     func deleteFromFavorites() {
         try! appDelegate.realm.write {
             if let persistedMovie = appDelegate.realm.objects(Favorite.self).filter("id == \(movie!.id)").first {
@@ -164,6 +199,9 @@ class MovieDetailsTableViewController: UITableViewController {
     
     // MARK: - Actions
     
+    /**
+        Action to share which movie the user is watching.
+     */
     func shareButtonPressed() {
         if let movie = self.movie {
             let textToShare = "Estou assistindo \(movie.title)!"
@@ -174,6 +212,9 @@ class MovieDetailsTableViewController: UITableViewController {
         }
     }
     
+    /**
+        Action that fires when favorites button is pressed
+     */
     @IBAction func favoriteButtonPressed(sender: AnyObject) {
         if !isFavorite {
             addToFavorites()
@@ -185,6 +226,9 @@ class MovieDetailsTableViewController: UITableViewController {
         configureFavorites()
     }
     
+    /**
+        Action that fires when purchase button is pressed.
+     */
     @IBAction func purchaseButtonPressed(sender: AnyObject) {
         self.performSegueWithIdentifier(PURCHASE_SEGUE, sender: movie)
     }

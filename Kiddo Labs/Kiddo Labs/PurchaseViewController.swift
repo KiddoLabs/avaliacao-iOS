@@ -23,6 +23,9 @@ class PurchaseViewController: UICollectionViewController {
     
     // MARK: - Instance Methods
     
+    /**
+        Set initial configuration for toolbar and navigation bar.
+     */
     func configureNavigationController() {
         navigationController?.toolbarHidden = true
         navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
@@ -31,6 +34,9 @@ class PurchaseViewController: UICollectionViewController {
         navigationController?.navigationBar.tintColor = UIColor.whiteColor()
     }
     
+    /**
+        Set the movie poster as the backgound image.
+     */
     func setBackgroundImage() {
         if let movie = self.movie {
             Shared.imageCache.fetch(URL: movie.poster.largePoster).onSuccess { image in

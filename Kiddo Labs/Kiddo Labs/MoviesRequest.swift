@@ -26,6 +26,12 @@ class MoviesRequest: BaseRequest {
     }
     
     // MARK: - Instance Methods
+    
+    /**
+     Make a request to GuideBox.
+     - parameter movieIndex: represents the index from where it will start retrieving more movies.
+     - parameter completion: The completion closure containing a tuple with movies and a error, if there was any.
+     */
     func makeRequest(movieIndex: Int, completion: ([Movie]?, ErrorType?) -> ()) {
         super.makeRequest(.GET, path: path + parameters(movieIndex), parameters: nil) { response in
             guard let json = response.result.value?[JSON_KEY_RESULTS] as? [JSONDictionary] else {
@@ -42,6 +48,11 @@ class MoviesRequest: BaseRequest {
         }
     }
     
+    /**
+    Concatenate all parameters to create a path.
+     - parameter movieIndex: represents the index from where it will start retrieving more movies.
+     - returns: a path to use in the request.
+     */
     func parameters(movieIndex: Int) -> String {
         return "\(movieIndex)/\(numberOfMovies)/\(source)/\(plataform)"
     }

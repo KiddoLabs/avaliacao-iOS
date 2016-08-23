@@ -30,12 +30,19 @@ class BaseCollectionViewController: UICollectionViewController {
     }
     
     // MARK: Instance Methods
+    
+    /**
+        Set navigation bar title.
+    */
     func addViewTitle() {
         let logoImageView = UIImageView(image: UIImage(named: isFavoriteView ? FAVORITES_LABEL : MOVIES_LABEL))
         let imageItem = UIBarButtonItem(customView: logoImageView)
         navigationItem.leftBarButtonItem = imageItem
     }
     
+    /**
+        Register movie collection view cell to be used later.
+     */
     func registerCell() {
         let nib = UINib(nibName: MOVIE_CELL, bundle: nil)
         self.collectionView?.registerNib(nib, forCellWithReuseIdentifier: MOVIE_CELL)
@@ -43,6 +50,11 @@ class BaseCollectionViewController: UICollectionViewController {
     
     // MARK: - Collection Control
     
+    /**
+        Returns a movie object. Checks if it is from favorites view or not.
+        - parameter indexPath: The indexPath of the movie.
+        - returns: a movie object.
+     */
     private func movie(indexPath: NSIndexPath) -> Movie? {
         let index = indexPath.row
         
