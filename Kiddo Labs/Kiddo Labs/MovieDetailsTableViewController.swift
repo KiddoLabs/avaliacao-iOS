@@ -112,7 +112,7 @@ class MovieDetailsTableViewController: UITableViewController {
     func fetchMovieInformation(movie: Movie, completion: () -> ()) {
         MovieInformationRequest().makeRequest(movie) { movie, error in
             if error != nil {
-                //TREAT ERROR
+                self.presentViewController(UIAlertController.errorAlert(error!), animated: true, completion: nil)
                 completion()
             }
             
@@ -147,7 +147,7 @@ class MovieDetailsTableViewController: UITableViewController {
                 favorite.year = movie.year
                 appDelegate.realm.add(favorite)
             } else {
-                // ALERT ERROR
+                self.presentViewController(UIAlertController.errorAlert(), animated: true, completion: nil)
             }
         }
     }
@@ -157,7 +157,7 @@ class MovieDetailsTableViewController: UITableViewController {
             if let persistedMovie = appDelegate.realm.objects(Favorite.self).filter("id == \(movie!.id)").first {
                 appDelegate.realm.delete(persistedMovie)
             } else {
-                // ALERT ERROR
+                self.presentViewController(UIAlertController.errorAlert(), animated: true, completion: nil)
             }
         }
     }
@@ -170,7 +170,7 @@ class MovieDetailsTableViewController: UITableViewController {
             let activityViewController = UIActivityViewController(activityItems: [textToShare], applicationActivities: nil)
             self.presentViewController(activityViewController, animated: true, completion: nil)
         } else {
-            // TREAT ERROR
+            self.presentViewController(UIAlertController.errorAlert(), animated: true, completion: nil)
         }
     }
     

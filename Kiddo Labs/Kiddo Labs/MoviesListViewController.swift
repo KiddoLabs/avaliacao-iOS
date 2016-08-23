@@ -33,15 +33,15 @@ class MoviesListViewController: BaseCollectionViewController {
     func fetchMovies(completion: (() -> ())? = nil) {
         MoviesRequest().makeRequest(movieIndex) { movies, error in
             if error != nil {
+                self.presentViewController(UIAlertController.errorAlert(error!), animated: true, completion: nil)
                 completion?()
-                // TREAT ERROR
             }
             
             if let moviesList = movies where moviesList.count > 0 {
                 self.moviesList.appendContentsOf(moviesList)
                 self.collectionView?.reloadData()
             } else {
-                print("Error: No movies found")
+                self.presentViewController(UIAlertController.errorAlert(error!), animated: true, completion: nil)
                 self.isLastPage = true
             }
             completion?()

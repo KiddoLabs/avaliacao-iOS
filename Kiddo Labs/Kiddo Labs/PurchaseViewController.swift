@@ -39,7 +39,7 @@ class PurchaseViewController: UICollectionViewController {
                 self.collectionView?.backgroundView = backgroundImageView
             }
         } else {
-            // TREAT ERROR
+            self.presentViewController(UIAlertController.errorAlert(), animated: true, completion: nil)
         }
         
     }

@@ -17,7 +17,11 @@ class MovieInformationRequest: BaseRequest {
     func makeRequest(movie: Movie, completion: (Movie?, ErrorType?) -> ()) {
         super.makeRequest(.GET, path: path + String(movie.id), parameters: nil) { response in
             guard let json = response.result.value as? JSONDictionary else {
-                completion(nil, JSONMappingError.KeyNotFound)
+                if response.result.error?.code == -1009 {
+                    completion(nil, InternetError.NoConnection)
+                } else {
+                    completion(nil, JSONMappingError.KeyNotFound)
+                }
                 return
             }
             

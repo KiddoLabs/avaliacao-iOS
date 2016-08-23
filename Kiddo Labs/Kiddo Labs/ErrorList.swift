@@ -15,3 +15,7 @@ enum JSONMappingError: ErrorType {
 enum ObjectCreationError: ErrorType {
     case Unknown
 }
+
+enum InternetError: ErrorType {
+    case NoConnection
+}
