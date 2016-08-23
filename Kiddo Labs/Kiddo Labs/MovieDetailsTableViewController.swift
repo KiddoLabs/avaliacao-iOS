@@ -19,10 +19,12 @@ class MovieDetailsTableViewController: UITableViewController {
     @IBOutlet weak var movieDescription: UILabel!
     @IBOutlet weak var formatsLabel: UILabel!
     @IBOutlet weak var favoriteButton: UIButton!
+    @IBOutlet weak var favoriteImageView: UIImageView!
     
     // MARK: - Attributes
     var movie: Movie?
     let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+    var isFavorite = false
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -34,7 +36,7 @@ class MovieDetailsTableViewController: UITableViewController {
         super.viewWillAppear(animated)
         
         if let movie = self.movie {
-            self.fetchMovieInformation(movie, completion: { 
+            self.fetchMovieInformation(movie, completion: {
                 self.fill(self.movie!)
             })
         }
@@ -44,12 +46,14 @@ class MovieDetailsTableViewController: UITableViewController {
     func fill(movie: Movie) {
         configureView()
         
+        isFavorite = !appDelegate.realm.objects(Favorite.self).filter("id == \(movie.id)").isEmpty
+        configureFavorites()
+        
         posterImageView.hnk_setImageFromURL(movie.posterURL)
         titleLabel.text = movie.title
         yearLabel.text = String(movie.year)
         movieDescription.text = movie.description
         configureSegmentedControl()
-        favoriteButtonPressed()
     }
     
     func configureSegmentedControl() {
@@ -94,12 +98,25 @@ class MovieDetailsTableViewController: UITableViewController {
         favoriteButton.backgroundColor = UIColor.whiteColor()
     }
     
-    func favoriteButtonPressed() {
-        if appDelegate.realm.objects(Favorite.self).filter("id == \(movie!.id)").isEmpty {
+    func configureFavorites() {
+        if isFavorite {
+            favoriteButton.setTitle("Remover dos favoritos", forState: .Normal)
+            favoriteImageView.image = UIImage(named: "star_highlighted")
+        } else {
+            favoriteButton.setTitle("Adicionar aos favoritos", forState: .Normal)
+            favoriteImageView.image = UIImage(named: "star")
+        }
+    }
+    
+    @IBAction func favoriteButtonPressed(sender: AnyObject) {
+        if !isFavorite {
             addToFavorites()
+            isFavorite = true
         } else {
             deleteFromFavorites()
+            isFavorite = false
         }
+        configureFavorites()
     }
     
     func addToFavorites() {

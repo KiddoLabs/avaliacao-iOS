@@ -167,11 +167,16 @@
                                                     </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JHZ-ao-qk1">
-                                                    <rect key="frame" x="172" y="137" width="106" height="28"/>
+                                                    <rect key="frame" x="172" y="137" width="140" height="28"/>
                                                     <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="140" id="EbN-x9-31G"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <state key="normal" title="Add aos favoritos"/>
+                                                    <connections>
+                                                        <action selector="favoriteButtonPressed:" destination="2Eo-fV-evP" eventType="touchUpInside" id="dxT-zg-cvr"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -247,6 +252,7 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="favoriteButton" destination="JHZ-ao-qk1" id="kv1-X3-Alq"/>
+                        <outlet property="favoriteImageView" destination="6cZ-8g-yRj" id="reh-aK-uoe"/>
                         <outlet property="formatsLabel" destination="usD-ke-FvK" id="S00-Wr-cdb"/>
                         <outlet property="movieDescription" destination="rE3-uU-f2h" id="vY6-V8-ecM"/>
                         <outlet property="movieFormatsSegmentedControl" destination="eqM-9u-8Ii" id="WOS-7H-n8k"/>
