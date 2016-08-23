@@ -66,8 +66,14 @@ class MovieDetailsTableViewController: UITableViewController {
     }
     
     func configureShareButton() {
-        let rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "share"), style: .Plain, target: self, action: nil)
+        let rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "share"), style: .Plain, target: self, action: #selector(MovieDetailsTableViewController.shareButtonPressed))
         self.navigationItem.rightBarButtonItem = rightBarButtonItem
+    }
+    
+    func shareButtonPressed() {
+        let textToShare = "Estou assistindo \(movie!.title)!"
+        let activityViewController = UIActivityViewController(activityItems: [textToShare], applicationActivities: nil)
+        self.presentViewController(activityViewController, animated: true, completion: nil)
     }
     
     func fetchMovieInformation(movie: Movie, completion: () -> ()) {
