@@ -20,11 +20,15 @@ class MoviesListViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         let nib = UINib(nibName: "MovieCell", bundle: nil)
         self.collectionView?.registerNib(nib, forCellWithReuseIdentifier: "MovieCell")
         addViewTitle()
         fetchMovies()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.toolbarHidden = true
     }
     
     func addViewTitle() {
@@ -116,7 +120,7 @@ class MoviesListViewController: UICollectionViewController {
     // MARK: - Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "movieDetails" {
-            if  let movieDetailsViewController = segue.destinationViewController as? MovieDetailsTableViewController,
+            if  let movieDetailsViewController = (segue.destinationViewController as? MovieDetailsTableViewController),
                 let movie = sender as? Movie {
                 movieDetailsViewController.hidesBottomBarWhenPushed = true
                 movieDetailsViewController.movie = movie

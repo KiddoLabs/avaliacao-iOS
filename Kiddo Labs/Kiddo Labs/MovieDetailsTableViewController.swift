@@ -30,6 +30,7 @@ class MovieDetailsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         movieFormatsSegmentedControl.removeAllSegments()
+        navigationController?.toolbarHidden = false
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -61,6 +62,10 @@ class MovieDetailsTableViewController: UITableViewController {
         for (index, format) in formats.enumerate() {
             movieFormatsSegmentedControl.insertSegmentWithTitle(format, atIndex: index, animated: false)
         }
+    }
+    
+    func addToolbar() {
+        
     }
     
     func fetchMovieInformation(movie: Movie, completion: () -> ()) {

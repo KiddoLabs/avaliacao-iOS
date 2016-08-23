@@ -255,8 +255,13 @@
                             <outlet property="delegate" destination="2Eo-fV-evP" id="G6A-YX-ZGA"/>
                         </connections>
                     </tableView>
-                    <toolbarItems/>
-                    <nil key="simulatedBottomBarMetrics"/>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="gp3-gm-lEz"/>
+                        <barButtonItem title="COMPRAR" style="done" id="Ap4-gb-UQD">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="QQT-6G-miI"/>
+                    </toolbarItems>
                     <connections>
                         <outlet property="favoriteButton" destination="JHZ-ao-qk1" id="kv1-X3-Alq"/>
                         <outlet property="favoriteImageView" destination="6cZ-8g-yRj" id="reh-aK-uoe"/>
@@ -275,7 +280,7 @@
         <!--Home-->
         <scene sceneID="PlZ-ZZ-gr2">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mOi-HN-gFa" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="mOi-HN-gFa" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" image="home" id="EzE-cp-zRa"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="LH9-KX-tjz">
@@ -284,6 +289,11 @@
                         <color key="tintColor" red="0.78845952181208057" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="2K2-ZM-UYz">
+                        <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.78845952180000001" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </toolbar>
                     <connections>
                         <segue destination="jRm-68-ns4" kind="relationship" relationship="rootViewController" id="AIX-4a-8uG"/>
                     </connections>
