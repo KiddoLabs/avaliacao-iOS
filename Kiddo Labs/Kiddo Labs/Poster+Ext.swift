@@ -10,8 +10,8 @@ import Foundation
 
 extension Poster {
     convenience init(json: JSONDictionary) throws {
-        guard let thumbnail = json["poster_120x171"] as? String,
-            largePoster = json["poster_400x570"] as? String else {
+        guard let thumbnail = json[JSON_KEY_THUMBNAIL] as? String,
+            largePoster = json[JSON_KEY_LARGE_IMAGE] as? String else {
                 throw JSONMappingError.KeyNotFound
         }
         

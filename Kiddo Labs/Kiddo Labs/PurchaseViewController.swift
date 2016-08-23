@@ -61,7 +61,7 @@ class PurchaseViewController: UICollectionViewController {
         
         var title: String?
         if isEmpty {
-            title = "Indisponível :("
+            title = LABELS_UNAVAILABLE
         } else {
             title = movie?.availableSources![indexPath.section].displayName
         }
@@ -79,7 +79,7 @@ class PurchaseViewController: UICollectionViewController {
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PurchaseCell", forIndexPath: indexPath) as? PurchaseCollectionViewCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(PURCHASE_CELL, forIndexPath: indexPath) as? PurchaseCollectionViewCell
         let format = movie?.availableSources![indexPath.section].formats[indexPath.row]
         
         guard cell != nil else {

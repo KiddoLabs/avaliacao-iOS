@@ -54,7 +54,7 @@
                         <barButtonItem key="backBarButtonItem" title="Voltar" id="xqb-K0-3Vb"/>
                     </navigationItem>
                     <connections>
-                        <segue destination="2Eo-fV-evP" kind="show" identifier="movieDetails" id="dKO-Da-vBE"/>
+                        <segue destination="2Eo-fV-evP" kind="show" identifier="MovieDetails" id="dKO-Da-vBE"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IQk-zt-LvG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -85,7 +85,7 @@
                         <barButtonItem key="backBarButtonItem" title="Voltar" id="ffz-bu-v8N"/>
                     </navigationItem>
                     <connections>
-                        <segue destination="2Eo-fV-evP" kind="show" identifier="movieDetails" id="FEk-iL-Xce"/>
+                        <segue destination="2Eo-fV-evP" kind="show" identifier="MovieDetails" id="FEk-iL-Xce"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S53-0t-8zB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -382,7 +382,7 @@
                         <outlet property="posterImageView" destination="w5U-9k-3Sy" id="fDK-hl-pl5"/>
                         <outlet property="titleLabel" destination="ikO-Ar-6Ia" id="GeQ-oJ-N4M"/>
                         <outlet property="yearLabel" destination="JYx-h1-fno" id="KSt-S4-Br8"/>
-                        <segue destination="oim-dj-Sat" kind="show" identifier="purchaseOptions" id="Keu-x7-AIs"/>
+                        <segue destination="oim-dj-Sat" kind="show" identifier="PurchaseOptions" id="Keu-x7-AIs"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1zh-62-myZ" userLabel="First Responder" sceneMemberID="firstResponder"/>

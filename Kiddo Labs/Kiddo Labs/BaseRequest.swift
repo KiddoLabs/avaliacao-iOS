@@ -12,7 +12,7 @@ import Alamofire
 class BaseRequest {
     
     // MARK: - Attributes
-    private let basePath = "https://api-public.guidebox.com/v1.43/US/\(GUIDEBOX_KEY)/"
+    private let basePath = BASE_PATH
     
     // MARK: - Instance Methods
     func makeRequest(httpMethod: Alamofire.Method, path: String, parameters: JSONDictionary?, completion: (Response<AnyObject, NSError>) -> ()) {

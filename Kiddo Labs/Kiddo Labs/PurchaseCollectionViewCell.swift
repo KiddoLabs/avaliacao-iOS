@@ -14,7 +14,6 @@ class PurchaseCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var purchaseType: UILabel!
     
-    
     // MARK: - Life Cycle
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -25,25 +24,23 @@ class PurchaseCollectionViewCell: UICollectionViewCell {
     }
     
     // MARK: - Content Managment
-    
     func fill(format: Format) {
         clean()
         configure()
         formatLabel.text = format.formatName
-        priceLabel.text = format.price
-        purchaseType.text = format.purchaseType
+        priceLabel.text = "$" + format.price
+        purchaseType.text = format.purchaseType.capitalizedString
     }
     
     func clean() {
-        formatLabel.text = "Unknown"
-        priceLabel.text = "No price"
-        purchaseType.text = "Unknown"
+        formatLabel.text = LABELS_UNKNOWN
+        priceLabel.text = LABELS_NO_PRICE
+        purchaseType.text = LABELS_UNKNOWN
     }
     
     func configure() {
-        // Configuring cell
         layer.cornerRadius = 5.0
         layer.masksToBounds = true
-        self.backgroundColor = UIColor(red: 170.0/255.0, green: 170.0/255.0, blue: 170.0/255.0, alpha: 0.5)
+        self.backgroundColor = CUSTOM_GREY_COLOR
     }
 }

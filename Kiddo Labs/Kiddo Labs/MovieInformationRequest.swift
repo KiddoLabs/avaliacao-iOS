@@ -11,7 +11,7 @@ import Foundation
 class MovieInformationRequest: BaseRequest {
     
     // MARK: - Attributes
-    private var path = "movie/"
+    private var path = MOVIE_DETAILS_PATH
     
     // MARK: - Instance Methods
     func makeRequest(movie: Movie, completion: (Movie?, ErrorType?) -> ()) {

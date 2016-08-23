@@ -42,7 +42,7 @@ class MovieDetailsTableViewController: UITableViewController {
     // MARK: - Instance Methods
     func configureNavigationController() {
         navigationController?.toolbarHidden = false
-        navigationController?.navigationBar.tintColor = UIColor(red: 201.0/255.0, green: 0, blue: 0, alpha: 1.0)
+        navigationController?.navigationBar.tintColor = CUSTOM_RED_COLOR
         navigationController?.navigationBar.translucent = false
     }
     
@@ -64,15 +64,14 @@ class MovieDetailsTableViewController: UITableViewController {
         for (index, format) in formats.enumerate() {
             movieFormatsSegmentedControl.insertSegmentWithTitle(format, atIndex: index, animated: false)
         }
-    gs
-        
+    
         if movieFormatsSegmentedControl.numberOfSegments == 0 {
-            movieFormatsSegmentedControl.insertSegmentWithTitle("Indisponível", atIndex: 0, animated: false)
+            movieFormatsSegmentedControl.insertSegmentWithTitle(LABELS_UNAVAILABLE, atIndex: 0, animated: false)
         }
     }
     
     func configureShareButton() {
-        let rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "share"), style: .Plain, target: self, action: #selector(MovieDetailsTableViewController.shareButtonPressed))
+        let rightBarButtonItem = UIBarButtonItem(image: UIImage(named: SHARE_IMAGE), style: .Plain, target: self, action: #selector(MovieDetailsTableViewController.shareButtonPressed))
         self.navigationItem.rightBarButtonItem = rightBarButtonItem
     }
     
@@ -117,11 +116,11 @@ class MovieDetailsTableViewController: UITableViewController {
     
     func configureFavorites() {
         if isFavorite {
-            favoriteButton.setTitle("Remover dos favoritos", forState: .Normal)
-            favoriteImageView.image = UIImage(named: "star_highlighted")
+            favoriteButton.setTitle(LABELS_REMOVE_FROM_FAVORITES, forState: .Normal)
+            favoriteImageView.image = UIImage(named: STAR_HIGHLIGHTED)
         } else {
-            favoriteButton.setTitle("Adicionar aos favoritos", forState: .Normal)
-            favoriteImageView.image = UIImage(named: "star")
+            favoriteButton.setTitle(LABELS_ADD_TO_FAVORITES, forState: .Normal)
+            favoriteImageView.image = UIImage(named: STAR)
         }
     }
     
@@ -137,7 +136,7 @@ class MovieDetailsTableViewController: UITableViewController {
     }
     
     @IBAction func purchaseButtonPressed(sender: AnyObject) {
-        self.performSegueWithIdentifier("purchaseOptions", sender: movie)
+        self.performSegueWithIdentifier(PURCHASE_SEGUE, sender: movie)
     }
     
     func addToFavorites() {
@@ -160,11 +159,11 @@ class MovieDetailsTableViewController: UITableViewController {
 
     // MARK: - Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "purchaseOptions" {
+        if segue.identifier == PURCHASE_SEGUE {
             if  let purchaseViewController = (segue.destinationViewController as? PurchaseViewController),
                 let movie = sender as? Movie {
                 purchaseViewController.movie = movie
-                navigationItem.backBarButtonItem = UIBarButtonItem(title: "Voltar", style: .Plain, target: nil, action: nil)
+                navigationItem.backBarButtonItem = UIBarButtonItem(title: LABELS_BACK, style: .Plain, target: nil, action: nil)
             }
         }
     }

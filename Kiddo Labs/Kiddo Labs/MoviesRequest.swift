@@ -11,7 +11,7 @@ import Foundation
 class MoviesRequest: BaseRequest {
     
     // MARK: - Attributes
-    private var path = "movies/all/"
+    private var path = MOVIES_PATH
     var movieIndex: Int
     var numberOfMovies: Int
     var source: String
@@ -28,7 +28,7 @@ class MoviesRequest: BaseRequest {
     // MARK: - Instance Methods
     func makeRequest(movieIndex: Int, completion: ([Movie]?, ErrorType?) -> ()) {
         super.makeRequest(.GET, path: path + parameters(movieIndex), parameters: nil) { response in
-            guard let json = response.result.value?["results"] as? [JSONDictionary] else {
+            guard let json = response.result.value?[JSON_KEY_RESULTS] as? [JSONDictionary] else {
                 completion(nil, JSONMappingError.KeyNotFound)
                 return
             }

@@ -10,8 +10,8 @@ import Foundation
 
 extension Source {
     convenience init(json: JSONDictionary) throws {
-        guard let displayName = json["display_name"] as? String,
-            formatsJSON = json["formats"] as? [JSONDictionary] else {
+        guard let displayName = json[JSON_KEY_SOURCE_DISPLAY_NAME] as? String,
+            formatsJSON = json[JSON_KEY_FORMATS] as? [JSONDictionary] else {
                 throw JSONMappingError.KeyNotFound
         }
         

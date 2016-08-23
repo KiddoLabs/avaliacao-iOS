@@ -38,8 +38,8 @@ class MovieCollectionViewCell: UICollectionViewCell {
     }
     
     func clean() {
-        titleLabel.text = "Untitled"
-        yearLabel.text = "Unknown"
+        titleLabel.text = LABELS_UNTITLED
+        yearLabel.text = LABELS_UNKNOWN
         posterImageView.image = nil
     }
     

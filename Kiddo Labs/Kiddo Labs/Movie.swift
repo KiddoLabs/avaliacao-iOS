@@ -18,7 +18,6 @@ class Movie {
     var availableSources: [Source]?
     
     // MARK: - Initializer
-    
     init(id: Int, title: String, year: Int, poster: Poster) {
         self.id = id
         self.title = title

@@ -20,8 +20,8 @@ class MoviesListViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let nib = UINib(nibName: "MovieCell", bundle: nil)
-        self.collectionView?.registerNib(nib, forCellWithReuseIdentifier: "MovieCell")
+        let nib = UINib(nibName: MOVIE_CELL, bundle: nil)
+        self.collectionView?.registerNib(nib, forCellWithReuseIdentifier: MOVIE_CELL)
         addViewTitle()
         fetchMovies()
     }
@@ -32,7 +32,7 @@ class MoviesListViewController: UICollectionViewController {
     }
     
     func addViewTitle() {
-        let logoImageView = UIImageView(image: UIImage(named: "moviesLabel"))
+        let logoImageView = UIImageView(image: UIImage(named: MOVIES_LABEL))
         let imageItem = UIBarButtonItem(customView: logoImageView)
         navigationItem.leftBarButtonItem = imageItem
     }
@@ -87,7 +87,7 @@ class MoviesListViewController: UICollectionViewController {
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("MovieCell", forIndexPath: indexPath) as? MovieCollectionViewCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(MOVIE_CELL, forIndexPath: indexPath) as? MovieCollectionViewCell
         let movie = self.movie(indexPath)
         
         guard cell != nil else {
@@ -112,13 +112,13 @@ class MoviesListViewController: UICollectionViewController {
     
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         if let movie = movie(indexPath) {
-            self.performSegueWithIdentifier("movieDetails", sender: movie)
+            self.performSegueWithIdentifier(MOVIE_DETAILS_SEGUE, sender: movie)
         }
     }
     
     // MARK: - Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "movieDetails" {
+        if segue.identifier == MOVIE_DETAILS_SEGUE {
             if  let movieDetailsViewController = (segue.destinationViewController as? MovieDetailsTableViewController),
                 let movie = sender as? Movie {
                 movieDetailsViewController.hidesBottomBarWhenPushed = true

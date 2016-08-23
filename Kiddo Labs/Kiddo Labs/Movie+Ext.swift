@@ -10,9 +10,9 @@ import Foundation
 
 extension Movie {
     convenience init(json: JSONDictionary) throws {
-        guard let id = json["id"] as? Int,
-                  title = json["title"] as? String,
-                  year = json["release_year"] as? Int else {
+        guard let id = json[JSON_KEY_ID] as? Int,
+                  title = json[JSON_KEY_TITLE] as? String,
+                  year = json[JSON_KEY_RELEASE_YEAR] as? Int else {
             throw JSONMappingError.KeyNotFound
         }
         
@@ -21,6 +21,8 @@ extension Movie {
             poster = try Poster(json: json)
         } catch JSONMappingError.KeyNotFound {
             throw JSONMappingError.KeyNotFound
+        } catch ObjectCreationError.Unknown {
+            throw ObjectCreationError.Unknown
         }
         
         self.init(id: id, title: title, year: year, poster: poster!)
@@ -44,8 +46,8 @@ extension Movie {
     }
     
     func movieInformation(jsonArray: JSONDictionary) -> (Movie?, ErrorType?) {
-        guard let description = jsonArray["overview"] as? String,
-                  sourcesJSON = jsonArray["purchase_ios_sources"] as? [JSONDictionary] else {
+        guard let description = jsonArray[JSON_KEY_DESCRIPTION] as? String,
+                  sourcesJSON = jsonArray[JSON_KEY_SOURCES] as? [JSONDictionary] else {
             return (nil, JSONMappingError.KeyNotFound)
         }
         

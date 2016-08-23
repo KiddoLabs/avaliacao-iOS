@@ -10,9 +10,9 @@ import Foundation
 
 extension Format {
     convenience init(json: JSONDictionary) throws {
-        guard let formatName = json["format"] as? String,
-            price = json["price"] as? String,
-            purchaseType = json["type"] as? String else {
+        guard let formatName = json[JSON_KEY_FORMAT_NAME] as? String,
+            price = json[JSON_KEY_FORMAT_PRICE] as? String,
+            purchaseType = json[JSON_KEY_FORMAT_TYPE] as? String else {
                 throw JSONMappingError.KeyNotFound
         }
         
