@@ -32,12 +32,16 @@ class PurchaseViewController: UICollectionViewController {
     }
     
     func setBackgroundImage() {
-        Shared.imageCache.fetch(URL: movie!.poster.largePoster).onSuccess { image in
-            let bgImage = UIImageView();
-            bgImage.image = image
-            bgImage.contentMode = .ScaleToFill
-            self.collectionView?.backgroundView = bgImage
+        if let movie = self.movie {
+            Shared.imageCache.fetch(URL: movie.poster.largePoster).onSuccess { image in
+                let backgroundImageView = UIImageView(image: image)
+                backgroundImageView.contentMode = .ScaleToFill
+                self.collectionView?.backgroundView = backgroundImageView
+            }
+        } else {
+            // TREAT ERROR
         }
+        
     }
     
     // MARK: - Collection View Data Source
@@ -93,6 +97,4 @@ class PurchaseViewController: UICollectionViewController {
         cell?.fill(format!)
         return cell!
     }
-    
-    // MARK: - Collection View Delegate
 }

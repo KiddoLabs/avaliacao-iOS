@@ -12,6 +12,7 @@ import RealmSwift
 class MovieDetailsTableViewController: UITableViewController {
     
     // MARK: - IBOutlets
+    
     @IBOutlet weak var posterImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var yearLabel: UILabel!
@@ -22,76 +23,28 @@ class MovieDetailsTableViewController: UITableViewController {
     @IBOutlet weak var favoriteImageView: UIImageView!
     
     // MARK: - Attributes
+    
     var movie: Movie?
     let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     var isFavorite = false
     
+    // MARK: - Life Cycle
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         movieFormatsSegmentedControl.removeAllSegments()
-        configureNavigationController()
         
         if let movie = self.movie {
             self.fetchMovieInformation(movie, completion: {
                 self.fill(self.movie!)
             })
         }
+        
         configureShareButton()
+        configureNavigationController()
     }
     
     // MARK: - Instance Methods
-    func configureNavigationController() {
-        navigationController?.toolbarHidden = false
-        navigationController?.navigationBar.tintColor = CUSTOM_RED_COLOR
-        navigationController?.navigationBar.translucent = false
-    }
-    
-    func fill(movie: Movie) {
-        configureView()
-        
-        isFavorite = !appDelegate.realm.objects(Favorite.self).filter("id == \(movie.id)").isEmpty
-        configureFavorites()
-        
-        posterImageView.hnk_setImageFromURL(movie.poster.thumbnail)
-        titleLabel.text = movie.title
-        yearLabel.text = String(movie.year)
-        movieDescription.text = movie.description
-        configureSegmentedControl()
-    }
-    
-    func configureSegmentedControl() {
-        let formats = availableQualityFormats()
-        for (index, format) in formats.enumerate() {
-            movieFormatsSegmentedControl.insertSegmentWithTitle(format, atIndex: index, animated: false)
-        }
-    
-        if movieFormatsSegmentedControl.numberOfSegments == 0 {
-            movieFormatsSegmentedControl.insertSegmentWithTitle(LABELS_UNAVAILABLE, atIndex: 0, animated: false)
-        }
-    }
-    
-    func configureShareButton() {
-        let rightBarButtonItem = UIBarButtonItem(image: UIImage(named: SHARE_IMAGE), style: .Plain, target: self, action: #selector(MovieDetailsTableViewController.shareButtonPressed))
-        self.navigationItem.rightBarButtonItem = rightBarButtonItem
-    }
-    
-    func shareButtonPressed() {
-        let textToShare = "Estou assistindo \(movie!.title)!"
-        let activityViewController = UIActivityViewController(activityItems: [textToShare], applicationActivities: nil)
-        self.presentViewController(activityViewController, animated: true, completion: nil)
-    }
-    
-    func fetchMovieInformation(movie: Movie, completion: () -> ()) {
-        MovieInformationRequest().makeRequest(movie) { movie, error in
-            if error != nil {
-                //TREAT ERROR
-                completion()
-            }
-            
-            self.movie = movie
-            completion()
-        }
-    }
     
     func availableQualityFormats() -> [String] {
         var allFormats = [String]()
@@ -107,12 +60,68 @@ class MovieDetailsTableViewController: UITableViewController {
         return allFormats
     }
     
+    func fill(movie: Movie) {
+        configureView()
+        
+        isFavorite = !appDelegate.realm.objects(Favorite.self).filter("id == \(movie.id)").isEmpty
+        configureFavorites()
+        
+        posterImageView.hnk_setImageFromURL(movie.poster.thumbnail)
+        titleLabel.text = movie.title
+        yearLabel.text = String(movie.year)
+        movieDescription.text = movie.description
+        configureSegmentedControl()
+    }
+    
+    // MARK: - Configuration Methods
+    
+    func configureNavigationController() {
+        navigationController?.toolbarHidden = false
+        navigationController?.navigationBar.tintColor = CUSTOM_RED_COLOR
+        navigationController?.navigationBar.translucent = false
+    }
+    
     func configureView() {
         titleLabel.backgroundColor = UIColor.whiteColor()
         yearLabel.backgroundColor = UIColor.whiteColor()
         formatsLabel.backgroundColor = UIColor.whiteColor()
         favoriteButton.backgroundColor = UIColor.whiteColor()
     }
+    
+    func configureSegmentedControl() {
+        let formats = availableQualityFormats()
+        for (index, format) in formats.enumerate() {
+            movieFormatsSegmentedControl.insertSegmentWithTitle(format, atIndex: index, animated: false)
+        }
+        
+        if movieFormatsSegmentedControl.numberOfSegments == 0 {
+            movieFormatsSegmentedControl.insertSegmentWithTitle(LABELS_UNAVAILABLE, atIndex: 0, animated: false)
+        }
+    }
+    
+    func configureShareButton() {
+        let rightBarButtonItem = UIBarButtonItem(image: UIImage(named: SHARE_IMAGE), style: .Plain, target: self, action: #selector(MovieDetailsTableViewController.shareButtonPressed))
+        self.navigationItem.rightBarButtonItem = rightBarButtonItem
+    }
+    
+    // MARK: - Data Fetcher
+    
+    func fetchMovieInformation(movie: Movie, completion: () -> ()) {
+        MovieInformationRequest().makeRequest(movie) { movie, error in
+            if error != nil {
+                //TREAT ERROR
+                completion()
+            }
+            
+            if movie != nil {
+                self.movie = movie!
+            }
+    
+            completion()
+        }
+    }
+    
+    // MARK: - Favorites
     
     func configureFavorites() {
         if isFavorite {
@@ -121,6 +130,44 @@ class MovieDetailsTableViewController: UITableViewController {
         } else {
             favoriteButton.setTitle(LABELS_ADD_TO_FAVORITES, forState: .Normal)
             favoriteImageView.image = UIImage(named: STAR)
+        }
+    }
+    
+    func addToFavorites() {
+        try! appDelegate.realm.write {
+            if let movie = self.movie {
+                let favorite = Favorite()
+                favorite.id = movie.id
+                favorite.title = movie.title
+                favorite.thumbnail = movie.poster.thumbnail.absoluteString
+                favorite.largerPoster = movie.poster.largePoster.absoluteString
+                favorite.year = movie.year
+                appDelegate.realm.add(favorite)
+            } else {
+                // ALERT ERROR
+            }
+        }
+    }
+    
+    func deleteFromFavorites() {
+        try! appDelegate.realm.write {
+            if let persistedMovie = appDelegate.realm.objects(Favorite.self).filter("id == \(movie!.id)").first {
+                appDelegate.realm.delete(persistedMovie)
+            } else {
+                // ALERT ERROR
+            }
+        }
+    }
+    
+    // MARK: - Actions
+    
+    func shareButtonPressed() {
+        if let movie = self.movie {
+            let textToShare = "Estou assistindo \(movie.title)!"
+            let activityViewController = UIActivityViewController(activityItems: [textToShare], applicationActivities: nil)
+            self.presentViewController(activityViewController, animated: true, completion: nil)
+        } else {
+            // TREAT ERROR
         }
     }
     
@@ -138,27 +185,9 @@ class MovieDetailsTableViewController: UITableViewController {
     @IBAction func purchaseButtonPressed(sender: AnyObject) {
         self.performSegueWithIdentifier(PURCHASE_SEGUE, sender: movie)
     }
-    
-    func addToFavorites() {
-        try! appDelegate.realm.write {
-            let favorite = Favorite()
-            favorite.id = movie!.id
-            favorite.title = movie!.title
-            favorite.thumbnail = (movie?.poster.thumbnail.absoluteString)!
-            favorite.largerPoster = (movie?.poster.largePoster.absoluteString)!
-            favorite.year = movie!.year
-            appDelegate.realm.add(favorite)
-        }
-    }
-    
-    func deleteFromFavorites() {
-        try! appDelegate.realm.write {
-            let persistedMovie = appDelegate.realm.objects(Favorite.self).filter("id == \(movie!.id)").first
-            appDelegate.realm.delete(persistedMovie!)
-        }
-    }
 
     // MARK: - Navigation
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == PURCHASE_SEGUE {
             if  let purchaseViewController = (segue.destinationViewController as? PurchaseViewController),

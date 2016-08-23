@@ -21,7 +21,6 @@ class MoviesListViewController: BaseCollectionViewController {
         super.viewDidLoad()
         
         isFavoriteView = false
-        addViewTitle()
         fetchMovies()
     }
     

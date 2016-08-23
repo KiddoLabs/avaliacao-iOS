@@ -10,15 +10,18 @@ import UIKit
 
 class BaseCollectionViewController: UICollectionViewController {
     
+    // MARK: - Attributes
+    
     var favoritesList = [Favorite]()
     var moviesList = [Movie]()
     var isFavoriteView = false
     
     // MARK: - Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let nib = UINib(nibName: MOVIE_CELL, bundle: nil)
-        self.collectionView?.registerNib(nib, forCellWithReuseIdentifier: MOVIE_CELL)
+        registerCell()
+        addViewTitle()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -33,6 +36,11 @@ class BaseCollectionViewController: UICollectionViewController {
         navigationItem.leftBarButtonItem = imageItem
     }
     
+    func registerCell() {
+        let nib = UINib(nibName: MOVIE_CELL, bundle: nil)
+        self.collectionView?.registerNib(nib, forCellWithReuseIdentifier: MOVIE_CELL)
+    }
+    
     // MARK: - Collection Control
     
     private func movie(indexPath: NSIndexPath) -> Movie? {
@@ -43,10 +51,8 @@ class BaseCollectionViewController: UICollectionViewController {
                 let favorite = favoritesList[index]
                 return Movie(id: favorite.id, title: favorite.title, year: favorite.year, poster: Poster(thumbnail: NSURL(string: favorite.thumbnail)!, largePoster: NSURL(string: favorite.largerPoster)!))
             }
-        } else {
-            if moviesList.count > index && index >= 0 {
-                return moviesList[index]
-            }
+        } else if moviesList.count > index && index >= 0 {
+            return moviesList[index]
         }
         
         return nil

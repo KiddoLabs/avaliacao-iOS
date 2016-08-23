@@ -19,7 +19,6 @@ class FavoritesViewController: BaseCollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         isFavoriteView = true
-        addViewTitle()
     }
     
     override func viewWillAppear(animated: Bool) {
