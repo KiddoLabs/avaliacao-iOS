@@ -12,6 +12,7 @@ class MoviesListViewController: BaseCollectionViewController {
 
     // MARK: - Attributes
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     var isLastPage = false
     var movieIndex = 0
     
@@ -21,7 +22,10 @@ class MoviesListViewController: BaseCollectionViewController {
         isFavoriteView = false
         super.viewDidLoad()
         createPullToRefresh()
-        fetchMovies()
+        self.activityIndicator.startAnimating()
+        fetchMovies { 
+            self.activityIndicator.stopAnimating()
+        }
     }
     
     // MARK: - Data Fetcher

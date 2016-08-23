@@ -44,6 +44,11 @@
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
                         </collectionViewFlowLayout>
+                        <activityIndicatorView key="backgroundView" hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" id="VS0-2D-qfk">
+                            <rect key="frame" x="282" y="217" width="37" height="37"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="color" red="0.78845952180000001" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </activityIndicatorView>
                         <cells/>
                         <connections>
                             <outlet property="dataSource" destination="jRm-68-ns4" id="iBG-05-eSH"/>
@@ -54,6 +59,7 @@
                         <barButtonItem key="backBarButtonItem" title="Voltar" id="xqb-K0-3Vb"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="activityIndicator" destination="VS0-2D-qfk" id="aNN-ky-igy"/>
                         <segue destination="2Eo-fV-evP" kind="show" identifier="MovieDetails" id="dKO-Da-vBE"/>
                     </connections>
                 </collectionViewController>
@@ -478,6 +484,6 @@
         <image name="star_highlighted" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="FEk-iL-Xce"/>
+        <segue reference="dKO-Da-vBE"/>
     </inferredMetricsTieBreakers>
 </document>
