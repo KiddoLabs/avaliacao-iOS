@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class MovieDetailsTableViewController: UITableViewController {
     
@@ -21,6 +22,7 @@ class MovieDetailsTableViewController: UITableViewController {
     
     // MARK: - Attributes
     var movie: Movie?
+    let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -42,14 +44,12 @@ class MovieDetailsTableViewController: UITableViewController {
     func fill(movie: Movie) {
         configureView()
         
-        if let url = NSURL(string: movie.posterURL) {
-            posterImageView.hnk_setImageFromURL(url)
-        }
-        
+        posterImageView.hnk_setImageFromURL(movie.posterURL)
         titleLabel.text = movie.title
         yearLabel.text = String(movie.year)
-        movieDescription.text = movie.movieDescription
+        movieDescription.text = movie.description
         configureSegmentedControl()
+        favoriteButtonPressed()
     }
     
     func configureSegmentedControl() {
@@ -73,10 +73,14 @@ class MovieDetailsTableViewController: UITableViewController {
     
     func availableQualityFormats() -> [String] {
         var allFormats = [String]()
-        for sources in (movie?.sources)! {
-            for format in sources.formats {
-                if !allFormats.contains(format.format) {
-                    allFormats.append(format.format)
+        if let availableFormats = movie?.availableFormats {
+            for formatsDictionary in availableFormats {
+                if let formats = formatsDictionary["formats"] as? [[String: AnyObject]] {
+                    for format in formats {
+                        if !allFormats.contains(format["format"] as! String) {
+                            allFormats.append(format["format"] as! String)
+                        }
+                    }
                 }
             }
         }
@@ -88,5 +92,28 @@ class MovieDetailsTableViewController: UITableViewController {
         yearLabel.backgroundColor = UIColor.whiteColor()
         formatsLabel.backgroundColor = UIColor.whiteColor()
         favoriteButton.backgroundColor = UIColor.whiteColor()
+    }
+    
+    func favoriteButtonPressed() {
+        if appDelegate.realm.objects(Favorite.self).filter("id == \(movie!.id)").isEmpty {
+            addToFavorites()
+        } else {
+            deleteFromFavorites()
+        }
+    }
+    
+    func addToFavorites() {
+        try! appDelegate.realm.write {
+            let favorite = Favorite()
+            favorite.id = movie!.id
+            appDelegate.realm.add(favorite)
+        }
+    }
+    
+    func deleteFromFavorites() {
+        try! appDelegate.realm.write {
+            let persistedMovie = appDelegate.realm.objects(Favorite.self).filter("id == \(movie!.id)").first
+            appDelegate.realm.delete(persistedMovie!)
+        }
     }
 }

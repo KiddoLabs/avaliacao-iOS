@@ -1,5 +1,5 @@
 //
-//  Source.swift
+//  Favorite.swift
 //  Kiddo Labs
 //
 //  Created by Lucas Domene Firmo on 8/22/16.
@@ -9,7 +9,6 @@
 import Foundation
 import RealmSwift
 
-class Source: Object {
-    dynamic var sourceName = ""
-    var formats = List<Format>()
+class Favorite: Object {
+    dynamic var id = 0
 }

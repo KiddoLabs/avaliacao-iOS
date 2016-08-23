@@ -7,14 +7,13 @@
 //
 
 import Foundation
-import RealmSwift
 
 extension Movie {
     convenience init(json: JSONDictionary) throws {
         guard let id = json["id"] as? Int,
                   title = json["title"] as? String,
                   year = json["release_year"] as? Int,
-                  posterURL = json["poster_120x171"] as? String else {
+                  posterURL = NSURL(string: json["poster_120x171"] as? String ?? "") else {
             throw JSONMappingError.KeyNotFound
         }
         
@@ -39,31 +38,12 @@ extension Movie {
     }
     
     func movieInformation(jsonArray: JSONDictionary) -> (Movie?, ErrorType?) {
-        guard let movieDescription = jsonArray["overview"] as? String,
+        guard let description = jsonArray["overview"] as? String,
                   sources = jsonArray["purchase_ios_sources"] as? [[String: AnyObject]] else {
             return (nil, JSONMappingError.KeyNotFound)
         }
-        
-        let sourceList = List<Source>()
-        for source in sources {
-            let newSource = Source()
-            if let formats = source["formats"] as? [[String: AnyObject]] {
-                let formatList = List<Format>()
-                for format in formats {
-                    let newFormat = Format()
-                    newFormat.format = format["format"] as! String
-                    newFormat.price = format["price"] as! String
-                    newFormat.type = format["type"] as! String
-                    formatList.append(newFormat)
-                }
-                newSource.formats = formatList
-                newSource.sourceName = source["display_name"] as! String
-            }
-            sourceList.append(newSource)
-        }
-        
-        self.sources = sourceList
-        self.movieDescription = movieDescription
+        self.availableFormats = sources
+        self.description = description
         return (self, nil)
     }
 }
