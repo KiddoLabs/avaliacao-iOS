@@ -33,7 +33,7 @@ class MovieDetailsTableViewController: UITableViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         movieFormatsSegmentedControl.removeAllSegments()
-        
+    
         // Try to fetch the movie information and configure the view with the received data.
         if let movie = self.movie {
             self.fetchMovieInformation(movie, completion: {
