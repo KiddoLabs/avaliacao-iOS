@@ -41,6 +41,7 @@ class MovieDetailsTableViewController: UITableViewController {
                 self.fill(self.movie!)
             })
         }
+        configureShareButton()
     }
     
     // MARK: - Instance Methods
@@ -64,8 +65,9 @@ class MovieDetailsTableViewController: UITableViewController {
         }
     }
     
-    func addToolbar() {
-        
+    func configureShareButton() {
+        let rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "share"), style: .Plain, target: self, action: nil)
+        self.navigationItem.rightBarButtonItem = rightBarButtonItem
     }
     
     func fetchMovieInformation(movie: Movie, completion: () -> ()) {
