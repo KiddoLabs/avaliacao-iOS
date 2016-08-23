@@ -12,6 +12,7 @@ import Haneke
 class PurchaseViewController: UICollectionViewController {
     // MARK: - Attributes
     var movie: Movie?
+    var isEmpty = false
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -31,7 +32,7 @@ class PurchaseViewController: UICollectionViewController {
     }
     
     func setBackgroundImage() {
-        Shared.imageCache.fetch(URL: movie!.posterURL).onSuccess { image in
+        Shared.imageCache.fetch(URL: movie!.poster.largePoster!).onSuccess { image in
             let bgImage = UIImageView();
             bgImage.image = image
             bgImage.contentMode = .ScaleToFill
@@ -41,8 +42,9 @@ class PurchaseViewController: UICollectionViewController {
     
     // MARK: - Collection View Data Source
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        guard let count = movie?.availableSources?.count else {
-            return 0
+        guard let count = movie?.availableSources?.count where count > 0 else {
+            isEmpty = true
+            return 1
         }
         return count
     }
@@ -57,7 +59,12 @@ class PurchaseViewController: UICollectionViewController {
     override func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
         let header = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "sectionHeader", forIndexPath: indexPath) as? PurchaseHeader
         
-        let title = movie?.availableSources![indexPath.section].displayName
+        var title: String?
+        if isEmpty {
+            title = "Indisponível :("
+        } else {
+            title = movie?.availableSources![indexPath.section].displayName
+        }
         
         guard header != nil else {
             return PurchaseHeader()

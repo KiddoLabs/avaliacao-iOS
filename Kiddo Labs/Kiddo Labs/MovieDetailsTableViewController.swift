@@ -52,7 +52,7 @@ class MovieDetailsTableViewController: UITableViewController {
         isFavorite = !appDelegate.realm.objects(Favorite.self).filter("id == \(movie.id)").isEmpty
         configureFavorites()
         
-        posterImageView.hnk_setImageFromURL(movie.posterURL)
+        posterImageView.hnk_setImageFromURL(movie.poster.thumbnail)
         titleLabel.text = movie.title
         yearLabel.text = String(movie.year)
         movieDescription.text = movie.description
@@ -140,7 +140,7 @@ class MovieDetailsTableViewController: UITableViewController {
             let favorite = Favorite()
             favorite.id = movie!.id
             favorite.title = movie!.title
-            favorite.posterURL = (movie?.posterURL.absoluteString)!
+            favorite.thumbnail = (movie?.poster.thumbnail.absoluteString)!
             favorite.year = movie!.year
             appDelegate.realm.add(favorite)
         }
@@ -159,6 +159,7 @@ class MovieDetailsTableViewController: UITableViewController {
             if  let purchaseViewController = (segue.destinationViewController as? PurchaseViewController),
                 let movie = sender as? Movie {
                 purchaseViewController.movie = movie
+                navigationItem.backBarButtonItem = UIBarButtonItem(title: "Voltar", style: .Plain, target: nil, action: nil)
             }
         }
     }

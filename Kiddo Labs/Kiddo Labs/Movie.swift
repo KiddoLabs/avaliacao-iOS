@@ -9,21 +9,20 @@
 import Foundation
 
 class Movie {
-    
     // MARK: - Attributes
     var id: Int
     var title: String
     var year: Int
-    var posterURL: NSURL
+    var poster: Poster
     var description: String?
     var availableSources: [Source]?
     
     // MARK: - Initializer
     
-    init(id: Int, title: String, year: Int, posterURL: NSURL) {
+    init(id: Int, title: String, year: Int, poster: Poster) {
         self.id = id
         self.title = title
         self.year = year
-        self.posterURL = posterURL
+        self.poster = poster
     }
 }

@@ -12,12 +12,18 @@ extension Movie {
     convenience init(json: JSONDictionary) throws {
         guard let id = json["id"] as? Int,
                   title = json["title"] as? String,
-                  year = json["release_year"] as? Int,
-                  posterURL = NSURL(string: json["poster_120x171"] as? String ?? "") else {
+                  year = json["release_year"] as? Int else {
             throw JSONMappingError.KeyNotFound
         }
         
-        self.init(id: id, title: title, year: year, posterURL: posterURL)
+        var poster: Poster?
+        do {
+            poster = try Poster(json: json)
+        } catch JSONMappingError.KeyNotFound {
+            throw JSONMappingError.KeyNotFound
+        }
+        
+        self.init(id: id, title: title, year: year, poster: poster!)
     }
     
     class func massCreation(jsonArray: [JSONDictionary]) -> ([Movie]?, ErrorType?) {

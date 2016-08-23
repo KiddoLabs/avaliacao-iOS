@@ -34,7 +34,7 @@ class MovieCollectionViewCell: UICollectionViewCell {
         configure()
         titleLabel.text = movie.title
         yearLabel.text = String(movie.year)
-        posterImageView.hnk_setImageFromURL(movie.posterURL)
+        posterImageView.hnk_setImageFromURL(movie.poster.thumbnail)
     }
     
     func clean() {

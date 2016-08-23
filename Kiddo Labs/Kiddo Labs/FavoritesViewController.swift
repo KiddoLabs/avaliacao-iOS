@@ -51,7 +51,7 @@ class FavoritesViewController: UICollectionViewController {
         let index = indexPath.row
         if favoritesList.count > index && index >= 0 {
             let favorite = favoritesList[index]
-            return Movie(id: favorite.id, title: favorite.title, year: favorite.year, posterURL: NSURL(string: favorite.posterURL ?? "")!)
+            return Movie(id: favorite.id, title: favorite.title, year: favorite.year, poster: Poster(thumbnail: NSURL(string: favorite.thumbnail)!, largePoster: nil))
         }
         return nil
     }
