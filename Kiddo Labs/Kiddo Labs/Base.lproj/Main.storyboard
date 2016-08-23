@@ -305,7 +305,7 @@
         <!--Favoritos-->
         <scene sceneID="rng-BZ-VOO">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RTR-xq-VTZ" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="RTR-xq-VTZ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Favoritos" image="favorite" id="SAS-sn-CIU"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="uv6-os-tyb">
@@ -314,6 +314,11 @@
                         <color key="tintColor" red="0.78845952180000001" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="NLU-fi-qfB">
+                        <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.78845952180000001" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </toolbar>
                     <connections>
                         <segue destination="LSk-h6-1fB" kind="relationship" relationship="rootViewController" id="Wn0-tm-Lyb"/>
                     </connections>

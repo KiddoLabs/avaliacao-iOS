@@ -25,6 +25,8 @@ class FavoritesViewController: UICollectionViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.toolbarHidden = true
         fetchFavorites()
     }
     
