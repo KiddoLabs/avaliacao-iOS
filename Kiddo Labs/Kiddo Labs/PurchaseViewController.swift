@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Haneke
 
 class PurchaseViewController: UICollectionViewController {
     // MARK: - Attributes
@@ -39,11 +38,11 @@ class PurchaseViewController: UICollectionViewController {
      */
     func setBackgroundImage() {
         if let movie = self.movie {
-            Shared.imageCache.fetch(URL: movie.poster.largePoster).onSuccess { image in
-                let backgroundImageView = UIImageView(image: image)
-                backgroundImageView.contentMode = .ScaleToFill
-                self.collectionView?.backgroundView = backgroundImageView
-            }
+            let backgroundImageView = UIImageView(frame: self.collectionView!.frame)
+            backgroundImageView.contentMode = .ScaleToFill
+            self.collectionView?.backgroundView = backgroundImageView
+            backgroundImageView.pin_updateWithProgress = true
+            backgroundImageView.pin_setImageFromURL(movie.poster.largePoster)
         } else {
             self.presentViewController(UIAlertController.errorAlert(), animated: true, completion: nil)
         }

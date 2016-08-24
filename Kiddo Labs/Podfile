@@ -5,8 +5,8 @@ use_frameworks!
 def shared_pods
     pod 'Alamofire'
     pod 'SwiftyJSON'
-    pod 'HanekeSwift'
     pod 'RealmSwift'
+    pod 'PINRemoteImage'
 end
 
 target 'Kiddo Labs' do

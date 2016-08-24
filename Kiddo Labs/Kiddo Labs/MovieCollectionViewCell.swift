@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Haneke
 
 class MovieCollectionViewCell: UICollectionViewCell {
     
@@ -38,7 +37,8 @@ class MovieCollectionViewCell: UICollectionViewCell {
         configure()
         titleLabel.text = movie.title
         yearLabel.text = String(movie.year)
-        posterImageView.hnk_setImageFromURL(movie.poster.thumbnail)
+        posterImageView.pin_updateWithProgress = true
+        posterImageView.pin_setImageFromURL(movie.poster.thumbnail)
     }
     
     /**

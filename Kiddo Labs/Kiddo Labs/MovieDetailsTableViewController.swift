@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import PINRemoteImage
 
 class MovieDetailsTableViewController: UITableViewController {
     
@@ -75,7 +76,8 @@ class MovieDetailsTableViewController: UITableViewController {
         isFavorite = !appDelegate.realm.objects(Favorite.self).filter("id == \(movie.id)").isEmpty
         configureFavorites()
         
-        posterImageView.hnk_setImageFromURL(movie.poster.thumbnail)
+        posterImageView.pin_updateWithProgress = true
+        posterImageView.pin_setImageFromURL(movie.poster.thumbnail)
         titleLabel.text = movie.title
         yearLabel.text = String(movie.year)
         movieDescription.text = movie.description
