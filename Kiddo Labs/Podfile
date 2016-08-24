@@ -1,0 +1,20 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0'
+use_frameworks!
+
+def shared_pods
+    pod 'Alamofire'
+    pod 'SwiftyJSON'
+    pod 'RealmSwift'
+    pod 'PINRemoteImage'
+end
+
+target 'Kiddo Labs' do
+    shared_pods
+end
+
+target 'Kiddo LabsTests' do
+    shared_pods
+end
+
+

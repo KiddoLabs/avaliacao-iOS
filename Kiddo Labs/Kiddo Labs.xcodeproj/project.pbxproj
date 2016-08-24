@@ -1,0 +1,694 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		893B206FED638A249A6E92C7 /* Pods_Kiddo_Labs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04429BDEEBB30F822A278AF /* Pods_Kiddo_Labs.framework */; };
+		A01134D11D68DB5D0008668D /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01134D01D68DB5D0008668D /* Movie.swift */; };
+		A01134D41D68DD7C0008668D /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01134D31D68DD7C0008668D /* BaseRequest.swift */; };
+		A01134D71D68DEA80008668D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01134D61D68DEA80008668D /* Constants.swift */; };
+		A01134D91D68E2790008668D /* MoviesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01134D81D68E2790008668D /* MoviesRequest.swift */; };
+		A01134DC1D68E8490008668D /* Movie+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01134DB1D68E8490008668D /* Movie+Ext.swift */; };
+		A01134DE1D68EA040008668D /* ErrorList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01134DD1D68EA040008668D /* ErrorList.swift */; };
+		A01134E21D69DF240008668D /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01134E11D69DF240008668D /* MovieCollectionViewCell.swift */; };
+		A01134E61D6B45C60008668D /* MovieDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01134E51D6B45C60008668D /* MovieDetailsTableViewController.swift */; };
+		A01134E81D6B5BA20008668D /* MovieInformationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01134E71D6B5BA20008668D /* MovieInformationRequest.swift */; };
+		A01134EE1D6B98500008668D /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A01134ED1D6B98500008668D /* MovieCell.xib */; };
+		A01134F01D6B9FCA0008668D /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01134EF1D6B9FCA0008668D /* FavoritesViewController.swift */; };
+		A01134F61D6BD4720008668D /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01134F51D6BD4720008668D /* Favorite.swift */; };
+		A01134F81D6C83CB0008668D /* PurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01134F71D6C83CB0008668D /* PurchaseViewController.swift */; };
+		A01134FA1D6C872E0008668D /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01134F91D6C872E0008668D /* Source.swift */; };
+		A01134FC1D6C87350008668D /* Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01134FB1D6C87350008668D /* Format.swift */; };
+		A01134FE1D6C88A50008668D /* Source+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01134FD1D6C88A50008668D /* Source+Ext.swift */; };
+		A01135001D6C88AD0008668D /* Format+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01134FF1D6C88AD0008668D /* Format+Ext.swift */; };
+		A01135021D6C95520008668D /* PurchaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01135011D6C95520008668D /* PurchaseCollectionViewCell.swift */; };
+		A01135041D6C9D780008668D /* PurchaseHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01135031D6C9D780008668D /* PurchaseHeader.swift */; };
+		A01135061D6CA7180008668D /* Poster.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01135051D6CA7180008668D /* Poster.swift */; };
+		A01135081D6CA7960008668D /* Poster+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01135071D6CA7960008668D /* Poster+Ext.swift */; };
+		A011350A1D6CC1F80008668D /* BaseCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01135091D6CC1F80008668D /* BaseCollectionViewController.swift */; };
+		A011350C1D6CE3D50008668D /* UIAlertController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A011350B1D6CE3D50008668D /* UIAlertController+Ext.swift */; };
+		A01135101D6CF9D00008668D /* MovieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A011350F1D6CF9D00008668D /* MovieTests.swift */; };
+		A01135121D6CFB1D0008668D /* SourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01135111D6CFB1D0008668D /* SourceTests.swift */; };
+		A01135141D6CFB350008668D /* FormatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01135131D6CFB350008668D /* FormatTests.swift */; };
+		A01135161D6CFD0E0008668D /* PosterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01135151D6CFD0E0008668D /* PosterTests.swift */; };
+		A092B5EC1D678F370023BF0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A092B5EB1D678F370023BF0D /* AppDelegate.swift */; };
+		A092B5EE1D678F370023BF0D /* MoviesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A092B5ED1D678F370023BF0D /* MoviesListViewController.swift */; };
+		A092B5F11D678F370023BF0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A092B5EF1D678F370023BF0D /* Main.storyboard */; };
+		A092B5F31D678F370023BF0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A092B5F21D678F370023BF0D /* Assets.xcassets */; };
+		A092B5F61D678F370023BF0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A092B5F41D678F370023BF0D /* LaunchScreen.storyboard */; };
+		B95D6C677EC0A494AE24E2EF /* Pods_Kiddo_LabsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB4EF3730CBE1441641AB5C0 /* Pods_Kiddo_LabsTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A092B5FD1D678F370023BF0D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A092B5E01D678F370023BF0D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A092B5E71D678F370023BF0D;
+			remoteInfo = "Kiddo Labs";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		09638D6A1A43A0AAECAACB77 /* Pods-Kiddo Labs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kiddo Labs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kiddo Labs/Pods-Kiddo Labs.debug.xcconfig"; sourceTree = "<group>"; };
+		3436C86C9A7E77E606EFC05E /* Pods-Kiddo LabsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kiddo LabsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kiddo LabsTests/Pods-Kiddo LabsTests.release.xcconfig"; sourceTree = "<group>"; };
+		5A4C66402D8815D4577E0552 /* Pods-Kiddo Labs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kiddo Labs.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kiddo Labs/Pods-Kiddo Labs.release.xcconfig"; sourceTree = "<group>"; };
+		7FB0A62F700CD1888CB09554 /* Pods-Kiddo LabsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kiddo LabsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kiddo LabsTests/Pods-Kiddo LabsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A01134D01D68DB5D0008668D /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		A01134D31D68DD7C0008668D /* BaseRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
+		A01134D61D68DEA80008668D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A01134D81D68E2790008668D /* MoviesRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesRequest.swift; sourceTree = "<group>"; };
+		A01134DB1D68E8490008668D /* Movie+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Movie+Ext.swift"; sourceTree = "<group>"; };
+		A01134DD1D68EA040008668D /* ErrorList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorList.swift; sourceTree = "<group>"; };
+		A01134E11D69DF240008668D /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
+		A01134E51D6B45C60008668D /* MovieDetailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailsTableViewController.swift; sourceTree = "<group>"; };
+		A01134E71D6B5BA20008668D /* MovieInformationRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieInformationRequest.swift; sourceTree = "<group>"; };
+		A01134ED1D6B98500008668D /* MovieCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieCell.xib; sourceTree = "<group>"; };
+		A01134EF1D6B9FCA0008668D /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		A01134F51D6BD4720008668D /* Favorite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
+		A01134F71D6C83CB0008668D /* PurchaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseViewController.swift; sourceTree = "<group>"; };
+		A01134F91D6C872E0008668D /* Source.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
+		A01134FB1D6C87350008668D /* Format.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Format.swift; sourceTree = "<group>"; };
+		A01134FD1D6C88A50008668D /* Source+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Source+Ext.swift"; sourceTree = "<group>"; };
+		A01134FF1D6C88AD0008668D /* Format+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Format+Ext.swift"; sourceTree = "<group>"; };
+		A01135011D6C95520008668D /* PurchaseCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		A01135031D6C9D780008668D /* PurchaseHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseHeader.swift; sourceTree = "<group>"; };
+		A01135051D6CA7180008668D /* Poster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Poster.swift; sourceTree = "<group>"; };
+		A01135071D6CA7960008668D /* Poster+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Poster+Ext.swift"; sourceTree = "<group>"; };
+		A01135091D6CC1F80008668D /* BaseCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewController.swift; sourceTree = "<group>"; };
+		A011350B1D6CE3D50008668D /* UIAlertController+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Ext.swift"; sourceTree = "<group>"; };
+		A011350F1D6CF9D00008668D /* MovieTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTests.swift; sourceTree = "<group>"; };
+		A01135111D6CFB1D0008668D /* SourceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceTests.swift; sourceTree = "<group>"; };
+		A01135131D6CFB350008668D /* FormatTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormatTests.swift; sourceTree = "<group>"; };
+		A01135151D6CFD0E0008668D /* PosterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PosterTests.swift; sourceTree = "<group>"; };
+		A092B5E81D678F370023BF0D /* Kiddo Labs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kiddo Labs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A092B5EB1D678F370023BF0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A092B5ED1D678F370023BF0D /* MoviesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListViewController.swift; sourceTree = "<group>"; };
+		A092B5F01D678F370023BF0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A092B5F21D678F370023BF0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A092B5F51D678F370023BF0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A092B5F71D678F370023BF0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A092B5FC1D678F370023BF0D /* Kiddo LabsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kiddo LabsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A092B6021D678F370023BF0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D04429BDEEBB30F822A278AF /* Pods_Kiddo_Labs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kiddo_Labs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB4EF3730CBE1441641AB5C0 /* Pods_Kiddo_LabsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kiddo_LabsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A092B5E51D678F370023BF0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				893B206FED638A249A6E92C7 /* Pods_Kiddo_Labs.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A092B5F91D678F370023BF0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B95D6C677EC0A494AE24E2EF /* Pods_Kiddo_LabsTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2D11C878397ACA0F8808DADD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D04429BDEEBB30F822A278AF /* Pods_Kiddo_Labs.framework */,
+				DB4EF3730CBE1441641AB5C0 /* Pods_Kiddo_LabsTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7FB6FE57FB93C21608B53A2E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				09638D6A1A43A0AAECAACB77 /* Pods-Kiddo Labs.debug.xcconfig */,
+				5A4C66402D8815D4577E0552 /* Pods-Kiddo Labs.release.xcconfig */,
+				7FB0A62F700CD1888CB09554 /* Pods-Kiddo LabsTests.debug.xcconfig */,
+				3436C86C9A7E77E606EFC05E /* Pods-Kiddo LabsTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A01134CF1D68DB500008668D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A01134D01D68DB5D0008668D /* Movie.swift */,
+				A01134F51D6BD4720008668D /* Favorite.swift */,
+				A01134F91D6C872E0008668D /* Source.swift */,
+				A01134FB1D6C87350008668D /* Format.swift */,
+				A01135051D6CA7180008668D /* Poster.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		A01134D21D68DD700008668D /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				A01134D31D68DD7C0008668D /* BaseRequest.swift */,
+				A01134D81D68E2790008668D /* MoviesRequest.swift */,
+				A01134E71D6B5BA20008668D /* MovieInformationRequest.swift */,
+			);
+			name = Requests;
+			sourceTree = "<group>";
+		};
+		A01134D51D68DE980008668D /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				A01134D61D68DEA80008668D /* Constants.swift */,
+				A01134DD1D68EA040008668D /* ErrorList.swift */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
+		A01134DA1D68E83A0008668D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A01134DB1D68E8490008668D /* Movie+Ext.swift */,
+				A01134FD1D6C88A50008668D /* Source+Ext.swift */,
+				A01134FF1D6C88AD0008668D /* Format+Ext.swift */,
+				A01135071D6CA7960008668D /* Poster+Ext.swift */,
+				A011350B1D6CE3D50008668D /* UIAlertController+Ext.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		A01134DF1D69D5240008668D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A092B5ED1D678F370023BF0D /* MoviesListViewController.swift */,
+				A01134E51D6B45C60008668D /* MovieDetailsTableViewController.swift */,
+				A01134EF1D6B9FCA0008668D /* FavoritesViewController.swift */,
+				A01134F71D6C83CB0008668D /* PurchaseViewController.swift */,
+				A01135091D6CC1F80008668D /* BaseCollectionViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A01134E01D69DF070008668D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A01134E11D69DF240008668D /* MovieCollectionViewCell.swift */,
+				A01135011D6C95520008668D /* PurchaseCollectionViewCell.swift */,
+				A01135031D6C9D780008668D /* PurchaseHeader.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		A092B5DF1D678F370023BF0D = {
+			isa = PBXGroup;
+			children = (
+				A092B5EA1D678F370023BF0D /* Kiddo Labs */,
+				A092B5FF1D678F370023BF0D /* Kiddo LabsTests */,
+				A092B5E91D678F370023BF0D /* Products */,
+				7FB6FE57FB93C21608B53A2E /* Pods */,
+				2D11C878397ACA0F8808DADD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A092B5E91D678F370023BF0D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A092B5E81D678F370023BF0D /* Kiddo Labs.app */,
+				A092B5FC1D678F370023BF0D /* Kiddo LabsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A092B5EA1D678F370023BF0D /* Kiddo Labs */ = {
+			isa = PBXGroup;
+			children = (
+				A01134E01D69DF070008668D /* Cells */,
+				A01134DF1D69D5240008668D /* ViewControllers */,
+				A01134DA1D68E83A0008668D /* Extensions */,
+				A01134D51D68DE980008668D /* Constants */,
+				A01134D21D68DD700008668D /* Requests */,
+				A01134CF1D68DB500008668D /* Models */,
+				A092B5EB1D678F370023BF0D /* AppDelegate.swift */,
+				A092B5EF1D678F370023BF0D /* Main.storyboard */,
+				A01134ED1D6B98500008668D /* MovieCell.xib */,
+				A092B5F21D678F370023BF0D /* Assets.xcassets */,
+				A092B5F41D678F370023BF0D /* LaunchScreen.storyboard */,
+				A092B5F71D678F370023BF0D /* Info.plist */,
+			);
+			path = "Kiddo Labs";
+			sourceTree = "<group>";
+		};
+		A092B5FF1D678F370023BF0D /* Kiddo LabsTests */ = {
+			isa = PBXGroup;
+			children = (
+				A092B6021D678F370023BF0D /* Info.plist */,
+				A011350F1D6CF9D00008668D /* MovieTests.swift */,
+				A01135111D6CFB1D0008668D /* SourceTests.swift */,
+				A01135131D6CFB350008668D /* FormatTests.swift */,
+				A01135151D6CFD0E0008668D /* PosterTests.swift */,
+			);
+			path = "Kiddo LabsTests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A092B5E71D678F370023BF0D /* Kiddo Labs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A092B6051D678F370023BF0D /* Build configuration list for PBXNativeTarget "Kiddo Labs" */;
+			buildPhases = (
+				16DBF0E4C77DC0AEE33221BF /* [CP] Check Pods Manifest.lock */,
+				A092B5E41D678F370023BF0D /* Sources */,
+				A092B5E51D678F370023BF0D /* Frameworks */,
+				A092B5E61D678F370023BF0D /* Resources */,
+				ECA79A7586157DD0F6FF241D /* [CP] Embed Pods Frameworks */,
+				4E80AFB6B7A552DBAF7D0832 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Kiddo Labs";
+			productName = "Kiddo Labs";
+			productReference = A092B5E81D678F370023BF0D /* Kiddo Labs.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A092B5FB1D678F370023BF0D /* Kiddo LabsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A092B6081D678F370023BF0D /* Build configuration list for PBXNativeTarget "Kiddo LabsTests" */;
+			buildPhases = (
+				09C88EA5EFC291F73A10407C /* [CP] Check Pods Manifest.lock */,
+				A092B5F81D678F370023BF0D /* Sources */,
+				A092B5F91D678F370023BF0D /* Frameworks */,
+				A092B5FA1D678F370023BF0D /* Resources */,
+				D3EE915B38F7C972C19DA0CE /* [CP] Embed Pods Frameworks */,
+				365CB7921318AE67FD43C1C8 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A092B5FE1D678F370023BF0D /* PBXTargetDependency */,
+			);
+			name = "Kiddo LabsTests";
+			productName = "Kiddo LabsTests";
+			productReference = A092B5FC1D678F370023BF0D /* Kiddo LabsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A092B5E01D678F370023BF0D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Domene;
+				TargetAttributes = {
+					A092B5E71D678F370023BF0D = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					A092B5FB1D678F370023BF0D = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = A092B5E71D678F370023BF0D;
+					};
+				};
+			};
+			buildConfigurationList = A092B5E31D678F370023BF0D /* Build configuration list for PBXProject "Kiddo Labs" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A092B5DF1D678F370023BF0D;
+			productRefGroup = A092B5E91D678F370023BF0D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A092B5E71D678F370023BF0D /* Kiddo Labs */,
+				A092B5FB1D678F370023BF0D /* Kiddo LabsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A092B5E61D678F370023BF0D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A092B5F61D678F370023BF0D /* LaunchScreen.storyboard in Resources */,
+				A092B5F31D678F370023BF0D /* Assets.xcassets in Resources */,
+				A01134EE1D6B98500008668D /* MovieCell.xib in Resources */,
+				A092B5F11D678F370023BF0D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A092B5FA1D678F370023BF0D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		09C88EA5EFC291F73A10407C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		16DBF0E4C77DC0AEE33221BF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		365CB7921318AE67FD43C1C8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Kiddo LabsTests/Pods-Kiddo LabsTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4E80AFB6B7A552DBAF7D0832 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Kiddo Labs/Pods-Kiddo Labs-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3EE915B38F7C972C19DA0CE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Kiddo LabsTests/Pods-Kiddo LabsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ECA79A7586157DD0F6FF241D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Kiddo Labs/Pods-Kiddo Labs-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A092B5E41D678F370023BF0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A01134FE1D6C88A50008668D /* Source+Ext.swift in Sources */,
+				A01134FC1D6C87350008668D /* Format.swift in Sources */,
+				A01135021D6C95520008668D /* PurchaseCollectionViewCell.swift in Sources */,
+				A01134F61D6BD4720008668D /* Favorite.swift in Sources */,
+				A01134DE1D68EA040008668D /* ErrorList.swift in Sources */,
+				A01134D71D68DEA80008668D /* Constants.swift in Sources */,
+				A01135081D6CA7960008668D /* Poster+Ext.swift in Sources */,
+				A01134F81D6C83CB0008668D /* PurchaseViewController.swift in Sources */,
+				A01135001D6C88AD0008668D /* Format+Ext.swift in Sources */,
+				A01134DC1D68E8490008668D /* Movie+Ext.swift in Sources */,
+				A01134D41D68DD7C0008668D /* BaseRequest.swift in Sources */,
+				A01134D91D68E2790008668D /* MoviesRequest.swift in Sources */,
+				A01135061D6CA7180008668D /* Poster.swift in Sources */,
+				A01135041D6C9D780008668D /* PurchaseHeader.swift in Sources */,
+				A011350A1D6CC1F80008668D /* BaseCollectionViewController.swift in Sources */,
+				A092B5EE1D678F370023BF0D /* MoviesListViewController.swift in Sources */,
+				A01134FA1D6C872E0008668D /* Source.swift in Sources */,
+				A01134E21D69DF240008668D /* MovieCollectionViewCell.swift in Sources */,
+				A01134E61D6B45C60008668D /* MovieDetailsTableViewController.swift in Sources */,
+				A01134E81D6B5BA20008668D /* MovieInformationRequest.swift in Sources */,
+				A011350C1D6CE3D50008668D /* UIAlertController+Ext.swift in Sources */,
+				A092B5EC1D678F370023BF0D /* AppDelegate.swift in Sources */,
+				A01134F01D6B9FCA0008668D /* FavoritesViewController.swift in Sources */,
+				A01134D11D68DB5D0008668D /* Movie.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A092B5F81D678F370023BF0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A01135141D6CFB350008668D /* FormatTests.swift in Sources */,
+				A01135161D6CFD0E0008668D /* PosterTests.swift in Sources */,
+				A01135101D6CF9D00008668D /* MovieTests.swift in Sources */,
+				A01135121D6CFB1D0008668D /* SourceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A092B5FE1D678F370023BF0D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A092B5E71D678F370023BF0D /* Kiddo Labs */;
+			targetProxy = A092B5FD1D678F370023BF0D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A092B5EF1D678F370023BF0D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A092B5F01D678F370023BF0D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A092B5F41D678F370023BF0D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A092B5F51D678F370023BF0D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A092B6031D678F370023BF0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A092B6041D678F370023BF0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A092B6061D678F370023BF0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09638D6A1A43A0AAECAACB77 /* Pods-Kiddo Labs.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Kiddo Labs/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.domene.Kiddo-Labs";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A092B6071D678F370023BF0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A4C66402D8815D4577E0552 /* Pods-Kiddo Labs.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Kiddo Labs/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.domene.Kiddo-Labs";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A092B6091D678F370023BF0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FB0A62F700CD1888CB09554 /* Pods-Kiddo LabsTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Kiddo LabsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.domene.Kiddo-LabsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kiddo Labs.app/Kiddo Labs";
+			};
+			name = Debug;
+		};
+		A092B60A1D678F370023BF0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3436C86C9A7E77E606EFC05E /* Pods-Kiddo LabsTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Kiddo LabsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.domene.Kiddo-LabsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kiddo Labs.app/Kiddo Labs";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A092B5E31D678F370023BF0D /* Build configuration list for PBXProject "Kiddo Labs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A092B6031D678F370023BF0D /* Debug */,
+				A092B6041D678F370023BF0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A092B6051D678F370023BF0D /* Build configuration list for PBXNativeTarget "Kiddo Labs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A092B6061D678F370023BF0D /* Debug */,
+				A092B6071D678F370023BF0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A092B6081D678F370023BF0D /* Build configuration list for PBXNativeTarget "Kiddo LabsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A092B6091D678F370023BF0D /* Debug */,
+				A092B60A1D678F370023BF0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A092B5E01D678F370023BF0D /* Project object */;
+}
