@@ -17,6 +17,9 @@ DerivedData/
 !default.perspectivev3
 xcuserdata/
 
+## CocoaPods
+Pods/
+
 ## Other
 *.moved-aside
 *.xccheckout
