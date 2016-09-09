@@ -39,7 +39,6 @@
                                 </cells>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="L7e-nl-QBa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="1LA-wZ-gfu"/>
                             <constraint firstAttribute="trailing" secondItem="L7e-nl-QBa" secondAttribute="trailing" id="W2m-wp-Mti"/>

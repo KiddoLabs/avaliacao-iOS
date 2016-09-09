@@ -17,6 +17,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
+//    self.window.backgroundColor = [UIColor colorWithRed:0.78f green:0.13f blue:0.11f alpha:1];
+//    [application setStatusBarStyle:UIStatusBarStyleBlackTranslucent];
+    
+//    
+//    self.window.frame =  CGRectMake(0,20,self.window.frame.size.width,self.window.frame.size.height-20);
+//    self.window.bounds = CGRectMake(0, 20, self.window.frame.size.width, self.window.frame.size.height);
+    
     return YES;
 }
 

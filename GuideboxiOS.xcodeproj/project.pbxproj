@@ -18,6 +18,7 @@
 		247D15CA1D821996007E968C /* PurchaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 247D15C91D821996007E968C /* PurchaseViewController.m */; };
 		247D15CC1D8223E8007E968C /* FilmCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 247D15CB1D8223E8007E968C /* FilmCell.xib */; };
 		247D15CF1D822775007E968C /* FilmCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 247D15CE1D822775007E968C /* FilmCell.m */; };
+		247D15D61D82416A007E968C /* MovieService.m in Sources */ = {isa = PBXBuildFile; fileRef = 247D15D51D82416A007E968C /* MovieService.m */; };
 		696146C5CDEA797E3EAF3FAC /* libPods-GuideboxiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 523D0977CEACCDFC8DECD1E3 /* libPods-GuideboxiOS.a */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,8 @@
 		247D15CB1D8223E8007E968C /* FilmCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilmCell.xib; sourceTree = "<group>"; };
 		247D15CD1D822775007E968C /* FilmCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilmCell.h; sourceTree = "<group>"; };
 		247D15CE1D822775007E968C /* FilmCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilmCell.m; sourceTree = "<group>"; };
+		247D15D41D82416A007E968C /* MovieService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieService.h; sourceTree = "<group>"; };
+		247D15D51D82416A007E968C /* MovieService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieService.m; sourceTree = "<group>"; };
 		523D0977CEACCDFC8DECD1E3 /* libPods-GuideboxiOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GuideboxiOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E88267D50154C02E504A5B3 /* Pods-GuideboxiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuideboxiOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GuideboxiOS/Pods-GuideboxiOS.debug.xcconfig"; sourceTree = "<group>"; };
 		DD77B438AD12E2D795F4E523 /* Pods-GuideboxiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuideboxiOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-GuideboxiOS/Pods-GuideboxiOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -87,6 +90,7 @@
 		247D15A31D821820007E968C /* GuideboxiOS */ = {
 			isa = PBXGroup;
 			children = (
+				247D15D31D823AD4007E968C /* Network */,
 				247D15BD1D8218B4007E968C /* Controller */,
 				247D15BC1D8218AE007E968C /* View */,
 				247D15BB1D8218A7007E968C /* Model */,
@@ -147,6 +151,15 @@
 				247D15AD1D821820007E968C /* Main.storyboard */,
 			);
 			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		247D15D31D823AD4007E968C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				247D15D41D82416A007E968C /* MovieService.h */,
+				247D15D51D82416A007E968C /* MovieService.m */,
+			);
+			name = Network;
 			sourceTree = "<group>";
 		};
 		E50291E77FCF8B22397E882C /* Pods */ = {
@@ -282,6 +295,7 @@
 			files = (
 				247D15C41D82193F007E968C /* FavoriteViewController.m in Sources */,
 				247D15CA1D821996007E968C /* PurchaseViewController.m in Sources */,
+				247D15D61D82416A007E968C /* MovieService.m in Sources */,
 				247D15A91D821820007E968C /* AppDelegate.m in Sources */,
 				247D15A61D821820007E968C /* main.m in Sources */,
 				247D15CF1D822775007E968C /* FilmCell.m in Sources */,

@@ -9,6 +9,8 @@
 #import "HomeViewController.h"
 #import "FilmCell.h"
 
+#import "MovieService.h"
+
 @interface HomeViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
@@ -26,6 +28,10 @@
     UINib *nib = [UINib nibWithNibName:@"FilmCell" bundle: nil];
     [self.collectionView registerNib:nib forCellWithReuseIdentifier:@"FilmCell"];
 //    nibMyCellloaded = YES;
+    
+    MovieService *service = [[MovieService alloc]init];
+    
+    [service movieList];
 }
 
 - (void)didReceiveMemoryWarning {
