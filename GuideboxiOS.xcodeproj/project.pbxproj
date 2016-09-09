@@ -16,9 +16,11 @@
 		247D15C41D82193F007E968C /* FavoriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 247D15C31D82193F007E968C /* FavoriteViewController.m */; };
 		247D15C71D82196D007E968C /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 247D15C61D82196D007E968C /* DetailViewController.m */; };
 		247D15CA1D821996007E968C /* PurchaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 247D15C91D821996007E968C /* PurchaseViewController.m */; };
-		247D15CC1D8223E8007E968C /* FilmCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 247D15CB1D8223E8007E968C /* FilmCell.xib */; };
-		247D15CF1D822775007E968C /* FilmCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 247D15CE1D822775007E968C /* FilmCell.m */; };
+		247D15CC1D8223E8007E968C /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 247D15CB1D8223E8007E968C /* MovieCell.xib */; };
+		247D15CF1D822775007E968C /* MovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 247D15CE1D822775007E968C /* MovieCell.m */; };
 		247D15D61D82416A007E968C /* MovieService.m in Sources */ = {isa = PBXBuildFile; fileRef = 247D15D51D82416A007E968C /* MovieService.m */; };
+		24F6B0FD1D82CF7A00F12CE1 /* UIColor+GBColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F6B0FC1D82CF7A00F12CE1 /* UIColor+GBColor.m */; };
+		24F6B1011D82D06000F12CE1 /* GBButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F6B1001D82D06000F12CE1 /* GBButton.m */; };
 		696146C5CDEA797E3EAF3FAC /* libPods-GuideboxiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 523D0977CEACCDFC8DECD1E3 /* libPods-GuideboxiOS.a */; };
 /* End PBXBuildFile section */
 
@@ -39,11 +41,15 @@
 		247D15C61D82196D007E968C /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		247D15C81D821996007E968C /* PurchaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PurchaseViewController.h; sourceTree = "<group>"; };
 		247D15C91D821996007E968C /* PurchaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PurchaseViewController.m; sourceTree = "<group>"; };
-		247D15CB1D8223E8007E968C /* FilmCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilmCell.xib; sourceTree = "<group>"; };
-		247D15CD1D822775007E968C /* FilmCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilmCell.h; sourceTree = "<group>"; };
-		247D15CE1D822775007E968C /* FilmCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilmCell.m; sourceTree = "<group>"; };
+		247D15CB1D8223E8007E968C /* MovieCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieCell.xib; sourceTree = "<group>"; };
+		247D15CD1D822775007E968C /* MovieCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieCell.h; sourceTree = "<group>"; };
+		247D15CE1D822775007E968C /* MovieCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieCell.m; sourceTree = "<group>"; };
 		247D15D41D82416A007E968C /* MovieService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieService.h; sourceTree = "<group>"; };
 		247D15D51D82416A007E968C /* MovieService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieService.m; sourceTree = "<group>"; };
+		24F6B0FB1D82CF7A00F12CE1 /* UIColor+GBColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+GBColor.h"; sourceTree = "<group>"; };
+		24F6B0FC1D82CF7A00F12CE1 /* UIColor+GBColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+GBColor.m"; sourceTree = "<group>"; };
+		24F6B0FF1D82D06000F12CE1 /* GBButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBButton.h; sourceTree = "<group>"; };
+		24F6B1001D82D06000F12CE1 /* GBButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBButton.m; sourceTree = "<group>"; };
 		523D0977CEACCDFC8DECD1E3 /* libPods-GuideboxiOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GuideboxiOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E88267D50154C02E504A5B3 /* Pods-GuideboxiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuideboxiOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GuideboxiOS/Pods-GuideboxiOS.debug.xcconfig"; sourceTree = "<group>"; };
 		DD77B438AD12E2D795F4E523 /* Pods-GuideboxiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuideboxiOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-GuideboxiOS/Pods-GuideboxiOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -122,10 +128,9 @@
 		247D15BC1D8218AE007E968C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				24F6B0FE1D82D01D00F12CE1 /* CustomComponents */,
+				24F6B0FA1D82CF4E00F12CE1 /* CustomCategories */,
 				247D15BE1D8218C3007E968C /* Storyboard */,
-				247D15CB1D8223E8007E968C /* FilmCell.xib */,
-				247D15CD1D822775007E968C /* FilmCell.h */,
-				247D15CE1D822775007E968C /* FilmCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -160,6 +165,43 @@
 				247D15D51D82416A007E968C /* MovieService.m */,
 			);
 			name = Network;
+			sourceTree = "<group>";
+		};
+		24F6B0FA1D82CF4E00F12CE1 /* CustomCategories */ = {
+			isa = PBXGroup;
+			children = (
+				24F6B0FB1D82CF7A00F12CE1 /* UIColor+GBColor.h */,
+				24F6B0FC1D82CF7A00F12CE1 /* UIColor+GBColor.m */,
+			);
+			name = CustomCategories;
+			sourceTree = "<group>";
+		};
+		24F6B0FE1D82D01D00F12CE1 /* CustomComponents */ = {
+			isa = PBXGroup;
+			children = (
+				24F6B1031D83087B00F12CE1 /* GBButton */,
+				24F6B1021D83086400F12CE1 /* MovieCell */,
+			);
+			name = CustomComponents;
+			sourceTree = "<group>";
+		};
+		24F6B1021D83086400F12CE1 /* MovieCell */ = {
+			isa = PBXGroup;
+			children = (
+				247D15CB1D8223E8007E968C /* MovieCell.xib */,
+				247D15CD1D822775007E968C /* MovieCell.h */,
+				247D15CE1D822775007E968C /* MovieCell.m */,
+			);
+			name = MovieCell;
+			sourceTree = "<group>";
+		};
+		24F6B1031D83087B00F12CE1 /* GBButton */ = {
+			isa = PBXGroup;
+			children = (
+				24F6B0FF1D82D06000F12CE1 /* GBButton.h */,
+				24F6B1001D82D06000F12CE1 /* GBButton.m */,
+			);
+			name = GBButton;
 			sourceTree = "<group>";
 		};
 		E50291E77FCF8B22397E882C /* Pods */ = {
@@ -232,7 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				247D15B41D821820007E968C /* LaunchScreen.storyboard in Resources */,
-				247D15CC1D8223E8007E968C /* FilmCell.xib in Resources */,
+				247D15CC1D8223E8007E968C /* MovieCell.xib in Resources */,
 				247D15B11D821820007E968C /* Assets.xcassets in Resources */,
 				247D15AF1D821820007E968C /* Main.storyboard in Resources */,
 			);
@@ -293,12 +335,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24F6B0FD1D82CF7A00F12CE1 /* UIColor+GBColor.m in Sources */,
 				247D15C41D82193F007E968C /* FavoriteViewController.m in Sources */,
 				247D15CA1D821996007E968C /* PurchaseViewController.m in Sources */,
 				247D15D61D82416A007E968C /* MovieService.m in Sources */,
 				247D15A91D821820007E968C /* AppDelegate.m in Sources */,
 				247D15A61D821820007E968C /* main.m in Sources */,
-				247D15CF1D822775007E968C /* FilmCell.m in Sources */,
+				24F6B1011D82D06000F12CE1 /* GBButton.m in Sources */,
+				247D15CF1D822775007E968C /* MovieCell.m in Sources */,
 				247D15C11D821913007E968C /* HomeViewController.m in Sources */,
 				247D15C71D82196D007E968C /* DetailViewController.m in Sources */,
 			);

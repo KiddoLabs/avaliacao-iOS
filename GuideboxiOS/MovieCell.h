@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FilmCell : UICollectionViewCell
+@interface MovieCell : UICollectionViewCell
 
 @end

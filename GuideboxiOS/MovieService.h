@@ -8,8 +8,21 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol MovieServiceDelegate
+
+@optional
+-(void)responseSuccess:(id)response;
+-(void)responseError:(NSError*)error;
+
+//@required
+//-(void)refreshTokenExpired;
+
+@end
+
 @interface MovieService : NSObject
 
--(void)movieList;
+- (instancetype)initWithTarget:(id<MovieServiceDelegate>)target;
+
+-(void)getMovieList;
 
 @end

@@ -7,11 +7,11 @@
 //
 
 #import "HomeViewController.h"
-#import "FilmCell.h"
+#import "MovieCell.h"
 
 #import "MovieService.h"
 
-@interface HomeViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface HomeViewController () <UICollectionViewDataSource, UICollectionViewDelegate, MovieServiceDelegate>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @end
@@ -25,18 +25,28 @@
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
     
-    UINib *nib = [UINib nibWithNibName:@"FilmCell" bundle: nil];
-    [self.collectionView registerNib:nib forCellWithReuseIdentifier:@"FilmCell"];
+    UINib *nib = [UINib nibWithNibName:@"MovieCell" bundle: nil];
+    [self.collectionView registerNib:nib forCellWithReuseIdentifier:@"MovieCell"];
 //    nibMyCellloaded = YES;
     
-    MovieService *service = [[MovieService alloc]init];
+    MovieService *service = [[MovieService alloc]initWithTarget:self];
     
-    [service movieList];
+    [service getMovieList];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - MovieServiceDelegate
+
+-(void)responseSuccess:(id)response{
+    NSLog(@"%@", response);
+}
+
+-(void)responseError:(NSError *)error{
+    NSLog(@"%@", error);
 }
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
@@ -51,7 +61,7 @@
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
 //    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"FilmCell" forIndexPath:indexPath];
     
-    FilmCell *cell = (FilmCell*)[collectionView dequeueReusableCellWithReuseIdentifier:@"FilmCell" forIndexPath:indexPath];
+    MovieCell *cell = (MovieCell*)[collectionView dequeueReusableCellWithReuseIdentifier:@"MovieCell" forIndexPath:indexPath];
 //     *cell= (photoUploadCollectionViewCell*)[collectionView dequeueReusableCellWithReuseIdentifier:@"photoUploadCell" forIndexPath:indexPath];
     
     return cell;

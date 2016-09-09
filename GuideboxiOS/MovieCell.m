@@ -6,8 +6,8 @@
 //  Copyright © 2016 Ezequiel Thomazetto. All rights reserved.
 //
 
-#import "FilmCell.h"
+#import "MovieCell.h"
 
-@implementation FilmCell
+@implementation MovieCell
 
 @end
