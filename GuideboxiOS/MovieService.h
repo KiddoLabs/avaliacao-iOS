@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+//Models
+#import "MovieList.h"
+#import "MovieDetail.h"
+
 @protocol MovieServiceDelegate
 
 @optional
@@ -24,5 +28,6 @@
 - (instancetype)initWithTarget:(id<MovieServiceDelegate>)target;
 
 -(void)getMovieList;
+-(void)getMovieDetailWithMovieID:(NSNumber*)movieID;
 
 @end

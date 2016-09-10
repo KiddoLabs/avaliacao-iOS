@@ -7,5 +7,7 @@ target 'GuideboxiOS' do
 
   # Pods for GuideboxiOS
   pod 'AFNetworking'
+  pod 'Mantle'
+  pod 'Realm'
 
 end

@@ -31,7 +31,7 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Film name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Izv-Qh-uyc">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Izv-Qh-uyc">
                         <rect key="frame" x="8" y="180" width="104" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="07f-wk-qGA"/>
@@ -56,6 +56,11 @@
                 <constraint firstItem="Izv-Qh-uyc" firstAttribute="leading" secondItem="lXJ-Jp-dY4" secondAttribute="leading" constant="8" id="yon-oI-ww7"/>
             </constraints>
             <size key="customSize" width="120" height="126"/>
+            <connections>
+                <outlet property="movieNameLabel" destination="Izv-Qh-uyc" id="nUN-R0-z12"/>
+                <outlet property="releaseYearLabel" destination="CRZ-H0-c8T" id="QWe-wc-Zq5"/>
+                <outlet property="thumbnailImageView" destination="KH3-cD-v4H" id="b2e-jT-e5d"/>
+            </connections>
             <point key="canvasLocation" x="229" y="351.5"/>
         </collectionViewCell>
     </objects>

@@ -7,8 +7,9 @@
 //
 
 #import "DetailViewController.h"
+#import "MovieService.h"
 
-@interface DetailViewController ()
+@interface DetailViewController () <MovieServiceDelegate>
 
 @end
 
@@ -17,11 +18,31 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    MovieService *service = [[MovieService alloc]initWithTarget:self];
+    
+    [service getMovieDetailWithMovieID:nil];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - MovieServiceDelegate
+
+-(void)responseSuccess:(id)response{
+    
+    if ([response isKindOfClass:[MovieDetail class]]) {
+        NSLog(@"%@", response);
+        //        self.movieList = response;
+        
+        //        [self.collectionView reloadData];
+    }
+}
+
+-(void)responseError:(NSError *)error{
+    NSLog(@"%@", error);
 }
 
 /*

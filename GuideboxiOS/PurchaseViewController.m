@@ -7,8 +7,10 @@
 //
 
 #import "PurchaseViewController.h"
+#import "PurchaseCell.h"
 
 @interface PurchaseViewController ()
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end
 
@@ -17,11 +19,37 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    UINib *nib = [UINib nibWithNibName:@"PurchaseCell" bundle: nil];
+    [self.collectionView registerNib:nib forCellWithReuseIdentifier:@"PurchaseCell"];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
+    return 1;
+}
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    
+    return 4;
+}
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    //    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"FilmCell" forIndexPath:indexPath];
+    
+    PurchaseCell *cell = (PurchaseCell*)[collectionView dequeueReusableCellWithReuseIdentifier:@"PurchaseCell" forIndexPath:indexPath];
+    //     *cell= (photoUploadCollectionViewCell*)[collectionView dequeueReusableCellWithReuseIdentifier:@"photoUploadCell" forIndexPath:indexPath];
+    
+    return cell;
+}
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+//    [self performSegueWithIdentifier:@"homeToDetailSegue" sender:self];
 }
 
 /*

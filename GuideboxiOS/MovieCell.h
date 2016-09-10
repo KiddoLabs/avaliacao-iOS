@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+#import "Movie.h"
+
 @interface MovieCell : UICollectionViewCell
+
+-(void)configCellWithMovie:(Movie*)movie;
 
 @end

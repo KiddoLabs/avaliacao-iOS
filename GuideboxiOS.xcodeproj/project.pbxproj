@@ -19,8 +19,15 @@
 		247D15CC1D8223E8007E968C /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 247D15CB1D8223E8007E968C /* MovieCell.xib */; };
 		247D15CF1D822775007E968C /* MovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 247D15CE1D822775007E968C /* MovieCell.m */; };
 		247D15D61D82416A007E968C /* MovieService.m in Sources */ = {isa = PBXBuildFile; fileRef = 247D15D51D82416A007E968C /* MovieService.m */; };
+		24C4AEA61D83842A00F66360 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C4AEA51D83842A00F66360 /* Movie.m */; };
+		24C4AEA91D83843700F66360 /* MovieList.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C4AEA81D83843700F66360 /* MovieList.m */; };
+		24C4AEAC1D8388AA00F66360 /* MovieDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C4AEAB1D8388AA00F66360 /* MovieDetail.m */; };
+		24C4AEAF1D838BFB00F66360 /* PurchaseSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C4AEAE1D838BFB00F66360 /* PurchaseSource.m */; };
+		24C4AEB21D838CA300F66360 /* Format.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C4AEB11D838CA300F66360 /* Format.m */; };
 		24F6B0FD1D82CF7A00F12CE1 /* UIColor+GBColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F6B0FC1D82CF7A00F12CE1 /* UIColor+GBColor.m */; };
 		24F6B1011D82D06000F12CE1 /* GBButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F6B1001D82D06000F12CE1 /* GBButton.m */; };
+		24F6B1061D8337A500F12CE1 /* PurchaseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24F6B1051D8337A500F12CE1 /* PurchaseCell.xib */; };
+		24F6B1091D8337C600F12CE1 /* PurchaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F6B1081D8337C600F12CE1 /* PurchaseCell.m */; };
 		696146C5CDEA797E3EAF3FAC /* libPods-GuideboxiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 523D0977CEACCDFC8DECD1E3 /* libPods-GuideboxiOS.a */; };
 /* End PBXBuildFile section */
 
@@ -46,10 +53,23 @@
 		247D15CE1D822775007E968C /* MovieCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieCell.m; sourceTree = "<group>"; };
 		247D15D41D82416A007E968C /* MovieService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieService.h; sourceTree = "<group>"; };
 		247D15D51D82416A007E968C /* MovieService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieService.m; sourceTree = "<group>"; };
+		24C4AEA41D83842A00F66360 /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
+		24C4AEA51D83842A00F66360 /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
+		24C4AEA71D83843700F66360 /* MovieList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieList.h; sourceTree = "<group>"; };
+		24C4AEA81D83843700F66360 /* MovieList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieList.m; sourceTree = "<group>"; };
+		24C4AEAA1D8388AA00F66360 /* MovieDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieDetail.h; sourceTree = "<group>"; };
+		24C4AEAB1D8388AA00F66360 /* MovieDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieDetail.m; sourceTree = "<group>"; };
+		24C4AEAD1D838BFB00F66360 /* PurchaseSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PurchaseSource.h; sourceTree = "<group>"; };
+		24C4AEAE1D838BFB00F66360 /* PurchaseSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PurchaseSource.m; sourceTree = "<group>"; };
+		24C4AEB01D838CA300F66360 /* Format.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Format.h; sourceTree = "<group>"; };
+		24C4AEB11D838CA300F66360 /* Format.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Format.m; sourceTree = "<group>"; };
 		24F6B0FB1D82CF7A00F12CE1 /* UIColor+GBColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+GBColor.h"; sourceTree = "<group>"; };
 		24F6B0FC1D82CF7A00F12CE1 /* UIColor+GBColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+GBColor.m"; sourceTree = "<group>"; };
 		24F6B0FF1D82D06000F12CE1 /* GBButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBButton.h; sourceTree = "<group>"; };
 		24F6B1001D82D06000F12CE1 /* GBButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBButton.m; sourceTree = "<group>"; };
+		24F6B1051D8337A500F12CE1 /* PurchaseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PurchaseCell.xib; sourceTree = "<group>"; };
+		24F6B1071D8337C600F12CE1 /* PurchaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PurchaseCell.h; sourceTree = "<group>"; };
+		24F6B1081D8337C600F12CE1 /* PurchaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PurchaseCell.m; sourceTree = "<group>"; };
 		523D0977CEACCDFC8DECD1E3 /* libPods-GuideboxiOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GuideboxiOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E88267D50154C02E504A5B3 /* Pods-GuideboxiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuideboxiOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GuideboxiOS/Pods-GuideboxiOS.debug.xcconfig"; sourceTree = "<group>"; };
 		DD77B438AD12E2D795F4E523 /* Pods-GuideboxiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuideboxiOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-GuideboxiOS/Pods-GuideboxiOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -121,6 +141,16 @@
 		247D15BB1D8218A7007E968C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				24C4AEA41D83842A00F66360 /* Movie.h */,
+				24C4AEA51D83842A00F66360 /* Movie.m */,
+				24C4AEA71D83843700F66360 /* MovieList.h */,
+				24C4AEA81D83843700F66360 /* MovieList.m */,
+				24C4AEAA1D8388AA00F66360 /* MovieDetail.h */,
+				24C4AEAB1D8388AA00F66360 /* MovieDetail.m */,
+				24C4AEAD1D838BFB00F66360 /* PurchaseSource.h */,
+				24C4AEAE1D838BFB00F66360 /* PurchaseSource.m */,
+				24C4AEB01D838CA300F66360 /* Format.h */,
+				24C4AEB11D838CA300F66360 /* Format.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -140,12 +170,12 @@
 			children = (
 				247D15BF1D821913007E968C /* HomeViewController.h */,
 				247D15C01D821913007E968C /* HomeViewController.m */,
-				247D15C21D82193F007E968C /* FavoriteViewController.h */,
-				247D15C31D82193F007E968C /* FavoriteViewController.m */,
 				247D15C51D82196D007E968C /* DetailViewController.h */,
 				247D15C61D82196D007E968C /* DetailViewController.m */,
 				247D15C81D821996007E968C /* PurchaseViewController.h */,
 				247D15C91D821996007E968C /* PurchaseViewController.m */,
+				247D15C21D82193F007E968C /* FavoriteViewController.h */,
+				247D15C31D82193F007E968C /* FavoriteViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -179,6 +209,7 @@
 		24F6B0FE1D82D01D00F12CE1 /* CustomComponents */ = {
 			isa = PBXGroup;
 			children = (
+				24F6B1041D83378100F12CE1 /* PurchaseCell */,
 				24F6B1031D83087B00F12CE1 /* GBButton */,
 				24F6B1021D83086400F12CE1 /* MovieCell */,
 			);
@@ -202,6 +233,16 @@
 				24F6B1001D82D06000F12CE1 /* GBButton.m */,
 			);
 			name = GBButton;
+			sourceTree = "<group>";
+		};
+		24F6B1041D83378100F12CE1 /* PurchaseCell */ = {
+			isa = PBXGroup;
+			children = (
+				24F6B1051D8337A500F12CE1 /* PurchaseCell.xib */,
+				24F6B1071D8337C600F12CE1 /* PurchaseCell.h */,
+				24F6B1081D8337C600F12CE1 /* PurchaseCell.m */,
+			);
+			name = PurchaseCell;
 			sourceTree = "<group>";
 		};
 		E50291E77FCF8B22397E882C /* Pods */ = {
@@ -273,6 +314,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24F6B1061D8337A500F12CE1 /* PurchaseCell.xib in Resources */,
 				247D15B41D821820007E968C /* LaunchScreen.storyboard in Resources */,
 				247D15CC1D8223E8007E968C /* MovieCell.xib in Resources */,
 				247D15B11D821820007E968C /* Assets.xcassets in Resources */,
@@ -340,9 +382,15 @@
 				247D15CA1D821996007E968C /* PurchaseViewController.m in Sources */,
 				247D15D61D82416A007E968C /* MovieService.m in Sources */,
 				247D15A91D821820007E968C /* AppDelegate.m in Sources */,
+				24C4AEAC1D8388AA00F66360 /* MovieDetail.m in Sources */,
 				247D15A61D821820007E968C /* main.m in Sources */,
+				24C4AEAF1D838BFB00F66360 /* PurchaseSource.m in Sources */,
+				24C4AEA91D83843700F66360 /* MovieList.m in Sources */,
+				24C4AEA61D83842A00F66360 /* Movie.m in Sources */,
 				24F6B1011D82D06000F12CE1 /* GBButton.m in Sources */,
 				247D15CF1D822775007E968C /* MovieCell.m in Sources */,
+				24C4AEB21D838CA300F66360 /* Format.m in Sources */,
+				24F6B1091D8337C600F12CE1 /* PurchaseCell.m in Sources */,
 				247D15C11D821913007E968C /* HomeViewController.m in Sources */,
 				247D15C71D82196D007E968C /* DetailViewController.m in Sources */,
 			);

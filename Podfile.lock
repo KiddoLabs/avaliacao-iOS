@@ -14,13 +14,23 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - Mantle (2.0.7):
+    - Mantle/extobjc (= 2.0.7)
+  - Mantle/extobjc (2.0.7)
+  - Realm (1.0.2):
+    - Realm/Headers (= 1.0.2)
+  - Realm/Headers (1.0.2)
 
 DEPENDENCIES:
   - AFNetworking
+  - Mantle
+  - Realm
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  Mantle: bc40bb061d8c2c6fb48d5083e04d928c3b7f73d9
+  Realm: 9d5c46a4d7d27958530a8dfc58f63a99e5c2cba3
 
-PODFILE CHECKSUM: 7a9f65afa36ba087e0a75ef0d68603281613d20c
+PODFILE CHECKSUM: eb81845cfd8348b755e7272c4eabc27300ca0314
 
 COCOAPODS: 1.0.1

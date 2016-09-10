@@ -118,23 +118,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comprar filme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="scU-8O-EvI">
-                                <rect key="frame" x="246" y="290" width="109" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="109" id="00l-rc-kOD"/>
-                                    <constraint firstAttribute="height" constant="20" id="nNw-W1-gPs"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WUP-1x-8sK">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Nbu-AY-BKh">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PurchaseCell" id="oo4-lC-hzo">
+                                        <rect key="frame" x="0.0" y="64" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="U8z-nA-XNt" id="xbF-iA-M3w"/>
+                                    <outlet property="delegate" destination="U8z-nA-XNt" id="NOR-wu-PBZ"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="scU-8O-EvI" firstAttribute="centerY" secondItem="omL-Xn-LJS" secondAttribute="centerY" id="eun-E1-FCR"/>
-                            <constraint firstItem="scU-8O-EvI" firstAttribute="centerX" secondItem="omL-Xn-LJS" secondAttribute="centerX" id="j7z-Yc-pRg"/>
+                            <constraint firstItem="WUP-1x-8sK" firstAttribute="leading" secondItem="omL-Xn-LJS" secondAttribute="leading" id="5H8-bL-uyq"/>
+                            <constraint firstItem="WUP-1x-8sK" firstAttribute="top" secondItem="ntg-o4-5iH" secondAttribute="bottom" id="CkX-0P-n5Y"/>
+                            <constraint firstAttribute="trailing" secondItem="WUP-1x-8sK" secondAttribute="trailing" id="Elu-uS-ano"/>
+                            <constraint firstItem="fwb-dj-S5P" firstAttribute="top" secondItem="WUP-1x-8sK" secondAttribute="bottom" id="NYs-2w-lnc"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="WUP-1x-8sK" id="8Am-BI-D2B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ko6-yT-qIR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

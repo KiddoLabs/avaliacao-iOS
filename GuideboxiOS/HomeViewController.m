@@ -14,6 +14,9 @@
 @interface HomeViewController () <UICollectionViewDataSource, UICollectionViewDelegate, MovieServiceDelegate>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+
+@property (nonatomic, strong) MovieList *movieList;
+
 @end
 
 @implementation HomeViewController
@@ -43,6 +46,13 @@
 
 -(void)responseSuccess:(id)response{
     NSLog(@"%@", response);
+    
+    if ([response isKindOfClass:[MovieList class]]) {
+        
+        self.movieList = response;
+        
+        [self.collectionView reloadData];
+    }
 }
 
 -(void)responseError:(NSError *)error{
@@ -55,13 +65,16 @@
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     
-    return 4;
+    return [self.movieList.movies count];
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
 //    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"FilmCell" forIndexPath:indexPath];
     
     MovieCell *cell = (MovieCell*)[collectionView dequeueReusableCellWithReuseIdentifier:@"MovieCell" forIndexPath:indexPath];
+    
+    [cell configCellWithMovie:[self.movieList.movies objectAtIndex:indexPath.row]];
+    
 //     *cell= (photoUploadCollectionViewCell*)[collectionView dequeueReusableCellWithReuseIdentifier:@"photoUploadCell" forIndexPath:indexPath];
     
     return cell;
