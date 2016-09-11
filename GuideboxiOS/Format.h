@@ -8,12 +8,17 @@
 
 #import <Mantle/Mantle.h>
 
+typedef enum : NSUInteger {
+    PurchaseTypePurchase,
+    PurchaseTypeRent
+} PurchaseType;
+
 @interface Format : MTLModel <MTLJSONSerializing>
 
 @property (nonatomic, strong) NSString *formatName;
 @property (nonatomic, strong) NSString *price;
+@property (nonatomic) PurchaseType type;
 
-#warning propriedade type pode ser um enum
-@property (nonatomic, strong) NSString *type;
+-(NSString*)getFormatType;
 
 @end

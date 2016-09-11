@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Format.h"
 
-@interface PurchaseCell : UICollectionViewCell
+@interface FormatCell : UICollectionViewCell
+
+-(void)configCellWithFormat:(Format*)format;
 
 @end

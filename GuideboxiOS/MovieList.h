@@ -15,6 +15,6 @@
 
 @property (nonatomic) NSInteger returnedMovieListSize;
 
-@property (nonatomic, strong) NSArray *movies;
+@property (nonatomic, strong) NSMutableArray *movies;
 
 @end

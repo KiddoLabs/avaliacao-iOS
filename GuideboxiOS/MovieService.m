@@ -34,9 +34,11 @@
     return self;
 }
 
--(void)getMovieList{
+-(void)getMovieListWithStart:(NSInteger)startAt size:(NSInteger)size{
     
-    [self.manager GET:@"US/rKJwmLEQB3qOouvHckEwjDrsGqKWpHgE/movies/all/1/10/all/all" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+     NSString *urlString = [NSString stringWithFormat:@"US/rKJwmLEQB3qOouvHckEwjDrsGqKWpHgE/movies/all/%ld/%ld/all/all", (long)startAt, (long)size];
+    
+    [self.manager GET:urlString parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         NSDictionary *responseDictionary = (NSDictionary *)responseObject;
         
@@ -61,7 +63,9 @@
 
 -(void)getMovieDetailWithMovieID:(NSNumber*)movieID{
     
-    [self.manager GET:@"US/rKJwmLEQB3qOouvHckEwjDrsGqKWpHgE/movie/138841" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    NSString *urlString = [NSString stringWithFormat:@"US/rKJwmLEQB3qOouvHckEwjDrsGqKWpHgE/movie/%@", [movieID stringValue]];
+    
+    [self.manager GET:urlString parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         NSDictionary *responseDictionary = (NSDictionary *)responseObject;
         

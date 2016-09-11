@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MovieDetail.h"
 
 @interface DetailViewController : UIViewController
+
+@property (nonatomic, strong)MovieDetail *movieDetail;
 
 @end

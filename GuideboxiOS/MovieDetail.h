@@ -11,11 +11,15 @@
 
 @interface MovieDetail : MTLModel <MTLJSONSerializing>
 
+@property (nonatomic, strong) NSNumber *movieID;
 @property (nonatomic, strong) NSURL *thumbnailURL;
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSNumber *releaseYear;
+
 @property (nonatomic, strong) NSArray *videoFormats;
 @property (nonatomic, strong) NSString *movieDescription;
 @property (nonatomic, strong) NSArray *purchaseSources;
 
+
+#warning metodo para retornar os tres formtas mas usados
 @end

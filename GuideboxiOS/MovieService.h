@@ -27,7 +27,7 @@
 
 - (instancetype)initWithTarget:(id<MovieServiceDelegate>)target;
 
--(void)getMovieList;
+-(void)getMovieListWithStart:(NSInteger)startAt size:(NSInteger)size;
 -(void)getMovieDetailWithMovieID:(NSNumber*)movieID;
 
 @end

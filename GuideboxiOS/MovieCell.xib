@@ -14,29 +14,17 @@
                 <rect key="frame" x="0.0" y="0.0" width="120" height="237"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FilmThumbnail" translatesAutoresizingMaskIntoConstraints="NO" id="KH3-cD-v4H">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KH3-cD-v4H">
                         <rect key="frame" x="0.0" y="0.0" width="120" height="171"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="171" id="Yvg-ff-MLm"/>
-                            <constraint firstAttribute="width" constant="120" id="h3n-mL-MpA"/>
-                        </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CRZ-H0-c8T">
-                        <rect key="frame" x="8" y="208" width="104" height="21"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="104" id="F3b-h9-h4N"/>
-                            <constraint firstAttribute="height" constant="21" id="Ueq-Us-Ys9"/>
-                        </constraints>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="CRZ-H0-c8T">
+                        <rect key="frame" x="8" y="211" width="104" height="26"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Izv-Qh-uyc">
-                        <rect key="frame" x="8" y="180" width="104" height="21"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="21" id="07f-wk-qGA"/>
-                            <constraint firstAttribute="width" constant="104" id="dzQ-cV-3ZK"/>
-                        </constraints>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie name with two lines" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Izv-Qh-uyc">
+                        <rect key="frame" x="8" y="171" width="104" height="40"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -44,16 +32,20 @@
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="KH3-cD-v4H" firstAttribute="top" secondItem="lXJ-Jp-dY4" secondAttribute="top" id="Dbb-cZ-7NU"/>
-                <constraint firstItem="KH3-cD-v4H" firstAttribute="leading" secondItem="lXJ-Jp-dY4" secondAttribute="leading" id="FSE-Ya-Llf"/>
-                <constraint firstAttribute="trailing" secondItem="CRZ-H0-c8T" secondAttribute="trailing" constant="8" id="LOI-rN-Dxv"/>
-                <constraint firstAttribute="trailing" secondItem="Izv-Qh-uyc" secondAttribute="trailing" constant="8" id="Pzh-G4-NUE"/>
-                <constraint firstAttribute="trailing" secondItem="KH3-cD-v4H" secondAttribute="trailing" id="fQW-VW-DQd"/>
-                <constraint firstItem="CRZ-H0-c8T" firstAttribute="top" secondItem="Izv-Qh-uyc" secondAttribute="bottom" constant="7" id="lNR-eD-5xC"/>
-                <constraint firstItem="CRZ-H0-c8T" firstAttribute="leading" secondItem="lXJ-Jp-dY4" secondAttribute="leading" constant="8" id="pL6-To-K3i"/>
-                <constraint firstItem="Izv-Qh-uyc" firstAttribute="top" secondItem="KH3-cD-v4H" secondAttribute="bottom" constant="9" id="vYZ-Vy-4oz"/>
-                <constraint firstItem="Izv-Qh-uyc" firstAttribute="leading" secondItem="lXJ-Jp-dY4" secondAttribute="leading" constant="8" id="yon-oI-ww7"/>
+                <constraint firstAttribute="bottom" secondItem="Izv-Qh-uyc" secondAttribute="bottom" constant="26" id="0ta-WE-r9x"/>
+                <constraint firstItem="Izv-Qh-uyc" firstAttribute="leading" secondItem="lXJ-Jp-dY4" secondAttribute="leading" constant="8" id="1a2-1I-koY"/>
+                <constraint firstItem="Izv-Qh-uyc" firstAttribute="top" secondItem="KH3-cD-v4H" secondAttribute="bottom" id="7qD-US-FHa"/>
+                <constraint firstItem="CRZ-H0-c8T" firstAttribute="leading" secondItem="lXJ-Jp-dY4" secondAttribute="leading" constant="8" id="DYq-ne-bc8"/>
+                <constraint firstItem="KH3-cD-v4H" firstAttribute="top" secondItem="lXJ-Jp-dY4" secondAttribute="top" id="Fbt-uv-yoL"/>
+                <constraint firstAttribute="bottom" secondItem="KH3-cD-v4H" secondAttribute="bottom" constant="66" id="JV6-9L-UNy"/>
+                <constraint firstAttribute="trailing" secondItem="CRZ-H0-c8T" secondAttribute="trailing" constant="8" id="Y1D-tw-Mg0"/>
+                <constraint firstAttribute="trailing" secondItem="Izv-Qh-uyc" secondAttribute="trailing" constant="8" id="ZRR-5j-10S"/>
+                <constraint firstAttribute="trailing" secondItem="KH3-cD-v4H" secondAttribute="trailing" id="gbs-vU-uhN"/>
+                <constraint firstItem="CRZ-H0-c8T" firstAttribute="top" secondItem="Izv-Qh-uyc" secondAttribute="bottom" id="lc3-y5-hnY"/>
+                <constraint firstAttribute="bottom" secondItem="CRZ-H0-c8T" secondAttribute="bottom" id="qbv-Ku-QS0"/>
+                <constraint firstItem="KH3-cD-v4H" firstAttribute="leading" secondItem="lXJ-Jp-dY4" secondAttribute="leading" id="ree-3n-Zw4"/>
             </constraints>
             <size key="customSize" width="120" height="126"/>
             <connections>
@@ -64,7 +56,4 @@
             <point key="canvasLocation" x="229" y="351.5"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <image name="FilmThumbnail" width="120" height="183"/>
-    </resources>
 </document>

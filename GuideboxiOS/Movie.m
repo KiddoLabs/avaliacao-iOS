@@ -19,4 +19,8 @@
              };
 }
 
++ (NSValueTransformer *)thumbnailURLJSONTransformer {
+    return [NSValueTransformer valueTransformerForName:MTLURLValueTransformerName];
+}
+
 @end

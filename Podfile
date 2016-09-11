@@ -9,5 +9,7 @@ target 'GuideboxiOS' do
   pod 'AFNetworking'
   pod 'Mantle'
   pod 'Realm'
+  pod 'SVPullToRefresh'
+  pod 'PINRemoteImage'
 
 end

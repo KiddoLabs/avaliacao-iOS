@@ -18,4 +18,28 @@
              };
 }
 
++ (NSValueTransformer *)typeJSONTransformer {
+    return [NSValueTransformer mtl_valueMappingTransformerWithDictionary:@{@"purchase": @(PurchaseTypePurchase), @"rent": @(PurchaseTypeRent)}];
+}
+
+-(NSString*)getFormatType{
+    
+    NSString *result;
+    
+    switch (self.type) {
+        case PurchaseTypePurchase:
+            result = @"Comprar";
+            break;
+        case PurchaseTypeRent:
+            result = @"Alugar: 3 Dias";
+            break;
+            
+        default:
+            result = @"";
+            break;
+    }
+    
+    return result;
+}
+
 @end

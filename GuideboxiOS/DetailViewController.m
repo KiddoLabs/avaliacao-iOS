@@ -8,8 +8,18 @@
 
 #import "DetailViewController.h"
 #import "MovieService.h"
+#import "PurchaseViewController.h"
+//#import "UIImageView+AFNetworking.h"
+
+//#import <SDWebImage/UIImageView+WebCache.h>
+
+#import <PINImageView+PINRemoteImage.h>
 
 @interface DetailViewController () <MovieServiceDelegate>
+@property (weak, nonatomic) IBOutlet UIImageView *thumbnailImageView;
+@property (weak, nonatomic) IBOutlet UILabel *movieTitleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *releaseYearLabel;
+@property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
 
 @end
 
@@ -21,12 +31,43 @@
     
     MovieService *service = [[MovieService alloc]initWithTarget:self];
     
-    [service getMovieDetailWithMovieID:nil];
+    [service getMovieDetailWithMovieID:self.movieDetail.movieID];
+    
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    
+    [self.navigationController setNavigationBarHidden:NO];
+    
+    self.navigationController.navigationBar.tintColor = [UIColor blackColor];
+    
+    [self updateScreenData];
+    
+}
+
+-(BOOL)hidesBottomBarWhenPushed
+{
+    return YES;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)updateScreenData{
+    
+//    [self.thumbnailImageView setImageWithURL:self.movieDetail.thumbnailURL];
+//    [self.thumbnailImageView sd_setImageWithURL:self.movieDetail.thumbnailURL];
+    
+    [self.thumbnailImageView setPin_updateWithProgress:YES];
+    
+    [self.thumbnailImageView pin_setImageFromURL:self.movieDetail.thumbnailURL];
+    
+    [self.movieTitleLabel setText:self.movieDetail.title];
+    [self.releaseYearLabel setText:[self.movieDetail.releaseYear stringValue]];
+    [self.descriptionTextView setText:self.movieDetail.movieDescription];
+    
 }
 
 #pragma mark - MovieServiceDelegate
@@ -38,11 +79,27 @@
         //        self.movieList = response;
         
         //        [self.collectionView reloadData];
+        
+        MovieDetail *movieDetail = (MovieDetail*)response;
+        
+        self.movieDetail.movieDescription = movieDetail.movieDescription;
+        self.movieDetail.purchaseSources = movieDetail.purchaseSources;
+        
+        [self updateScreenData];
     }
 }
 
 -(void)responseError:(NSError *)error{
     NSLog(@"%@", error);
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    if ([segue.identifier isEqualToString:@"detailToPurchase"]) {
+        
+        PurchaseViewController *purchaseViewController = (PurchaseViewController *)segue.destinationViewController;
+        purchaseViewController.purchaseSources = self.movieDetail.purchaseSources;
+    }
 }
 
 /*

@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PurchaseSource.h"
 
 @interface PurchaseViewController : UIViewController
+
+@property (nonatomic, strong) NSArray *purchaseSources;
 
 @end
