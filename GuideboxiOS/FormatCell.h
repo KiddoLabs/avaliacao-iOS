@@ -13,4 +13,7 @@
 
 -(void)configCellWithFormat:(Format*)format;
 
+-(void)selectCell;
+-(void)configCellSelectedState:(BOOL)state;
+
 @end

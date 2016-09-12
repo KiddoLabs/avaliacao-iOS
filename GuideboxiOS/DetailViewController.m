@@ -14,6 +14,7 @@
 //#import <SDWebImage/UIImageView+WebCache.h>
 
 #import <PINImageView+PINRemoteImage.h>
+#import <TSMessages/TSMessage.h>
 
 @interface DetailViewController () <MovieServiceDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *thumbnailImageView;
@@ -28,6 +29,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        
+        if (status == AFNetworkReachabilityStatusNotReachable) {
+            [TSMessage showNotificationWithTitle:@"Sem conexão"
+                                        subtitle:@"Verifique sua conexão com a internet"
+                                            type:TSMessageNotificationTypeError];
+        }
+        
+    }];
     
     MovieService *service = [[MovieService alloc]initWithTarget:self];
     

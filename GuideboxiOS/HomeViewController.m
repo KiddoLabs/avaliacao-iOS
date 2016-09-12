@@ -14,6 +14,7 @@
 
 #import "DetailViewController.h"
 #import "SVPullToRefresh.h"
+#import <TSMessages/TSMessage.h>
 
 @interface HomeViewController () <UICollectionViewDelegateFlowLayout ,UICollectionViewDataSource, UICollectionViewDelegate, MovieServiceDelegate>
 
@@ -27,9 +28,20 @@
 
 @implementation HomeViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        
+        if (status == AFNetworkReachabilityStatusNotReachable) {
+            [TSMessage showNotificationWithTitle:@"Sem conexão"
+                                        subtitle:@"Verifique sua conexão com a internet"
+                                            type:TSMessageNotificationTypeError];
+        }
+        
+    }];
     
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;

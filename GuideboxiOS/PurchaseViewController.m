@@ -9,9 +9,13 @@
 #import "PurchaseViewController.h"
 #import "FormatCell.h"
 #import "PurchaseListHeader.h"
+#import "GBButton.h"
 
-@interface PurchaseViewController ()
+@interface PurchaseViewController () <UICollectionViewDelegateFlowLayout ,UICollectionViewDataSource, UICollectionViewDelegate>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+
+@property (nonatomic, strong)NSIndexPath *selectedIndexPath;
+@property (weak, nonatomic) IBOutlet GBButton *purchaseButton;
 
 @end
 
@@ -26,6 +30,8 @@
     
     UINib *purchaseListHeader = [UINib nibWithNibName:@"PurchaseListHeader" bundle: nil];
     [self.collectionView registerNib:purchaseListHeader forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"PurchaseListHeader"];
+    
+//    self.selectedIndexPath = nil;
     
 }
 
@@ -77,14 +83,79 @@
     
     [cell configCellWithFormat:format];
     
+    if (self.selectedIndexPath != nil && [self.selectedIndexPath compare:indexPath] == NSOrderedSame) {
+        [cell configCellSelectedState:YES];
+    }
+    else{
+        [cell configCellSelectedState:NO];
+    }
+    
+    if (self.selectedIndexPath == nil) {
+        self.purchaseButton.enable = NO;
+    }
+    else{
+        self.purchaseButton.enable = YES;
+    }
+    [self.purchaseButton setNeedsLayout];
+    
     return cell;
 }
-
+//
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     
 //    [self performSegueWithIdentifier:@"homeToDetailSegue" sender:self];
+//    FormatCell *cell = (FormatCell*)[collectionView dequeueReusableCellWithReuseIdentifier:@"formatCell" forIndexPath:indexPath];
+    
+//    FormatCell *cell = (FormatCell*)[collectionView cellForItemAtIndexPath:indexPath];
+    
+//    [cell selectCell];
+    if (self.selectedIndexPath != nil && [self.selectedIndexPath compare:indexPath] == NSOrderedSame) {
+        self.selectedIndexPath = nil;
+    }
+    else{
+        self.selectedIndexPath = indexPath;
+    }
+    
+    
+
+//    [collectionView reloadData];
+    
+    [collectionView reloadData];
+    
+//    [collectionView reloadItemsAtIndexPaths:[NSArray arrayWithObject:indexPath]];
+    
+//    cell.selectedBackgroundView
+    
+    
+//    [cell selectCell];
     
 }
+
+//-(void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath{
+//    
+//    FormatCell *cell = (FormatCell*)[collectionView cellForItemAtIndexPath:indexPath];
+//    
+//    [cell configCellSelectedState:NO];
+//    
+//    [collectionView reloadItemsAtIndexPaths:[NSArray arrayWithObject:indexPath]];
+//    
+//}
+
+//-(void)collectionView:(UICollectionView *)collectionView didHighlightItemAtIndexPath:(NSIndexPath *)indexPath{
+//    
+//    FormatCell *cell = (FormatCell*)[collectionView cellForItemAtIndexPath:indexPath];
+//    
+//    [cell configCellSelectedState:YES];
+//}
+//
+//-(void)collectionView:(UICollectionView *)collectionView didUnhighlightItemAtIndexPath:(NSIndexPath *)indexPath{
+//    
+//    FormatCell *cell = (FormatCell*)[collectionView cellForItemAtIndexPath:indexPath];
+//    
+//    [cell configCellSelectedState:NO];
+//    
+//}
+
 
 -(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
     return UIEdgeInsetsMake(0, 7, 0, 7);

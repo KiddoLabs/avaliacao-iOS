@@ -11,5 +11,6 @@ target 'GuideboxiOS' do
   pod 'Realm'
   pod 'SVPullToRefresh'
   pod 'PINRemoteImage'
+  pod 'TSMessages'
 
 end

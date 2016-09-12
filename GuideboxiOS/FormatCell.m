@@ -16,6 +16,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *priceLabel;
 @property (weak, nonatomic) IBOutlet UILabel *typeLabel;
 
+@property BOOL selectedState;
+
 @end
 
 @implementation FormatCell
@@ -65,11 +67,38 @@
 //    
 //    [self.movieNameLabel setText:movie.title];
 //    [self.releaseYearLabel setText:[movie.releaseYear stringValue]];
+    
 }
 
--(void)configSelectedState{
+//-(void)setSelected:(BOOL)selected{
+//    NSLog(@"selected");
+//}
+//
+//-(BOOL)isSelected{
+//    return YES;
+//}
+
+-(void)selectCell{
     
-    if (/* DISABLES CODE */ (YES)) {
+//    if (self.selectedState) {
+//        self.selectedState = NO;
+//        
+//    }
+//    else{
+//        self.selectedState = YES;
+//        
+//    }
+    
+
+//    
+    [self configCellSelectedState:self.selectedState];
+    
+}
+//-
+
+-(void)configCellSelectedState:(BOOL)state{
+    
+    if (state) {
         [self setBackgroundColor:[UIColor whiteColor]];
         [self.formatNameLabel setTextColor:[UIColor GBRedColor]];
         [self.priceLabel setTextColor:[UIColor GBRedColor]];
@@ -77,13 +106,24 @@
     }
     else{
         
-        [self.backgroundColor = [UIColor whiteColor]colorWithAlphaComponent:0.35f]; //setBackgroundColor:[UIColor colo]];
+        [self setBackgroundColor:[[UIColor whiteColor] colorWithAlphaComponent:0.35f]]; //s//etBackgroundColor: [UIColor whiteColor]colorWithAlphaComponent:0.35f]; //setBackgroundColor:[UIColor colo]];
         
-        [self.formatNameLabel setTextColor:[UIColor GBRedColor]];
-        [self.priceLabel setTextColor:[UIColor GBRedColor]];
-        [self.typeLabel setTextColor:[UIColor GBRedColor]];
+//        [[UIColor blackColor] colorWithAlphaComponent:0.5f];
+        
+        [self.formatNameLabel setTextColor:[UIColor whiteColor]];
+        [self.priceLabel setTextColor:[UIColor whiteColor]];
+        [self.typeLabel setTextColor:[UIColor whiteColor]];
     }
 
     
 }
+
+//-(void)performSelectionAnimations {
+//
+//    [self setBackgroundColor:[UIColor whiteColor]];
+//    [self.formatNameLabel setTextColor:[UIColor GBRedColor]];
+//    [self.priceLabel setTextColor:[UIColor GBRedColor]];
+//    [self.typeLabel setTextColor:[UIColor GBRedColor]];
+//}
+
 @end

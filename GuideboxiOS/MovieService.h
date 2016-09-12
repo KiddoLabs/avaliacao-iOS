@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AFNetworking/AFNetworking.h>
 
 //Models
 #import "MovieList.h"

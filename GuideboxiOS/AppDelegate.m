@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <AFNetworking/AFNetworking.h>
 
 @interface AppDelegate ()
 
@@ -26,6 +27,8 @@
 //    
 //    self.window.frame =  CGRectMake(0,20,self.window.frame.size.width,self.window.frame.size.height-20);
 //    self.window.bounds = CGRectMake(0, 20, self.window.frame.size.width, self.window.frame.size.height);
+    
+    [[AFNetworkReachabilityManager sharedManager] startMonitoring];
     
     return YES;
 }

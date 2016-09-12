@@ -7,7 +7,6 @@
 //
 
 #import "MovieService.h"
-#import <AFNetworking/AFNetworking.h>
 
 @interface MovieService ()
 
