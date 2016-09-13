@@ -45,6 +45,7 @@
                                 </collectionReusableView>
                             </collectionView>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="L7e-nl-QBa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="1LA-wZ-gfu"/>
                             <constraint firstAttribute="trailing" secondItem="L7e-nl-QBa" secondAttribute="trailing" id="W2m-wp-Mti"/>
@@ -125,7 +126,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DcB-Xf-0cj">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="DcB-Xf-0cj">
                                 <rect key="frame" x="142" y="221" width="158" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="DED-se-Kvf"/>
@@ -135,6 +136,9 @@
                                 <state key="normal" title="Add aos favoritos" image="favoriteStar">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addFavorites:" destination="cH9-T9-yKm" eventType="touchUpInside" id="hHo-xb-sST"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xLb-zW-Jq1">
                                 <rect key="frame" x="9" y="260" width="301" height="199"/>
@@ -156,7 +160,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BRD-CZ-D4v">
                                         <rect key="frame" x="52" y="0.0" width="51" height="36"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4FE-2g-rve">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4FE-2g-rve">
                                                 <rect key="frame" x="1" y="8" width="48" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="kKo-6B-ixc"/>
@@ -176,7 +180,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oga-CP-KAG">
                                         <rect key="frame" x="104" y="0.0" width="51" height="36"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3m9-xQ-Yfr">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3m9-xQ-Yfr">
                                                 <rect key="frame" x="1" y="8" width="48" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="IOe-Tv-2co"/>
@@ -196,7 +200,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KjR-Z1-SIZ">
                                         <rect key="frame" x="0.0" y="0.0" width="51" height="36"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full HD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Elj-fQ-8dv">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Elj-fQ-8dv">
                                                 <rect key="frame" x="1" y="8" width="48" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="O0J-Ze-G7O"/>
@@ -229,6 +233,12 @@
                                     <constraint firstItem="oga-CP-KAG" firstAttribute="top" secondItem="W3B-JE-Irz" secondAttribute="top" id="tVu-z0-WFQ"/>
                                     <constraint firstItem="BRD-CZ-D4v" firstAttribute="leading" secondItem="KjR-Z1-SIZ" secondAttribute="trailing" constant="1" id="vVN-G6-HqV"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="9"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -269,15 +279,20 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addFavoriteButton" destination="DcB-Xf-0cj" id="J22-Dh-7Bu"/>
                         <outlet property="descriptionTextView" destination="xLb-zW-Jq1" id="jou-p4-KtP"/>
+                        <outlet property="firstFormatLabel" destination="Elj-fQ-8dv" id="XrU-OH-KMW"/>
                         <outlet property="movieTitleLabel" destination="ohV-lZ-uvX" id="l8p-Om-xNF"/>
+                        <outlet property="purchaseButton" destination="wt2-Gm-YcC" id="p2V-K5-708"/>
                         <outlet property="releaseYearLabel" destination="on2-Dj-g1Y" id="U6c-Kc-Lg0"/>
+                        <outlet property="secondFormatLabel" destination="4FE-2g-rve" id="Aee-4y-foV"/>
+                        <outlet property="thirdFormatLabel" destination="3m9-xQ-Yfr" id="TWM-er-zyC"/>
                         <outlet property="thumbnailImageView" destination="zfw-Mi-qh5" id="O32-Xm-tJg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z6q-7j-4gv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2649" y="290"/>
+            <point key="canvasLocation" x="2654" y="568"/>
         </scene>
         <!--Purchase View Controller-->
         <scene sceneID="xXE-xG-d5f">
@@ -293,7 +308,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WUP-1x-8sK">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="467"/>
-                                <color key="backgroundColor" red="0.0" green="0.50196078430000002" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Nbu-AY-BKh">
                                     <size key="itemSize" width="115" height="100"/>
                                     <size key="headerReferenceSize" width="50" height="50"/>
@@ -350,12 +365,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ko6-yT-qIR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3349" y="290"/>
+            <point key="canvasLocation" x="3257" y="568"/>
         </scene>
-        <!--Favoritos-->
+        <!--Favorite View Controller-->
         <scene sceneID="wx6-6E-f4P">
             <objects>
-                <viewController id="rOq-VD-Y0z" sceneMemberID="viewController">
+                <viewController id="rOq-VD-Y0z" customClass="FavoriteViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Fd9-JZ-yK0"/>
                         <viewControllerLayoutGuide type="bottom" id="00R-65-gYK"/>
@@ -363,19 +378,50 @@
                     <view key="view" contentMode="scaleToFill" id="fAt-9F-rdT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GDo-1f-Z04">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Yz1-ZU-kFM">
+                                    <size key="itemSize" width="120" height="237"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="filmCell" id="lGr-c9-QdR" customClass="MovieCell">
+                                        <rect key="frame" x="0.0" y="114" width="120" height="237"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="120" height="237"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="movieListHeader" id="rBJ-wo-hD0" customClass="MovieListHeader">
+                                    <rect key="frame" x="0.0" y="64" width="320" height="50"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </collectionReusableView>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="GDo-1f-Z04" secondAttribute="trailing" id="K2U-cd-W3n"/>
+                            <constraint firstItem="00R-65-gYK" firstAttribute="top" secondItem="GDo-1f-Z04" secondAttribute="bottom" id="LeG-OE-JZq"/>
+                            <constraint firstItem="GDo-1f-Z04" firstAttribute="leading" secondItem="fAt-9F-rdT" secondAttribute="leading" id="S05-Tk-b0x"/>
+                            <constraint firstItem="GDo-1f-Z04" firstAttribute="top" secondItem="fAt-9F-rdT" secondAttribute="top" id="pmR-Sa-QAH"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Favoritos" image="FavoriteTabBarIcon" id="x66-b9-zsI">
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
-                                <color key="value" red="0.60784313729999995" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="Z7q-nR-IQb"/>
+                    <connections>
+                        <outlet property="collectionView" destination="GDo-1f-Z04" id="cBs-0e-4mW"/>
+                        <segue destination="cH9-T9-yKm" kind="show" identifier="favoriteToDetailSegue" id="67K-5e-BCs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nyg-li-bZC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1057" y="1068"/>
+            <point key="canvasLocation" x="1869" y="1037"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="fXh-bc-gJG">
@@ -389,7 +435,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="0Or-sS-fiP" kind="relationship" relationship="viewControllers" id="Xw8-F5-zae"/>
-                        <segue destination="rOq-VD-Y0z" kind="relationship" relationship="viewControllers" id="tmw-WY-v4Z"/>
+                        <segue destination="F9E-dj-CMz" kind="relationship" relationship="viewControllers" id="tmw-WY-v4Z"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Uo-ni-6DR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -422,6 +468,32 @@
             </objects>
             <point key="canvasLocation" x="1057" y="290"/>
         </scene>
+        <!--Favoritos-->
+        <scene sceneID="lJf-n0-g4A">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="F9E-dj-CMz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Favoritos" image="FavoriteTabBarIcon" id="x66-b9-zsI">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.60784313729999995" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="H34-eR-HTv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rOq-VD-Y0z" kind="relationship" relationship="rootViewController" id="Y4j-0e-8Go"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b3d-GH-ySp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1057" y="1037"/>
+        </scene>
     </scenes>
     <resources>
         <image name="FavoriteTabBarIcon" width="27" height="27"/>
@@ -429,4 +501,7 @@
         <image name="HomeTabBarIcon" width="27" height="27"/>
         <image name="favoriteStar" width="18" height="18"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="67K-5e-BCs"/>
+    </inferredMetricsTieBreakers>
 </document>

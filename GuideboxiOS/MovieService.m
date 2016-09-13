@@ -11,8 +11,8 @@
 @interface MovieService ()
 
 @property (nonatomic, weak) id<MovieServiceDelegate> delegate;
-
 @property (nonatomic, strong) AFHTTPSessionManager *manager;
+@property (nonatomic, strong)NSString *key;
 
 @end
 
@@ -26,21 +26,20 @@
         self.delegate = target;
         
         NSURL *url = [NSURL URLWithString:@"https://api-public.guidebox.com/v1.43"];
+        self.key = @"rKJwmLEQB3qOouvHckEwjDrsGqKWpHgE";
+        self.manager = [[AFHTTPSessionManager alloc]initWithBaseURL:url];
         
-         self.manager = [[AFHTTPSessionManager alloc]initWithBaseURL:url];
-
     }
     return self;
 }
 
 -(void)getMovieListWithStart:(NSInteger)startAt size:(NSInteger)size{
     
-     NSString *urlString = [NSString stringWithFormat:@"US/rKJwmLEQB3qOouvHckEwjDrsGqKWpHgE/movies/all/%ld/%ld/all/all", (long)startAt, (long)size];
+    NSString *urlString = [NSString stringWithFormat:@"US/%@/movies/all/%ld/%ld/all/all", self.key, (long)startAt, (long)size];
     
     [self.manager GET:urlString parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         NSDictionary *responseDictionary = (NSDictionary *)responseObject;
-        
         NSError *error;
         
         MovieList *movieList = [MTLJSONAdapter modelOfClass:[MovieList class] fromJSONDictionary:responseDictionary error:&error];
@@ -55,19 +54,18 @@
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
         [self.delegate responseError:error];
-
+        
     }];
     
 }
 
 -(void)getMovieDetailWithMovieID:(NSNumber*)movieID{
     
-    NSString *urlString = [NSString stringWithFormat:@"US/rKJwmLEQB3qOouvHckEwjDrsGqKWpHgE/movie/%@", [movieID stringValue]];
+    NSString *urlString = [NSString stringWithFormat:@"US/%@/movie/%@", self.key, [movieID stringValue]];
     
     [self.manager GET:urlString parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         NSDictionary *responseDictionary = (NSDictionary *)responseObject;
-        
         NSError *error;
         
         MovieDetail *movieDetail = [MTLJSONAdapter modelOfClass:[MovieDetail class] fromJSONDictionary:responseDictionary error:&error];

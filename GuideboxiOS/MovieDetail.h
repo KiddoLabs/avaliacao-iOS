@@ -15,11 +15,9 @@
 @property (nonatomic, strong) NSURL *thumbnailURL;
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSNumber *releaseYear;
-
-@property (nonatomic, strong) NSArray *videoFormats;
 @property (nonatomic, strong) NSString *movieDescription;
 @property (nonatomic, strong) NSArray *purchaseSources;
 
+-(NSMutableArray*)getAllFormats;
 
-#warning metodo para retornar os tres formtas mas usados
 @end

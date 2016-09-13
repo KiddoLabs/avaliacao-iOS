@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface PurchaseListHeader : UICollectionReusableView
+
+/**
+ Label referente ao nome da fonte de compra.
+ */
 @property (weak, nonatomic) IBOutlet UILabel *purchaseSourceNameLabel;
 
 @end

@@ -12,5 +12,6 @@
 @interface PurchaseViewController : UIViewController
 
 @property (nonatomic, strong) NSArray *purchaseSources;
+@property (nonatomic, strong) NSURL *thumbnailURL;
 
 @end

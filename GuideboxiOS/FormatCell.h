@@ -11,9 +11,18 @@
 
 @interface FormatCell : UICollectionViewCell
 
+/**
+ Este metodo é responsável por configurar a célula a partir de um objeto do tipo Format.
+ 
+ @param format objeto com informações requeridas para configuração da célula.
+ */
 -(void)configCellWithFormat:(Format*)format;
 
--(void)selectCell;
+/**
+ Este metodo é responsável por configurar um estado de seleção para a célula.
+ 
+ @param state flag responsável por definir o estado de seleção.
+ */
 -(void)configCellSelectedState:(BOOL)state;
 
 @end

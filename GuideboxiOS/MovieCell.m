@@ -7,10 +7,7 @@
 //
 
 #import "MovieCell.h"
-//#import "UIImageView+AFNetworking.h"
-//#import <SDWebImage/UIImageView+WebCache.h>
 #import <PINImageView+PINRemoteImage.h>
-
 
 @interface MovieCell ()
 
@@ -30,7 +27,6 @@
     }
     return self;
     
-    
 }
 
 - (instancetype)initWithCoder:(NSCoder *)coder
@@ -49,18 +45,7 @@
     self.layer.masksToBounds = YES;
     
     self.contentView.layer.cornerRadius = 4.0f;
-//    self.contentView.layer.borderWidth = 0.1f;
-//    self.contentView.layer.borderColor = [UIColor blackColor].CGColor;
     self.contentView.layer.masksToBounds = YES;
-    
-//    self.layer.shadowColor = [UIColor blackColor].CGColor;
-//    self.layer.shadowOffset = CGSizeMake(10.0f, 10.0f);
-//    self.layer.shadowRadius = 4.0f;
-//    self.layer.shadowOpacity = 1.0f;
-    
-    
-//    self.layer.masksToBounds = NO;
-//    self.layer.shadowPath = [UIBezierPath bezierPathWithRoundedRect:self.bounds cornerRadius:self.contentView.layer.cornerRadius].CGPath;
     
     self.layer.shadowColor = [UIColor blackColor].CGColor;
     self.layer.shadowOpacity = 0.5f;
@@ -68,26 +53,24 @@
     self.layer.shadowOpacity = 1;
     self.layer.shadowRadius = 4.0f;
     self.layer.masksToBounds = NO;
-//    self.layer.shadowPath = [UIBezierPath bezierPathWithRoundedRect:self.bounds cornerRadius:self.contentView.layer.cornerRadius].CGPath;
 }
 
 -(void)configCellWithMovie:(Movie*)movie{
     
-//    [self.thumbnailImageView setShowActivityIndicatorView:YES];
-    
-//    [self.thumbnailImageView sd_setImageWithURL:movie.thumbnailURL];
-    
     [self.thumbnailImageView setPin_updateWithProgress:YES];
-    
     [self.thumbnailImageView pin_setImageFromURL:movie.thumbnailURL];
-    
-    //setImageWithURL:movie.thumbnailURL];
-    
-#warning implementar esse metodo depois
-//    self.thumbnailImageView setImageWithURL:<#(nonnull NSURL *)#> placeholderImage:<#(nullable UIImage *)#>
     
     [self.movieNameLabel setText:movie.title];
     [self.releaseYearLabel setText:[movie.releaseYear stringValue]];
+}
+
+-(void)configCellWithFavouriteMovie:(FavoriteMovieDetail*)favoriteMovieDetail{
+    
+    [self.thumbnailImageView setPin_updateWithProgress:YES];
+    [self.thumbnailImageView pin_setImageFromURL:[NSURL URLWithString:favoriteMovieDetail.thumbnailURL]];
+    
+    [self.movieNameLabel setText:favoriteMovieDetail.title];
+    [self.releaseYearLabel setText:[favoriteMovieDetail.releaseYear stringValue]];
 }
 
 @end

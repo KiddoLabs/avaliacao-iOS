@@ -11,6 +11,9 @@
 IB_DESIGNABLE
 @interface GBButton : UIButton
 
+/**
+ Flag para habilitar ou desabilitar o botão.
+ */
 @property (nonatomic) IBInspectable BOOL enable;
 
 @end

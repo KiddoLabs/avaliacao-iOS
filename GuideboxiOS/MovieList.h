@@ -12,9 +12,7 @@
 @interface MovieList : MTLModel <MTLJSONSerializing>
 
 @property (nonatomic) NSInteger movieListSize;
-
 @property (nonatomic) NSInteger returnedMovieListSize;
-
 @property (nonatomic, strong) NSMutableArray *movies;
 
 @end
