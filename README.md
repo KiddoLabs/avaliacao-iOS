@@ -2,7 +2,7 @@
 
 ---
 
-Aqui está meu teste desenvolvido. Para utilizar esta aplicação basta executar:
+Aqui está meu teste desenvolvido. Para utilizar esta aplicação basta executar o seguinte comando no terminal:
 
 ```bash
 $ pod install
