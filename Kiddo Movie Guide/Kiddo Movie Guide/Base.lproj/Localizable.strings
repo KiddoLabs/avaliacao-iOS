@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  Kiddo Movie Guide
+
+  Created by Rogerio Hirooka on 8/13/17.
+  Copyright © 2017 Kiddo Labs. All rights reserved.
+*/
+
+// Interface Values
+
+"Movies.Item.NullTitle"             = "(Untitled)";
+"Movies.Item.NullYear"              = "(Unknown)";
+"UI.Home"                           = "Home";
+"UI.Favorites"                      = "Favorites";
+"UI.Progress"                       = "Please Wait...";
