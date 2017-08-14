@@ -13,3 +13,8 @@
 "UI.Home"                           = "Home";
 "UI.Favorites"                      = "Favorites";
 "UI.Progress"                       = "Please Wait...";
+"UI.MovieDetail"                    = "Movie Details";
+"UI.Back"                           = "Back";
+"Exception.Loading"                 = "Failed to load movies from Server";
+"Exception.GenericTitle"            = "Sorry!";
+"Exception.Favorite"                = "Failed to remove favorite record";

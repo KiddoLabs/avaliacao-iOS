@@ -30,8 +30,8 @@ extension Movie {
         self.init(id: id,
                   year: year!,
                   originalTitle: originalTitle,
-                  title: title,
-                  overview: overview,
+                  title: title!,
+                  overview: overview!,
                   posterPath: posterPath!,
                   backdropPath: backdropPath!)
     }

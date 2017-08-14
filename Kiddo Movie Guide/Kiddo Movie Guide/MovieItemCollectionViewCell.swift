@@ -31,7 +31,23 @@ class MovieItemCollectionViewCell : UICollectionViewCell {
         self.imageViewPoster.image = nil
     }
     
-    // MARK: - Content Handlers
+    func setupView() {
+        self.layer.masksToBounds = true
+        
+        self.layer.cornerRadius = ThemeConstants.defaultRadius
+        self.layer.borderColor  = ThemeConstants.cellShadesColor.cgColor
+        self.layer.shadowColor  = ThemeConstants.cellShadesColor.cgColor
+        
+        self.layer.shadowOffset = CGSize(width: 0, height: ThemeConstants.defaultRadius)
+        self.layer.shadowRadius = ThemeConstants.defaultRadius
+        self.layer.borderWidth  = ThemeConstants.defaultBorder
+        
+        self.imageViewPoster.layer.borderColor = ThemeConstants.cellShadesColor.cgColor
+        self.imageViewPoster.layer.borderWidth = ThemeConstants.defaultBorder
+        
+    }
+    
+    // MARK: - Methods
     private static var _nullImage: UIImage? = nil
     static var nullImage: UIImage? {
         get {
@@ -51,10 +67,14 @@ class MovieItemCollectionViewCell : UICollectionViewCell {
         self.labelMovieTitle.text   = NSLocalizedString("Movies.Item.NullTitle", comment: "")
         self.labelYear.text         = NSLocalizedString("Movies.Item.NullYear", comment: "")
         self.imageViewPoster.image  = MovieItemCollectionViewCell.nullImage
-
     }
     
+    /**
+     Assigns the movie entity and render it's content.
+     Image poster is prefetched and cached - null image is the FA "Film"
+     */
     func setViewModel(movie: Movie) {
+        self.setupView()
         self.clearContent()
         
         if (movie.year > 0) { self.labelYear.text = String(movie.year) }

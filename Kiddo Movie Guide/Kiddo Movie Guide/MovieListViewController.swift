@@ -8,6 +8,7 @@
 
 import UIKit
 import MRProgress
+import AMSmoothAlert
 
 class MovieListViewController:
     UIViewController,
@@ -16,9 +17,11 @@ class MovieListViewController:
     
     // MARK: - Private Constants
     let cellID = "MovieItemCell"
+    let segueDetail = "segueDetail"
     
     // MARK: - Properties
     var isFavorites = false
+    var isReachedEnd = false
     var dataset = [Movie]()
     var page = 1
     var inProgress: Bool {
@@ -59,6 +62,7 @@ class MovieListViewController:
         
         self.setupInterface()
         self.registerCollectionCell()
+        self.reloadAll(sender: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -67,28 +71,72 @@ class MovieListViewController:
     }
 
     // MARK: - Methods
-    func registerCollectionCell() {
+    private func registerCollectionCell() {
         let cell = UINib(nibName: cellID, bundle: nil)
         self.collectionView?.register(cell, forCellWithReuseIdentifier: cellID)
     }
     
+    // MARK: Events
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.navigationController?.isNavigationBarHidden = true
+        self.navigationController?.isToolbarHidden = true
+    }
+    
     // MARK: Load Movies
-    func loadMovies(completion: (() -> ())? = nil) {
-//        TMDBAPI.sharedInstance.performDiscover(page: page) { (DataResponse<Any>) in
-//            code
-//        }
+    func loadMovies(completionHandler: (() -> ())? = nil) {
+        if self.isFavorites {
+            let result = Storage.realmInstance().objects(Movie.self)
+            self.dataset = Array(result)
+            self.collectionView.reloadData()
+        } else {
+            TMDBAPI.sharedInstance.performDiscover(page: page) { (movies, error) in
+                if error == nil || movies == nil {
+                    if (movies?.count)! > 0 {
+                        self.dataset.append(contentsOf: movies!)
+                        self.collectionView.reloadData()
+                    } else {
+                        self.isReachedEnd = true
+                    }
+                } else {
+                    let alert = AMSmoothAlertView(dropAlertWithTitle: NSLocalizedString("Exception.GenericTitle", comment: ""),
+                                                  andText: NSLocalizedString("Exception.Loading", comment: ""),
+                                                  andCancelButton: true,
+                                                  for: AlertType.success)
+                    alert?.show()
+                }
+                completionHandler?()
+            }
+        }
+    }
+    
+    func reloadAll(sender: UIRefreshControl?) {
+        dataset = [Movie]()
+        isReachedEnd = false
+        page = 1
+        loadMovies {
+            sender?.endRefreshing()
+        }
     }
     
     // MARK: View Configuration
-    func setupInterface() {
+    private func setupInterface() {
         self.title = isFavorites ?
-            NSLocalizedString("UI.Home",        comment: "") :
-            NSLocalizedString("UI.Favorites",   comment: "")
+            NSLocalizedString("UI.Favorites",   comment: "") :
+            NSLocalizedString("UI.Home",        comment: "")
         self.labelTitle.text = self.title
     }
     
+    // MARK: UIRefreshControl
+    private func setupUIRefreshControl() {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(MovieListViewController.reloadAll(sender:)), for: .valueChanged)
+        self.collectionView?.addSubview(refreshControl)
+    }
+
+    
     // MARK: UICollectionViewDataSource
-    @available(iOS 6.0, *)
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return dataset.count
     }
@@ -111,5 +159,42 @@ class MovieListViewController:
 
 
     // MARK: UICollectionViewDelegate
+    /**
+        Whenever attempting to render the last line of cells, try to prefetch a new page from the server
+    */
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if indexPath.row == dataset.count - 3 {
+            if (!self.isReachedEnd) {
+                page += 1
+                loadMovies()
+            }
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let movie = dataset[indexPath.row]
+        self.performSegue(withIdentifier: segueDetail , sender: movie)
+        
+    }
+    
+    // MARK: Controller Flow
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == segueDetail {
+            guard let movieDetailVC = segue.destination as? MovieDetailViewController else {
+                print("View Inconsistency")
+                return
+            }
+            
+            guard let movieItem = sender as? Movie else {
+                return
+            }
+            
+            movieDetailVC.dataItem = movieItem
+        }
+        
+    }
+
 }
 

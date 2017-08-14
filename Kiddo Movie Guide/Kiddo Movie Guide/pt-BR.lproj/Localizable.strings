@@ -13,3 +13,8 @@
 "UI.Home"                           = "Home";
 "UI.Favorites"                      = "Favoritos";
 "UI.Progress"                       = "Por favor aguarde...";
+"UI.MovieDetail"                    = "Detalhes do Filme";
+"UI.Back"                           = "Voltar";
+"Exception.Loading"                 = "Falha ao obter filmes do Servidor";
+"Exception.GenericTitle"            = "Desculpe!";
+"Exception.Favorite"                = "Falha ao remover item Favorito";

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 /**
 
@@ -43,22 +44,24 @@ import Foundation
  - Available sources data are NOT AVAILABLE from this service. Mock data will be structured as follows: - ID % 4
  
  */
-class Movie {
+class Movie : Object {
 
     // MARK: - Attributes
-    var id:             Int
-    var year:           Int
-    var originalTitle:  String
-    var title:          String?
-    var overview:       String?
+    dynamic var id:             Int     = 0
+    dynamic var year:           Int     = 0
+    dynamic var originalTitle:  String  = ""
+    dynamic var title:          String  = ""
+    dynamic var overview:       String  = ""
     
-    var posterPath:     String
-    var backdropPath:   String
+    dynamic var posterPath:     String  = ""
+    dynamic var backdropPath:   String  = ""
     
     // MARK: - Convenience Initializer
-    init(id: Int, year: Int,
-         originalTitle: String, title: String?, overview: String?,
+    convenience init(id: Int, year: Int,
+         originalTitle: String, title: String, overview: String,
          posterPath: String, backdropPath: String) {
+        
+        self.init()
         
         self.id             = id
         self.year           = year
@@ -71,5 +74,8 @@ class Movie {
         
     }
     
+    override class func primaryKey() -> String? {
+        return "id"
+    }
 
 }

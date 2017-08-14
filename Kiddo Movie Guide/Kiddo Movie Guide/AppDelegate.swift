@@ -7,23 +7,19 @@
 //
 
 import UIKit
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    lazy var storage = try! Realm()
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         self.setStatusBarColor(backgroundColor: ThemeConstants.mainColor)
-
-        TMDBAPI.sharedInstance.performDiscover(page: 1) { (movies: [Movie]?, error: Error?) in
-            print("")
-        }
-        
         return true
     }
 
