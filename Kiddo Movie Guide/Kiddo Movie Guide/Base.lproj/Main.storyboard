@@ -86,7 +86,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.39627617385786806" green="0.011228540033379843" blue="0.003808136176499095" alpha="0.55070098458904104" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="TTy-IZ-DNg" firstAttribute="centerY" secondItem="l6Y-zN-Epu" secondAttribute="centerY" id="hT7-Cz-f2j"/>
                                     <constraint firstItem="TTy-IZ-DNg" firstAttribute="width" secondItem="l6Y-zN-Epu" secondAttribute="width" id="iJk-5R-iSQ"/>
@@ -423,7 +423,7 @@
                                 </connections>
                             </collectionViewCell>
                         </cells>
-                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="headerSource" id="QCM-Bq-y90" customClass="PurchaseHeaderReusableView" customModule="Kiddo_Movie_Guide" customModuleProvider="target">
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="headerTitle" id="QCM-Bq-y90" customClass="PurchaseHeaderReusableView" customModule="Kiddo_Movie_Guide" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
@@ -441,6 +441,9 @@
                                 </view>
                             </subviews>
                             <color key="backgroundColor" red="0.16427665950000001" green="0.17148905989999999" blue="0.2253939509" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <outlet property="labelHeaderTitle" destination="4pz-vz-QS0" id="DpB-rU-9ao"/>
+                            </connections>
                         </collectionReusableView>
                         <connections>
                             <outlet property="dataSource" destination="Kx5-s2-YII" id="PxL-ZU-7gT"/>

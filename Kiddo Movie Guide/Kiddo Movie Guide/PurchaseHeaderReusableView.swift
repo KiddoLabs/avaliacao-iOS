@@ -10,6 +10,6 @@ import Foundation
 
 class PurchaseHeaderReusableView : UICollectionReusableView {
 
-    
+    @IBOutlet weak var labelHeaderTitle: UILabel!
     
 }

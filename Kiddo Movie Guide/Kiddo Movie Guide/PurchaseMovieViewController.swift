@@ -116,6 +116,19 @@ class PurchaseMovieViewController : UICollectionViewController {
         return cell
     }
     
+    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        let headerCell = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "headerTitle", for: indexPath) as? PurchaseHeaderReusableView
+        
+        let title = (indexPath.section == 0) ? "iTunes" : "Vudu";
+        
+        guard headerCell != nil else { return PurchaseHeaderReusableView() }
+        
+        headerCell?.labelHeaderTitle.text = title
+        headerCell?.backgroundColor = UIColor.clear
+        
+        return headerCell!
+    }
     
     // MARK: UICollectionViewDelegate
     

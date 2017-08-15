@@ -9,6 +9,7 @@
 import Foundation
 import RealmSwift
 import AMSmoothAlert
+import Font_Awesome_Swift
 
 class MovieDetailViewController : UITableViewController {
     
@@ -59,6 +60,8 @@ class MovieDetailViewController : UITableViewController {
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.navigationBar.tintColor = ThemeConstants.mainColor
         self.setViewModel(movie: dataItem!)
+        
+        self.setupShare()
     }
 
     // MARK: - Methods
@@ -96,10 +99,22 @@ class MovieDetailViewController : UITableViewController {
                                                           action:#selector(MovieDetailViewController.tapFavorite(_:)))
         labelFavorites.addGestureRecognizer(tapGestureRecognizer)
 
-        self.navigationController?.navigationItem.backBarButtonItem = UIBarButtonItem(title: NSLocalizedString("UI.Back", comment: ""),
-                                                                style: UIBarButtonItemStyle.plain,
-                                                                target: nil,
-                                                                action: nil)
+//        self.navigationController?.navigationItem.backBarButtonItem = UIBarButtonItem(title: NSLocalizedString("UI.Back", comment: ""),
+//                                                                style: UIBarButtonItemStyle.plain,
+//                                                                target: nil,
+//                                                                action: nil)
+    }
+    
+    private func setupShare() {
+        let shareButton = UIBarButtonItem(title: "Share",
+                                          style: .plain,
+                                          target: self,
+                                          action: #selector(MovieDetailViewController.tapShare))
+        shareButton.setFAText(prefixText: "",
+                              icon: FAType.FAShareAlt,
+                              postfixText: " Share",
+                              size: 18)
+        self.navigationItem.rightBarButtonItem = shareButton
     }
     
     private func updatedFavorite() {
@@ -112,6 +127,12 @@ class MovieDetailViewController : UITableViewController {
     }
     
     // MARK: Events
+    func tapShare() {
+        let activityViewController = UIActivityViewController(activityItems: ["Kiddo Movie Guide\nI'm watching \(String(describing: dataItem!.title))!"],
+                                                              applicationActivities: nil)
+        self.present(activityViewController, animated: true, completion: nil)
+    }
+    
     @IBAction func tapFavorite(_ sender: Any) {
         self.setFavoriteEnabledState(state: false)
         try! Storage.realmInstance().write {
