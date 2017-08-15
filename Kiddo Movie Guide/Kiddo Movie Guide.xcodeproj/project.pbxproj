@@ -30,6 +30,7 @@
 		03F431AA1F42AF89001877B8 /* PurchaseItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F431A91F42AF89001877B8 /* PurchaseItemCollectionViewCell.swift */; };
 		03F431AC1F42B145001877B8 /* PurchaseHeaderReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F431AB1F42B145001877B8 /* PurchaseHeaderReusableView.swift */; };
 		03F431AE1F42B34A001877B8 /* PurchaseMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F431AD1F42B34A001877B8 /* PurchaseMovieViewController.swift */; };
+		03F431B21F42E9A6001877B8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F431B11F42E9A6001877B8 /* ViewController.m */; };
 		6590C81E094264BCEAE84449 /* Pods_Kiddo_Movie_GuideUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F1BE4DEA05F72456EBA2FCE /* Pods_Kiddo_Movie_GuideUITests.framework */; };
 		778BBDFFE75FD61D6C1DDE40 /* Pods_Kiddo_Movie_Guide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D6D7E915047229D4381231 /* Pods_Kiddo_Movie_Guide.framework */; };
 		8C75FCBE5A096B1A3761A142 /* Pods_Kiddo_Movie_GuideTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A5C15B1869E1F824E69023A /* Pods_Kiddo_Movie_GuideTests.framework */; };
@@ -86,6 +87,9 @@
 		03F431A91F42AF89001877B8 /* PurchaseItemCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		03F431AB1F42B145001877B8 /* PurchaseHeaderReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseHeaderReusableView.swift; sourceTree = "<group>"; };
 		03F431AD1F42B34A001877B8 /* PurchaseMovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseMovieViewController.swift; sourceTree = "<group>"; };
+		03F431AF1F42E9A6001877B8 /* Kiddo Movie GuideTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Kiddo Movie GuideTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		03F431B01F42E9A6001877B8 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		03F431B11F42E9A6001877B8 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		07D6D7E915047229D4381231 /* Pods_Kiddo_Movie_Guide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kiddo_Movie_Guide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		08F6FE763B8FC8365CE28B27 /* Pods-Kiddo Movie GuideUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kiddo Movie GuideUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kiddo Movie GuideUITests/Pods-Kiddo Movie GuideUITests.release.xcconfig"; sourceTree = "<group>"; };
 		0A5C15B1869E1F824E69023A /* Pods_Kiddo_Movie_GuideTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kiddo_Movie_GuideTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -169,6 +173,9 @@
 			children = (
 				03F4315B1F3CBA5A001877B8 /* Kiddo_Movie_GuideTests.swift */,
 				03F4315D1F3CBA5A001877B8 /* Info.plist */,
+				03F431B01F42E9A6001877B8 /* ViewController.h */,
+				03F431B11F42E9A6001877B8 /* ViewController.m */,
+				03F431AF1F42E9A6001877B8 /* Kiddo Movie GuideTests-Bridging-Header.h */,
 			);
 			path = "Kiddo Movie GuideTests";
 			sourceTree = "<group>";
@@ -390,6 +397,7 @@
 					03F431561F3CBA5A001877B8 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 693YX79L7U;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 03F431401F3CBA5A001877B8;
 					};
@@ -488,11 +496,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Kiddo Movie GuideTests/Pods-Kiddo Movie GuideTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/KIF/KIF.framework",
+				"${BUILT_PRODUCTS_DIR}/Expecta/Expecta.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KIF.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Expecta.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -593,11 +601,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Kiddo Movie GuideUITests/Pods-Kiddo Movie GuideUITests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/KIF/KIF.framework",
+				"${BUILT_PRODUCTS_DIR}/Expecta/Expecta.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KIF.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Expecta.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -652,6 +660,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03F431B21F42E9A6001877B8 /* ViewController.m in Sources */,
 				03F4315C1F3CBA5A001877B8 /* Kiddo_Movie_GuideTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -846,11 +855,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 693YX79L7U;
 				INFOPLIST_FILE = "Kiddo Movie GuideTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hirooka.Kiddo-Movie-GuideTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Kiddo Movie GuideTests/Kiddo Movie GuideTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kiddo Movie Guide.app/Kiddo Movie Guide";
 			};
@@ -862,11 +874,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 693YX79L7U;
 				INFOPLIST_FILE = "Kiddo Movie GuideTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hirooka.Kiddo-Movie-GuideTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Kiddo Movie GuideTests/Kiddo Movie GuideTests-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kiddo Movie Guide.app/Kiddo Movie Guide";
 			};

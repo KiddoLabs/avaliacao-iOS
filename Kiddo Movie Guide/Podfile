@@ -19,13 +19,15 @@ target 'Kiddo Movie Guide' do
   target 'Kiddo Movie GuideTests' do
     inherit! :search_paths
     # Pods for testing
-    pod 'KIF', :configurations => ['Debug']
+    pod 'Expecta'
+#    pod 'KIF', :configurations => ['Debug']
   end
 
   target 'Kiddo Movie GuideUITests' do
     inherit! :search_paths
     # Pods for testing
-    pod 'KIF', :configurations => ['Debug']
+    pod 'Expecta'
+#    pod 'KIF', :configurations => ['Debug']
   end
 
 end
