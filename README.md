@@ -21,8 +21,14 @@ Segue minha versão do projeto teste conforme solicitado. Alterações, notas e 
 
 3. Utilizarei a API do [TheMovieDB.org](https://www.themoviedb.org/), que além de totalmente livre, possui uma [política](https://www.themoviedb.org/terms-of-use) menos restritiva de acesso a seus serviços.
 
-- Tomei a liberdade de criar uma SplashScreen simples com o tema inferido a partir do website da KiddoLabs.
+- Tomei a liberdade de criar uma SplashScreen simples com o tema inferido a partir do website da KiddoLabs - idem quanto ao ícone do App.
 
 - Os ícones da TabBar estão ligeiramente diferentes pois escolhi utilizar a fonte 'FontAwesome' ao invés de imagens, no intuito de simplificar a expansão futura do App, disponibilizando a coletânea de ícones da fonte e potencialmente economizando espaço e agilizando os futuros desenvolvimentos.
 
 - O projeto está regionalizado no idioma-base Inglês e Português-BR
+
+- Animações: Transição entre abas, dialogbox de alert
+
+- A API escolhida não retorna formatos de cada título, portanto há um método de MOCK na extension da entidade Movie+Ext, que retorna resoluções, formatos e preços de acordo com o id do filme.
+
+- A interface ainda requer alguns aperfeiçoamentos, mas no momento não disponho de tempo hábil para focar nisso. Conforme o decorrer do tempo tentarei implementar tais melhorias, mesmo já estando isento da avaliação.
