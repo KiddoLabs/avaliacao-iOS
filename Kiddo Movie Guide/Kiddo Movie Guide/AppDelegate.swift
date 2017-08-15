@@ -20,6 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         self.setStatusBarColor(backgroundColor: ThemeConstants.mainColor)
+        
+//        try! storage.write {
+//            storage.deleteAll()
+//        }
+        
         return true
     }
 

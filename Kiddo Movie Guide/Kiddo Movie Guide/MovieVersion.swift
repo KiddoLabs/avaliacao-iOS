@@ -37,13 +37,17 @@ class MovieVersion {
     var licenseKind: Licenses   = .Purchase
     
     var provider:    String
+    var price:       Float
+    
+    var selected:    Bool
 
     // MARK: - Convenience Initializer
-    init(resolution: Resolution, license: Licenses, provider: String) {
+    init(resolution: Resolution, license: Licenses, provider: String, price: Float) {
         self.resolution     = resolution
         self.licenseKind    = license
-        
+        self.price          = price
         self.provider       = provider
+        self.selected       = false
     }
 
 }

@@ -56,6 +56,8 @@ class Movie : Object {
     dynamic var posterPath:     String  = ""
     dynamic var backdropPath:   String  = ""
     
+    dynamic var voteAverage:    Float   = 0
+    
     // MARK: - Convenience Initializer
     convenience init(id: Int, year: Int,
          originalTitle: String, title: String, overview: String,

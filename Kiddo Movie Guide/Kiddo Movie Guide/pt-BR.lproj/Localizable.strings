@@ -18,3 +18,13 @@
 "Exception.Loading"                 = "Falha ao obter filmes do Servidor";
 "Exception.GenericTitle"            = "Desculpe!";
 "Exception.Favorite"                = "Falha ao remover item Favorito";
+"Unknown"                           = "==";
+"PriceUnavailable"                  = "[Sem Preço]";
+"Buy"                               = "Comprar";
+"Rent"                              = "Alugar: 3 dias";
+"Resolution.0"                      = "SD";
+"Resolution.1"                      = "HD";
+"Resolution.2"                      = "FullHD";
+"Resolution.3"                      = "4K";
+"Purchase.Title"                    = "Compra";
+"Purchase.Message"                  = "Compra efetuada com sucesso";

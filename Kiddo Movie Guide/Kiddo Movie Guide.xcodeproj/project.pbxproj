@@ -27,6 +27,9 @@
 		03F431A31F4183D9001877B8 /* Exceptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F431A21F4183D9001877B8 /* Exceptions.swift */; };
 		03F431A51F41EB10001877B8 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F431A41F41EB10001877B8 /* MovieDetailViewController.swift */; };
 		03F431A81F4202D9001877B8 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F431A71F4202D9001877B8 /* Storage.swift */; };
+		03F431AA1F42AF89001877B8 /* PurchaseItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F431A91F42AF89001877B8 /* PurchaseItemCollectionViewCell.swift */; };
+		03F431AC1F42B145001877B8 /* PurchaseHeaderReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F431AB1F42B145001877B8 /* PurchaseHeaderReusableView.swift */; };
+		03F431AE1F42B34A001877B8 /* PurchaseMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F431AD1F42B34A001877B8 /* PurchaseMovieViewController.swift */; };
 		6590C81E094264BCEAE84449 /* Pods_Kiddo_Movie_GuideUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F1BE4DEA05F72456EBA2FCE /* Pods_Kiddo_Movie_GuideUITests.framework */; };
 		778BBDFFE75FD61D6C1DDE40 /* Pods_Kiddo_Movie_Guide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D6D7E915047229D4381231 /* Pods_Kiddo_Movie_Guide.framework */; };
 		8C75FCBE5A096B1A3761A142 /* Pods_Kiddo_Movie_GuideTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A5C15B1869E1F824E69023A /* Pods_Kiddo_Movie_GuideTests.framework */; };
@@ -80,6 +83,9 @@
 		03F431A21F4183D9001877B8 /* Exceptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exceptions.swift; sourceTree = "<group>"; };
 		03F431A41F41EB10001877B8 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		03F431A71F4202D9001877B8 /* Storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		03F431A91F42AF89001877B8 /* PurchaseItemCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		03F431AB1F42B145001877B8 /* PurchaseHeaderReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseHeaderReusableView.swift; sourceTree = "<group>"; };
+		03F431AD1F42B34A001877B8 /* PurchaseMovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseMovieViewController.swift; sourceTree = "<group>"; };
 		07D6D7E915047229D4381231 /* Pods_Kiddo_Movie_Guide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kiddo_Movie_Guide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		08F6FE763B8FC8365CE28B27 /* Pods-Kiddo Movie GuideUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kiddo Movie GuideUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kiddo Movie GuideUITests/Pods-Kiddo Movie GuideUITests.release.xcconfig"; sourceTree = "<group>"; };
 		0A5C15B1869E1F824E69023A /* Pods_Kiddo_Movie_GuideTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kiddo_Movie_GuideTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -183,6 +189,7 @@
 				03F431461F3CBA5A001877B8 /* MovieListViewController.swift */,
 				03F431981F4140BC001877B8 /* CustomTabBarViewController.swift */,
 				03F431A41F41EB10001877B8 /* MovieDetailViewController.swift */,
+				03F431AD1F42B34A001877B8 /* PurchaseMovieViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -218,6 +225,8 @@
 			isa = PBXGroup;
 			children = (
 				03F4317F1F40749C001877B8 /* MovieItemCollectionViewCell.swift */,
+				03F431A91F42AF89001877B8 /* PurchaseItemCollectionViewCell.swift */,
+				03F431AB1F42B145001877B8 /* PurchaseHeaderReusableView.swift */,
 			);
 			name = ItemViews;
 			sourceTree = "<group>";
@@ -620,8 +629,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03F431AA1F42AF89001877B8 /* PurchaseItemCollectionViewCell.swift in Sources */,
 				03F431A01F41823B001877B8 /* Movie+Ext.swift in Sources */,
+				03F431AE1F42B34A001877B8 /* PurchaseMovieViewController.swift in Sources */,
 				03F431911F40F37C001877B8 /* MovieVersion.swift in Sources */,
+				03F431AC1F42B145001877B8 /* PurchaseHeaderReusableView.swift in Sources */,
 				03F4319C1F4145D1001877B8 /* ThemeConstants.swift in Sources */,
 				03F4318F1F40DCB1001877B8 /* Movie.swift in Sources */,
 				03F431A51F41EB10001877B8 /* MovieDetailViewController.swift in Sources */,

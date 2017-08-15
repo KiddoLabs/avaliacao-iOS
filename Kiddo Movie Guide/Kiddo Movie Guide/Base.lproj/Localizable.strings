@@ -18,3 +18,13 @@
 "Exception.Loading"                 = "Failed to load movies from Server";
 "Exception.GenericTitle"            = "Sorry!";
 "Exception.Favorite"                = "Failed to remove favorite record";
+"Unknown"                           = "==";
+"PriceUnavailable"                  = "[No Price]";
+"Buy"                               = "Buy";
+"Rent"                              = "Rent";
+"Resolution.0"                      = "SD";
+"Resolution.1"                      = "HD";
+"Resolution.2"                      = "FullHD";
+"Resolution.3"                      = "4K";
+"Purchase.Title"                    = "Purchase";
+"Purchase.Message"                  = "Purchase successful";

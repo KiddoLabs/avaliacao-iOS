@@ -55,6 +55,9 @@ class MovieListViewController:
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var labelTitle: UILabel!
     
+    @IBOutlet weak var viewNoFavoritesSaved: UIView!
+    
+    
     // MARK: - Init/Deinit
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,6 +85,12 @@ class MovieListViewController:
         
         self.navigationController?.isNavigationBarHidden = true
         self.navigationController?.isToolbarHidden = true
+        
+        if (self.isFavorites) {
+            self.reloadAll(sender: nil)
+        } else {
+            self.viewNoFavoritesSaved.isHidden = true
+        }
     }
     
     // MARK: Load Movies
@@ -90,20 +99,24 @@ class MovieListViewController:
             let result = Storage.realmInstance().objects(Movie.self)
             self.dataset = Array(result)
             self.collectionView.reloadData()
+            
+            self.viewNoFavoritesSaved.isHidden = (self.dataset.count > 0)
         } else {
             TMDBAPI.sharedInstance.performDiscover(page: page) { (movies, error) in
-                if error == nil || movies == nil {
+                if error == nil && movies != nil {
                     if (movies?.count)! > 0 {
+                        
                         self.dataset.append(contentsOf: movies!)
                         self.collectionView.reloadData()
                     } else {
                         self.isReachedEnd = true
                     }
                 } else {
+//                    let err = error
                     let alert = AMSmoothAlertView(dropAlertWithTitle: NSLocalizedString("Exception.GenericTitle", comment: ""),
                                                   andText: NSLocalizedString("Exception.Loading", comment: ""),
                                                   andCancelButton: true,
-                                                  for: AlertType.success)
+                                                  for: AlertType.failure)
                     alert?.show()
                 }
                 completionHandler?()
@@ -115,9 +128,12 @@ class MovieListViewController:
         dataset = [Movie]()
         isReachedEnd = false
         page = 1
+        
         loadMovies {
             sender?.endRefreshing()
+            self.viewNoFavoritesSaved.isHidden = (self.dataset.count > 0)
         }
+        
     }
     
     // MARK: View Configuration
@@ -126,6 +142,8 @@ class MovieListViewController:
             NSLocalizedString("UI.Favorites",   comment: "") :
             NSLocalizedString("UI.Home",        comment: "")
         self.labelTitle.text = self.title
+        self.viewNoFavoritesSaved.isHidden = false
+
     }
     
     // MARK: UIRefreshControl
@@ -152,6 +170,7 @@ class MovieListViewController:
                 return MovieItemCollectionViewCell()
         }
         
+        cell.clearContent()
         cell.setViewModel(movie: dataset[indexPath.row])
         
         return cell
@@ -163,7 +182,7 @@ class MovieListViewController:
         Whenever attempting to render the last line of cells, try to prefetch a new page from the server
     */
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        if indexPath.row == dataset.count - 3 {
+        if !self.isFavorites && indexPath.row == dataset.count - 3 {
             if (!self.isReachedEnd) {
                 page += 1
                 loadMovies()

@@ -88,14 +88,22 @@ public class TMDBAPI {
                                 guard let results = json["results"] as JSON? else {
                                     print("performDiscover failed to fetch results: \(json)")
                                 }
-                                for u: JSON in results.array! {
-                                    do {
-                                        let movie = try Movie(json: u)
-                                        ret.append(movie)
-                                    } catch ExpectedFormatError.JSONKeyMissing {
-                                        completionHandler (nil, ExpectedFormatError.JSONKeyMissing)
-                                    } catch {
-                                        completionHandler (nil, UnexpectedError.UnknownException)
+                                
+                                if let error = results.error {
+                                    if error.code == 901 {
+                                        print("Connection Failure")
+                                        completionHandler(nil, ConnectivityError.NoConnection)
+                                    }
+                                } else {
+                                    for u: JSON in results.array! {
+                                        do {
+                                            let movie = try Movie(json: u)
+                                            ret.append(movie)
+                                        } catch ExpectedFormatError.JSONKeyMissing {
+                                            completionHandler (nil, ExpectedFormatError.JSONKeyMissing)
+                                        } catch {
+                                            completionHandler (nil, UnexpectedError.UnknownException)
+                                        }
                                     }
                                 }
                                 

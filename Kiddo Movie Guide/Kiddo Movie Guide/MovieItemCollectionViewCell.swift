@@ -13,6 +13,8 @@ import CQImageDownloader
 
 class MovieItemCollectionViewCell : UICollectionViewCell {
 
+    // MARK: - Variables
+    var downloader : CQImageDownloader? = nil
     // MARK: - Outlets
     @IBOutlet weak var labelMovieTitle: UILabel!
     @IBOutlet weak var labelYear: UILabel!
@@ -57,16 +59,16 @@ class MovieItemCollectionViewCell : UICollectionViewCell {
                                                                        topIcon: .FAFilm,
                                                                        topTextColor: .white,
                                                                        bgLarge: true,
-                                                                       size: CGSize(width: 100, height: 100))
+                                                                       size: CGSize(width: 100, height: 144))
             }
             return MovieItemCollectionViewCell._nullImage
         }
     }
     
     func clearContent() {
-        self.labelMovieTitle.text   = NSLocalizedString("Movies.Item.NullTitle", comment: "")
-        self.labelYear.text         = NSLocalizedString("Movies.Item.NullYear", comment: "")
-        self.imageViewPoster.image  = MovieItemCollectionViewCell.nullImage
+        self.labelMovieTitle?.text   = NSLocalizedString("Movies.Item.NullTitle", comment: "")
+        self.labelYear?.text         = NSLocalizedString("Movies.Item.NullYear", comment: "")
+        self.imageViewPoster?.image  = MovieItemCollectionViewCell.nullImage
     }
     
     /**
@@ -74,15 +76,20 @@ class MovieItemCollectionViewCell : UICollectionViewCell {
      Image poster is prefetched and cached - null image is the FA "Film"
      */
     func setViewModel(movie: Movie) {
+        if self.downloader != nil {
+            self.downloader?.cancelDownload()
+            self.downloader = nil
+        }
+        
         self.setupView()
         self.clearContent()
         
         if (movie.year > 0) { self.labelYear.text = String(movie.year) }
-        self.labelMovieTitle.text = (movie.title == nil || movie.title == "") ? movie.originalTitle : movie.title
+        self.labelMovieTitle?.text = (movie.title == nil || movie.title == "") ? movie.originalTitle : movie.title
         
         let imageFullURL = TMDBAPI.sharedInstance.imageBasePath + movie.posterPath
         
-        let _ = self.imageViewPoster.setCQImage(imageFullURL, placeholder: MovieItemCollectionViewCell.nullImage)
+        self.downloader = self.imageViewPoster.setCQImage(imageFullURL, placeholder: MovieItemCollectionViewCell.nullImage)
     }
     
 }
