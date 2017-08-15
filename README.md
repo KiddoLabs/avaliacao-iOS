@@ -5,7 +5,7 @@ Segue minha versão do projeto teste conforme solicitado. Alterações, notas e 
 
 
 <p align="center">
-	<img src="img/ios_logo.png" width="187px">
+	<img src="img/RogerioHirooka-small.png" width="187px">
 </p>
 
 ### Alterações
