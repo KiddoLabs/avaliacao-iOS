@@ -61,6 +61,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 
         }
         statusBar.backgroundColor = backgroundColor
+        statusBar.tintColor = UIColor.white
+        UIApplication.shared.statusBarStyle = .lightContent
     }
 
 }

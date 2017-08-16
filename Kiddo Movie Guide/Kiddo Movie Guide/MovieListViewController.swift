@@ -62,7 +62,8 @@ class MovieListViewController:
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        (UIApplication.shared.delegate as! AppDelegate).setStatusBarColor(backgroundColor: ThemeConstants.mainColor)
+
         self.setupInterface()
         self.registerCollectionCell()
         self.reloadAll(sender: nil)

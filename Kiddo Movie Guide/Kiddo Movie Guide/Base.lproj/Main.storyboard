@@ -111,6 +111,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="" id="acW-dT-cKf"/>
                     <navigationItem key="navigationItem" id="W86-nP-zrf"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="collectionView" destination="c53-Ru-IJa" id="qo4-db-f8F"/>
                         <outlet property="labelTitle" destination="m3n-iL-5Az" id="bYg-p7-A7H"/>
@@ -308,6 +309,7 @@
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="1SR-gV-W0S"/>
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="AR1-GM-mt7"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="buttonFavorite" destination="LEp-no-mwO" id="C9L-1A-Clw"/>
                         <outlet property="imagePoster" destination="U87-ch-VF4" id="c25-39-1Vg"/>
@@ -460,6 +462,7 @@
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="fX4-W9-gar"/>
                     </toolbarItems>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xAH-tQ-IN7" userLabel="First Responder" sceneMemberID="firstResponder"/>

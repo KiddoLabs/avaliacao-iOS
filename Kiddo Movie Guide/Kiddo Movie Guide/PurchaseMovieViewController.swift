@@ -43,6 +43,8 @@ class PurchaseMovieViewController : UICollectionViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        (UIApplication.shared.delegate as! AppDelegate).setStatusBarColor(backgroundColor: UIColor.clear)
+        
         self.navigationController?.navigationItem.backBarButtonItem = UIBarButtonItem(title: NSLocalizedString("UI.Back", comment: ""),
                                                                                       style: UIBarButtonItemStyle.plain,
                                                                                       target: nil,

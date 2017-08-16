@@ -52,6 +52,8 @@ class MovieDetailViewController : UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        (UIApplication.shared.delegate as! AppDelegate).setStatusBarColor(backgroundColor: ThemeConstants.mainColor)
+        
         self.navigationController?.isNavigationBarHidden = false
         self.navigationController?.isToolbarHidden = false
         
