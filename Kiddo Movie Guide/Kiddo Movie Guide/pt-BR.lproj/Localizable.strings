@@ -1,0 +1,30 @@
+/* 
+  Localizable.strings
+  Kiddo Movie Guide
+
+  Created by Rogerio Hirooka on 8/13/17.
+  Copyright © 2017 Kiddo Labs. All rights reserved.
+*/
+
+// Interface Values
+
+"Movies.Item.NullTitle"             = "(Sem título)";
+"Movies.Item.NullYear"              = "(Desconhecido)";
+"UI.Home"                           = "Home";
+"UI.Favorites"                      = "Favoritos";
+"UI.Progress"                       = "Por favor aguarde...";
+"UI.MovieDetail"                    = "Detalhes do Filme";
+"UI.Back"                           = "Voltar";
+"Exception.Loading"                 = "Falha ao obter filmes do Servidor";
+"Exception.GenericTitle"            = "Desculpe!";
+"Exception.Favorite"                = "Falha ao remover item Favorito";
+"Unknown"                           = "==";
+"PriceUnavailable"                  = "[Sem Preço]";
+"Buy"                               = "Comprar";
+"Rent"                              = "Alugar: 3 dias";
+"Resolution.0"                      = "SD";
+"Resolution.1"                      = "HD";
+"Resolution.2"                      = "FullHD";
+"Resolution.3"                      = "4K";
+"Purchase.Title"                    = "Compra";
+"Purchase.Message"                  = "Compra efetuada com sucesso";
