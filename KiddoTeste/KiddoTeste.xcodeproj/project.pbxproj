@@ -1,0 +1,1007 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		20482F75203B8890007B13E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 20482F74203B8890007B13E4 /* AppDelegate.m */; };
+		20482F7B203B8890007B13E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20482F79203B8890007B13E4 /* Main.storyboard */; };
+		20482F7E203B8890007B13E4 /* KiddoTeste.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 20482F7C203B8890007B13E4 /* KiddoTeste.xcdatamodeld */; };
+		20482F80203B8890007B13E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20482F7F203B8890007B13E4 /* Assets.xcassets */; };
+		20482F83203B8890007B13E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20482F81203B8890007B13E4 /* LaunchScreen.storyboard */; };
+		20482F86203B8890007B13E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 20482F85203B8890007B13E4 /* main.m */; };
+		206BF6F2203FC49F006F52DC /* KiddoSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206BF6F1203FC49F006F52DC /* KiddoSwift.swift */; };
+		206BF6F5203FCF84006F52DC /* KIF.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 206BF6F6203FCF84006F52DC /* KIF.framework */; };
+		206BF6FB203FD0CA006F52DC /* FavoriteMinionsTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 206BF6FA203FD0CA006F52DC /* FavoriteMinionsTestCase.m */; };
+		2073C4AF203FDCDA00CED5D3 /* UnfavoriteMinionsTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2073C4AE203FDCD900CED5D3 /* UnfavoriteMinionsTestCase.m */; };
+		2073C4B1203FDDC200CED5D3 /* BuyMinionsFromHome.m in Sources */ = {isa = PBXBuildFile; fileRef = 2073C4B0203FDDC200CED5D3 /* BuyMinionsFromHome.m */; };
+		2088B85A203F9F70002092BE /* MovieDetailNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2088B859203F9F70002092BE /* MovieDetailNavigationController.m */; };
+		208E591D203B924C0074E5BD /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 208E591C203B924C0074E5BD /* MainViewController.m */; };
+		208E5921203BBA040074E5BD /* MainTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 208E5920203BBA040074E5BD /* MainTabBarViewController.m */; };
+		208E5925203BBDD00074E5BD /* MovieListCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 208E5924203BBDD00074E5BD /* MovieListCollectionViewCell.m */; };
+		208E5929203BC01F0074E5BD /* UIColor+Essentials.m in Sources */ = {isa = PBXBuildFile; fileRef = 208E5928203BC01F0074E5BD /* UIColor+Essentials.m */; };
+		208E592C203BCC5E0074E5BD /* CurrentTitleViewCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 208E592B203BCC5E0074E5BD /* CurrentTitleViewCollectionReusableView.m */; };
+		208E592E203BCF720074E5BD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 208E592D203BCF720074E5BD /* QuartzCore.framework */; };
+		20AC6754203E2DDB00E41B83 /* MovieDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20AC6753203E2DDB00E41B83 /* MovieDetailsViewController.m */; };
+		20AC6758203E481E00E41B83 /* MovieDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 20AC6757203E481E00E41B83 /* MovieDatabaseManager.m */; };
+		20AC6761203E5FE500E41B83 /* FavoritesDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 20AC6760203E5FE500E41B83 /* FavoritesDatabase.m */; };
+		20AC6764203E728600E41B83 /* FavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20AC6763203E728600E41B83 /* FavoritesViewController.m */; };
+		20AC6767203E7B3800E41B83 /* BuyMovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20AC6766203E7B3800E41B83 /* BuyMovieViewController.m */; };
+		20AC676A203E813500E41B83 /* SellSectionCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 20AC6769203E813500E41B83 /* SellSectionCollectionReusableView.m */; };
+		20AC676D203E8CAD00E41B83 /* SellItemCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 20AC676C203E8CAD00E41B83 /* SellItemCollectionViewCell.m */; };
+		20C4373D203CFA7100DC2C21 /* MovieData.m in Sources */ = {isa = PBXBuildFile; fileRef = 20C4373C203CFA7100DC2C21 /* MovieData.m */; };
+		20C43741203CFCFF00DC2C21 /* ApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 20C43740203CFCFF00DC2C21 /* ApiManager.m */; };
+		20C43744203CFD1F00DC2C21 /* ApiServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 20C43743203CFD1F00DC2C21 /* ApiServices.m */; };
+		3EC071F4EE9567F0F8FB1655 /* Pods_KiddoTesteUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FC6DA3E956C42813B4F2FEF /* Pods_KiddoTesteUITests.framework */; };
+		AE03786E1D5280C84D166962 /* Pods_KiddoTesteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF14930B4D96CC4FCD2A5B97 /* Pods_KiddoTesteTests.framework */; };
+		DD307E4B0F9B02642F40DB9A /* Pods_KiddoTeste.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AE237B1F76506E167A46B51 /* Pods_KiddoTeste.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		20482F8C203B8893007B13E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20482F68203B888F007B13E4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 20482F6F203B888F007B13E4;
+			remoteInfo = KiddoTeste;
+		};
+		20482F97203B8893007B13E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20482F68203B888F007B13E4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 20482F6F203B888F007B13E4;
+			remoteInfo = KiddoTeste;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		131DB31B88D36AAF3DDA4AEE /* Pods-KiddoTeste.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiddoTeste.release.xcconfig"; path = "Pods/Target Support Files/Pods-KiddoTeste/Pods-KiddoTeste.release.xcconfig"; sourceTree = "<group>"; };
+		20482F70203B888F007B13E4 /* KiddoTeste.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KiddoTeste.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		20482F73203B8890007B13E4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		20482F74203B8890007B13E4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		20482F7A203B8890007B13E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		20482F7D203B8890007B13E4 /* KiddoTeste.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KiddoTeste.xcdatamodel; sourceTree = "<group>"; };
+		20482F7F203B8890007B13E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		20482F82203B8890007B13E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		20482F84203B8890007B13E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20482F85203B8890007B13E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		20482F8B203B8893007B13E4 /* KiddoTesteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KiddoTesteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		20482F91203B8893007B13E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20482F96203B8893007B13E4 /* KiddoTesteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KiddoTesteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		20482F9C203B8893007B13E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		206BF6F0203FC49E006F52DC /* KiddoTeste-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KiddoTeste-Bridging-Header.h"; sourceTree = "<group>"; };
+		206BF6F1203FC49F006F52DC /* KiddoSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KiddoSwift.swift; sourceTree = "<group>"; };
+		206BF6F6203FCF84006F52DC /* KIF.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = KIF.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		206BF6FA203FD0CA006F52DC /* FavoriteMinionsTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FavoriteMinionsTestCase.m; sourceTree = "<group>"; };
+		2073C4AE203FDCD900CED5D3 /* UnfavoriteMinionsTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnfavoriteMinionsTestCase.m; sourceTree = "<group>"; };
+		2073C4B0203FDDC200CED5D3 /* BuyMinionsFromHome.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BuyMinionsFromHome.m; sourceTree = "<group>"; };
+		2088B858203F9F70002092BE /* MovieDetailNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieDetailNavigationController.h; sourceTree = "<group>"; };
+		2088B859203F9F70002092BE /* MovieDetailNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieDetailNavigationController.m; sourceTree = "<group>"; };
+		208E591B203B924C0074E5BD /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		208E591C203B924C0074E5BD /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		208E591F203BBA040074E5BD /* MainTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTabBarViewController.h; sourceTree = "<group>"; };
+		208E5920203BBA040074E5BD /* MainTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTabBarViewController.m; sourceTree = "<group>"; };
+		208E5923203BBDD00074E5BD /* MovieListCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieListCollectionViewCell.h; sourceTree = "<group>"; };
+		208E5924203BBDD00074E5BD /* MovieListCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieListCollectionViewCell.m; sourceTree = "<group>"; };
+		208E5927203BC01F0074E5BD /* UIColor+Essentials.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Essentials.h"; sourceTree = "<group>"; };
+		208E5928203BC01F0074E5BD /* UIColor+Essentials.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Essentials.m"; sourceTree = "<group>"; };
+		208E592A203BCC5E0074E5BD /* CurrentTitleViewCollectionReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CurrentTitleViewCollectionReusableView.h; sourceTree = "<group>"; };
+		208E592B203BCC5E0074E5BD /* CurrentTitleViewCollectionReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CurrentTitleViewCollectionReusableView.m; sourceTree = "<group>"; };
+		208E592D203BCF720074E5BD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		20AC6752203E2DDB00E41B83 /* MovieDetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieDetailsViewController.h; sourceTree = "<group>"; };
+		20AC6753203E2DDB00E41B83 /* MovieDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieDetailsViewController.m; sourceTree = "<group>"; };
+		20AC6756203E481E00E41B83 /* MovieDatabaseManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieDatabaseManager.h; sourceTree = "<group>"; };
+		20AC6757203E481E00E41B83 /* MovieDatabaseManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieDatabaseManager.m; sourceTree = "<group>"; };
+		20AC675F203E5FE500E41B83 /* FavoritesDatabase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FavoritesDatabase.h; sourceTree = "<group>"; };
+		20AC6760203E5FE500E41B83 /* FavoritesDatabase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FavoritesDatabase.m; sourceTree = "<group>"; };
+		20AC6762203E728600E41B83 /* FavoritesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FavoritesViewController.h; sourceTree = "<group>"; };
+		20AC6763203E728600E41B83 /* FavoritesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FavoritesViewController.m; sourceTree = "<group>"; };
+		20AC6765203E7B3800E41B83 /* BuyMovieViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BuyMovieViewController.h; sourceTree = "<group>"; };
+		20AC6766203E7B3800E41B83 /* BuyMovieViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BuyMovieViewController.m; sourceTree = "<group>"; };
+		20AC6768203E813500E41B83 /* SellSectionCollectionReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SellSectionCollectionReusableView.h; sourceTree = "<group>"; };
+		20AC6769203E813500E41B83 /* SellSectionCollectionReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SellSectionCollectionReusableView.m; sourceTree = "<group>"; };
+		20AC676B203E8CAD00E41B83 /* SellItemCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SellItemCollectionViewCell.h; sourceTree = "<group>"; };
+		20AC676C203E8CAD00E41B83 /* SellItemCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SellItemCollectionViewCell.m; sourceTree = "<group>"; };
+		20C4373B203CFA7100DC2C21 /* MovieData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieData.h; sourceTree = "<group>"; };
+		20C4373C203CFA7100DC2C21 /* MovieData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieData.m; sourceTree = "<group>"; };
+		20C4373F203CFCFF00DC2C21 /* ApiManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiManager.h; sourceTree = "<group>"; };
+		20C43740203CFCFF00DC2C21 /* ApiManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApiManager.m; sourceTree = "<group>"; };
+		20C43742203CFD1F00DC2C21 /* ApiServices.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiServices.h; sourceTree = "<group>"; };
+		20C43743203CFD1F00DC2C21 /* ApiServices.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApiServices.m; sourceTree = "<group>"; };
+		409FA2207A3AB9637D8947B6 /* Pods-KiddoTesteUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiddoTesteUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KiddoTesteUITests/Pods-KiddoTesteUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4341FDE4D6777F90B98AAB97 /* Pods-KiddoTesteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiddoTesteTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KiddoTesteTests/Pods-KiddoTesteTests.release.xcconfig"; sourceTree = "<group>"; };
+		49AE9B3AD36324FEB9432FD5 /* Pods-KiddoTesteUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiddoTesteUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KiddoTesteUITests/Pods-KiddoTesteUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7AE237B1F76506E167A46B51 /* Pods_KiddoTeste.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KiddoTeste.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FC6DA3E956C42813B4F2FEF /* Pods_KiddoTesteUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KiddoTesteUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF14930B4D96CC4FCD2A5B97 /* Pods_KiddoTesteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KiddoTesteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E26380CF074FCD18F72CFC87 /* Pods-KiddoTeste.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiddoTeste.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KiddoTeste/Pods-KiddoTeste.debug.xcconfig"; sourceTree = "<group>"; };
+		F2F9C87F1FCC841230257D35 /* Pods-KiddoTesteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiddoTesteTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KiddoTesteTests/Pods-KiddoTesteTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		20482F6D203B888F007B13E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				208E592E203BCF720074E5BD /* QuartzCore.framework in Frameworks */,
+				DD307E4B0F9B02642F40DB9A /* Pods_KiddoTeste.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20482F88203B8893007B13E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				206BF6F5203FCF84006F52DC /* KIF.framework in Frameworks */,
+				AE03786E1D5280C84D166962 /* Pods_KiddoTesteTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20482F93203B8893007B13E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EC071F4EE9567F0F8FB1655 /* Pods_KiddoTesteUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		20482F67203B888E007B13E4 = {
+			isa = PBXGroup;
+			children = (
+				20482F72203B888F007B13E4 /* KiddoTeste */,
+				20482F8E203B8893007B13E4 /* KiddoTesteTests */,
+				20482F99203B8893007B13E4 /* KiddoTesteUITests */,
+				20482F71203B888F007B13E4 /* Products */,
+				F32892D98990C32DCEDE0CC4 /* Pods */,
+				33BFC4DF87A4FCA088A06122 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		20482F71203B888F007B13E4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				20482F70203B888F007B13E4 /* KiddoTeste.app */,
+				20482F8B203B8893007B13E4 /* KiddoTesteTests.xctest */,
+				20482F96203B8893007B13E4 /* KiddoTesteUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		20482F72203B888F007B13E4 /* KiddoTeste */ = {
+			isa = PBXGroup;
+			children = (
+				20AC6755203E47FE00E41B83 /* CoreData Stack */,
+				20C4373E203CFCD300DC2C21 /* API */,
+				20C4373A203CFA2200DC2C21 /* Models */,
+				20F8498F203CDDF100BBC2AD /* CollectionView */,
+				208E5926203BBFFB0074E5BD /* Categories */,
+				208E591E203BB9AD0074E5BD /* ViewControllers */,
+				20482F73203B8890007B13E4 /* AppDelegate.h */,
+				20482F74203B8890007B13E4 /* AppDelegate.m */,
+				20482F79203B8890007B13E4 /* Main.storyboard */,
+				20482F7F203B8890007B13E4 /* Assets.xcassets */,
+				20482F81203B8890007B13E4 /* LaunchScreen.storyboard */,
+				20482F84203B8890007B13E4 /* Info.plist */,
+				20482F85203B8890007B13E4 /* main.m */,
+				20482F7C203B8890007B13E4 /* KiddoTeste.xcdatamodeld */,
+				206BF6F1203FC49F006F52DC /* KiddoSwift.swift */,
+				206BF6F0203FC49E006F52DC /* KiddoTeste-Bridging-Header.h */,
+			);
+			path = KiddoTeste;
+			sourceTree = "<group>";
+		};
+		20482F8E203B8893007B13E4 /* KiddoTesteTests */ = {
+			isa = PBXGroup;
+			children = (
+				20482F91203B8893007B13E4 /* Info.plist */,
+				206BF6FA203FD0CA006F52DC /* FavoriteMinionsTestCase.m */,
+				2073C4AE203FDCD900CED5D3 /* UnfavoriteMinionsTestCase.m */,
+				2073C4B0203FDDC200CED5D3 /* BuyMinionsFromHome.m */,
+			);
+			path = KiddoTesteTests;
+			sourceTree = "<group>";
+		};
+		20482F99203B8893007B13E4 /* KiddoTesteUITests */ = {
+			isa = PBXGroup;
+			children = (
+				20482F9C203B8893007B13E4 /* Info.plist */,
+			);
+			path = KiddoTesteUITests;
+			sourceTree = "<group>";
+		};
+		208E591E203BB9AD0074E5BD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				208E591F203BBA040074E5BD /* MainTabBarViewController.h */,
+				208E5920203BBA040074E5BD /* MainTabBarViewController.m */,
+				208E591B203B924C0074E5BD /* MainViewController.h */,
+				208E591C203B924C0074E5BD /* MainViewController.m */,
+				20AC6762203E728600E41B83 /* FavoritesViewController.h */,
+				20AC6763203E728600E41B83 /* FavoritesViewController.m */,
+				2088B858203F9F70002092BE /* MovieDetailNavigationController.h */,
+				2088B859203F9F70002092BE /* MovieDetailNavigationController.m */,
+				20AC6752203E2DDB00E41B83 /* MovieDetailsViewController.h */,
+				20AC6753203E2DDB00E41B83 /* MovieDetailsViewController.m */,
+				20AC6765203E7B3800E41B83 /* BuyMovieViewController.h */,
+				20AC6766203E7B3800E41B83 /* BuyMovieViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		208E5922203BBDAF0074E5BD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				208E5923203BBDD00074E5BD /* MovieListCollectionViewCell.h */,
+				208E5924203BBDD00074E5BD /* MovieListCollectionViewCell.m */,
+				208E592A203BCC5E0074E5BD /* CurrentTitleViewCollectionReusableView.h */,
+				208E592B203BCC5E0074E5BD /* CurrentTitleViewCollectionReusableView.m */,
+				20AC6768203E813500E41B83 /* SellSectionCollectionReusableView.h */,
+				20AC6769203E813500E41B83 /* SellSectionCollectionReusableView.m */,
+				20AC676B203E8CAD00E41B83 /* SellItemCollectionViewCell.h */,
+				20AC676C203E8CAD00E41B83 /* SellItemCollectionViewCell.m */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		208E5926203BBFFB0074E5BD /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				208E5927203BC01F0074E5BD /* UIColor+Essentials.h */,
+				208E5928203BC01F0074E5BD /* UIColor+Essentials.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		20AC6755203E47FE00E41B83 /* CoreData Stack */ = {
+			isa = PBXGroup;
+			children = (
+				20AC675A203E52AF00E41B83 /* Entities */,
+				20AC6759203E529D00E41B83 /* Database Manager */,
+			);
+			path = "CoreData Stack";
+			sourceTree = "<group>";
+		};
+		20AC6759203E529D00E41B83 /* Database Manager */ = {
+			isa = PBXGroup;
+			children = (
+				20AC6756203E481E00E41B83 /* MovieDatabaseManager.h */,
+				20AC6757203E481E00E41B83 /* MovieDatabaseManager.m */,
+			);
+			path = "Database Manager";
+			sourceTree = "<group>";
+		};
+		20AC675A203E52AF00E41B83 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				20AC675F203E5FE500E41B83 /* FavoritesDatabase.h */,
+				20AC6760203E5FE500E41B83 /* FavoritesDatabase.m */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		20C4373A203CFA2200DC2C21 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				20C4373B203CFA7100DC2C21 /* MovieData.h */,
+				20C4373C203CFA7100DC2C21 /* MovieData.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		20C4373E203CFCD300DC2C21 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				20C4373F203CFCFF00DC2C21 /* ApiManager.h */,
+				20C43740203CFCFF00DC2C21 /* ApiManager.m */,
+				20C43742203CFD1F00DC2C21 /* ApiServices.h */,
+				20C43743203CFD1F00DC2C21 /* ApiServices.m */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		20F8498F203CDDF100BBC2AD /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				208E5922203BBDAF0074E5BD /* Cells */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		33BFC4DF87A4FCA088A06122 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				206BF6F6203FCF84006F52DC /* KIF.framework */,
+				208E592D203BCF720074E5BD /* QuartzCore.framework */,
+				7AE237B1F76506E167A46B51 /* Pods_KiddoTeste.framework */,
+				BF14930B4D96CC4FCD2A5B97 /* Pods_KiddoTesteTests.framework */,
+				7FC6DA3E956C42813B4F2FEF /* Pods_KiddoTesteUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F32892D98990C32DCEDE0CC4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E26380CF074FCD18F72CFC87 /* Pods-KiddoTeste.debug.xcconfig */,
+				131DB31B88D36AAF3DDA4AEE /* Pods-KiddoTeste.release.xcconfig */,
+				F2F9C87F1FCC841230257D35 /* Pods-KiddoTesteTests.debug.xcconfig */,
+				4341FDE4D6777F90B98AAB97 /* Pods-KiddoTesteTests.release.xcconfig */,
+				49AE9B3AD36324FEB9432FD5 /* Pods-KiddoTesteUITests.debug.xcconfig */,
+				409FA2207A3AB9637D8947B6 /* Pods-KiddoTesteUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		20482F6F203B888F007B13E4 /* KiddoTeste */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20482F9F203B8893007B13E4 /* Build configuration list for PBXNativeTarget "KiddoTeste" */;
+			buildPhases = (
+				341EC13772CF6D839719D8B2 /* [CP] Check Pods Manifest.lock */,
+				20482F6C203B888F007B13E4 /* Sources */,
+				20482F6D203B888F007B13E4 /* Frameworks */,
+				20482F6E203B888F007B13E4 /* Resources */,
+				6CC3262A6EC829F07AE141FC /* [CP] Embed Pods Frameworks */,
+				3640017ACD929DA45F189C0B /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KiddoTeste;
+			productName = KiddoTeste;
+			productReference = 20482F70203B888F007B13E4 /* KiddoTeste.app */;
+			productType = "com.apple.product-type.application";
+		};
+		20482F8A203B8893007B13E4 /* KiddoTesteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20482FA2203B8893007B13E4 /* Build configuration list for PBXNativeTarget "KiddoTesteTests" */;
+			buildPhases = (
+				65DD1F049773961153B4DF04 /* [CP] Check Pods Manifest.lock */,
+				20482F87203B8893007B13E4 /* Sources */,
+				20482F88203B8893007B13E4 /* Frameworks */,
+				20482F89203B8893007B13E4 /* Resources */,
+				1E41AE66C4F482159E3BF995 /* [CP] Embed Pods Frameworks */,
+				6CAD711CF54F3EAF71C6446E /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				20482F8D203B8893007B13E4 /* PBXTargetDependency */,
+			);
+			name = KiddoTesteTests;
+			productName = KiddoTesteTests;
+			productReference = 20482F8B203B8893007B13E4 /* KiddoTesteTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		20482F95203B8893007B13E4 /* KiddoTesteUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20482FA5203B8893007B13E4 /* Build configuration list for PBXNativeTarget "KiddoTesteUITests" */;
+			buildPhases = (
+				A22EA6E0C23929EB0A627CF5 /* [CP] Check Pods Manifest.lock */,
+				20482F92203B8893007B13E4 /* Sources */,
+				20482F93203B8893007B13E4 /* Frameworks */,
+				20482F94203B8893007B13E4 /* Resources */,
+				E128E72C3E2EC36BF2A12A48 /* [CP] Embed Pods Frameworks */,
+				94E0F82E930D89310E5AB278 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				20482F98203B8893007B13E4 /* PBXTargetDependency */,
+			);
+			name = KiddoTesteUITests;
+			productName = KiddoTesteUITests;
+			productReference = 20482F96203B8893007B13E4 /* KiddoTesteUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		20482F68203B888F007B13E4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Aloisio Mello";
+				TargetAttributes = {
+					20482F6F203B888F007B13E4 = {
+						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
+						ProvisioningStyle = Automatic;
+					};
+					20482F8A203B8893007B13E4 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 20482F6F203B888F007B13E4;
+					};
+					20482F95203B8893007B13E4 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 20482F6F203B888F007B13E4;
+					};
+				};
+			};
+			buildConfigurationList = 20482F6B203B888F007B13E4 /* Build configuration list for PBXProject "KiddoTeste" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 20482F67203B888E007B13E4;
+			productRefGroup = 20482F71203B888F007B13E4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				20482F6F203B888F007B13E4 /* KiddoTeste */,
+				20482F8A203B8893007B13E4 /* KiddoTesteTests */,
+				20482F95203B8893007B13E4 /* KiddoTesteUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		20482F6E203B888F007B13E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20482F83203B8890007B13E4 /* LaunchScreen.storyboard in Resources */,
+				20482F80203B8890007B13E4 /* Assets.xcassets in Resources */,
+				20482F7B203B8890007B13E4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20482F89203B8893007B13E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20482F94203B8893007B13E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1E41AE66C4F482159E3BF995 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-KiddoTesteTests/Pods-KiddoTesteTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/KIF/KIF.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KIF.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KiddoTesteTests/Pods-KiddoTesteTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		341EC13772CF6D839719D8B2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KiddoTeste-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3640017ACD929DA45F189C0B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KiddoTeste/Pods-KiddoTeste-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		65DD1F049773961153B4DF04 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KiddoTesteTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6CAD711CF54F3EAF71C6446E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KiddoTesteTests/Pods-KiddoTesteTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6CC3262A6EC829F07AE141FC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-KiddoTeste/Pods-KiddoTeste-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ADLivelyCollectionView/ADLivelyCollectionView.framework",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/CCBottomRefreshControl/CCBottomRefreshControl.framework",
+				"${BUILT_PRODUCTS_DIR}/CCZoomTransition/CCZoomTransition.framework",
+				"${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework",
+				"${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework",
+				"${BUILT_PRODUCTS_DIR}/PINRemoteImage/PINRemoteImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Reachability/Reachability.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ADLivelyCollectionView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CCBottomRefreshControl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CCZoomTransition.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLAnimatedImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINCache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINRemoteImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KiddoTeste/Pods-KiddoTeste-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		94E0F82E930D89310E5AB278 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KiddoTesteUITests/Pods-KiddoTesteUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A22EA6E0C23929EB0A627CF5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KiddoTesteUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E128E72C3E2EC36BF2A12A48 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-KiddoTesteUITests/Pods-KiddoTesteUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/KIF/KIF.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KIF.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KiddoTesteUITests/Pods-KiddoTesteUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		20482F6C203B888F007B13E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20C43744203CFD1F00DC2C21 /* ApiServices.m in Sources */,
+				20C43741203CFCFF00DC2C21 /* ApiManager.m in Sources */,
+				20AC6767203E7B3800E41B83 /* BuyMovieViewController.m in Sources */,
+				20482F7E203B8890007B13E4 /* KiddoTeste.xcdatamodeld in Sources */,
+				20482F86203B8890007B13E4 /* main.m in Sources */,
+				2088B85A203F9F70002092BE /* MovieDetailNavigationController.m in Sources */,
+				20AC6754203E2DDB00E41B83 /* MovieDetailsViewController.m in Sources */,
+				20AC6764203E728600E41B83 /* FavoritesViewController.m in Sources */,
+				208E5921203BBA040074E5BD /* MainTabBarViewController.m in Sources */,
+				20AC676A203E813500E41B83 /* SellSectionCollectionReusableView.m in Sources */,
+				208E5925203BBDD00074E5BD /* MovieListCollectionViewCell.m in Sources */,
+				20AC6758203E481E00E41B83 /* MovieDatabaseManager.m in Sources */,
+				208E5929203BC01F0074E5BD /* UIColor+Essentials.m in Sources */,
+				208E592C203BCC5E0074E5BD /* CurrentTitleViewCollectionReusableView.m in Sources */,
+				20AC6761203E5FE500E41B83 /* FavoritesDatabase.m in Sources */,
+				206BF6F2203FC49F006F52DC /* KiddoSwift.swift in Sources */,
+				20482F75203B8890007B13E4 /* AppDelegate.m in Sources */,
+				20AC676D203E8CAD00E41B83 /* SellItemCollectionViewCell.m in Sources */,
+				208E591D203B924C0074E5BD /* MainViewController.m in Sources */,
+				20C4373D203CFA7100DC2C21 /* MovieData.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20482F87203B8893007B13E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2073C4AF203FDCDA00CED5D3 /* UnfavoriteMinionsTestCase.m in Sources */,
+				2073C4B1203FDDC200CED5D3 /* BuyMinionsFromHome.m in Sources */,
+				206BF6FB203FD0CA006F52DC /* FavoriteMinionsTestCase.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20482F92203B8893007B13E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		20482F8D203B8893007B13E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 20482F6F203B888F007B13E4 /* KiddoTeste */;
+			targetProxy = 20482F8C203B8893007B13E4 /* PBXContainerItemProxy */;
+		};
+		20482F98203B8893007B13E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 20482F6F203B888F007B13E4 /* KiddoTeste */;
+			targetProxy = 20482F97203B8893007B13E4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		20482F79203B8890007B13E4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				20482F7A203B8890007B13E4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		20482F81203B8890007B13E4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				20482F82203B8890007B13E4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		20482F9D203B8893007B13E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		20482F9E203B8893007B13E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		20482FA0203B8893007B13E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E26380CF074FCD18F72CFC87 /* Pods-KiddoTeste.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PNBCD87QYD;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = KiddoTeste/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.avmello.KiddoTeste;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "KiddoTeste/KiddoTeste-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		20482FA1203B8893007B13E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 131DB31B88D36AAF3DDA4AEE /* Pods-KiddoTeste.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PNBCD87QYD;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = KiddoTeste/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.avmello.KiddoTeste;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "KiddoTeste/KiddoTeste-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		20482FA3203B8893007B13E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2F9C87F1FCC841230257D35 /* Pods-KiddoTesteTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PNBCD87QYD;
+				INFOPLIST_FILE = KiddoTesteTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"KIF\"",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.avmello.KiddoTesteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KiddoTeste.app/KiddoTeste";
+			};
+			name = Debug;
+		};
+		20482FA4203B8893007B13E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4341FDE4D6777F90B98AAB97 /* Pods-KiddoTesteTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PNBCD87QYD;
+				INFOPLIST_FILE = KiddoTesteTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"KIF\"",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.avmello.KiddoTesteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KiddoTeste.app/KiddoTeste";
+			};
+			name = Release;
+		};
+		20482FA6203B8893007B13E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49AE9B3AD36324FEB9432FD5 /* Pods-KiddoTesteUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PNBCD87QYD;
+				INFOPLIST_FILE = KiddoTesteUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.avmello.KiddoTesteUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KiddoTeste;
+			};
+			name = Debug;
+		};
+		20482FA7203B8893007B13E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 409FA2207A3AB9637D8947B6 /* Pods-KiddoTesteUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PNBCD87QYD;
+				INFOPLIST_FILE = KiddoTesteUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.avmello.KiddoTesteUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KiddoTeste;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		20482F6B203B888F007B13E4 /* Build configuration list for PBXProject "KiddoTeste" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20482F9D203B8893007B13E4 /* Debug */,
+				20482F9E203B8893007B13E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		20482F9F203B8893007B13E4 /* Build configuration list for PBXNativeTarget "KiddoTeste" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20482FA0203B8893007B13E4 /* Debug */,
+				20482FA1203B8893007B13E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		20482FA2203B8893007B13E4 /* Build configuration list for PBXNativeTarget "KiddoTesteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20482FA3203B8893007B13E4 /* Debug */,
+				20482FA4203B8893007B13E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		20482FA5203B8893007B13E4 /* Build configuration list for PBXNativeTarget "KiddoTesteUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20482FA6203B8893007B13E4 /* Debug */,
+				20482FA7203B8893007B13E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		20482F7C203B8890007B13E4 /* KiddoTeste.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				20482F7D203B8890007B13E4 /* KiddoTeste.xcdatamodel */,
+			);
+			currentVersion = 20482F7D203B8890007B13E4 /* KiddoTeste.xcdatamodel */;
+			path = KiddoTeste.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 20482F68203B888F007B13E4 /* Project object */;
+}

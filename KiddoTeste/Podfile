@@ -1,0 +1,28 @@
+# Uncomment the next line to define a global platform for your project
+ platform :ios, '8.0'
+
+target 'KiddoTeste' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+   use_frameworks!
+
+  # Pods for KiddoTeste
+
+  pod 'AFNetworking'
+  pod 'PINRemoteImage'
+  pod 'ADLivelyCollectionView'
+  pod 'CCBottomRefreshControl'
+  pod 'CCZoomTransition'
+  pod 'Reachability'
+  
+  target 'KiddoTesteTests' do
+    inherit! :search_paths
+    pod 'KIF'
+    # Pods for testing
+  end
+
+  target 'KiddoTesteUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
